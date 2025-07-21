@@ -10,18 +10,18 @@ const STATUS_COLORS = {
     not_started: '#444'
 };
 
-// 품사별 색상
+// 품사별 색상 (Apple 스타일 UI Kit 기반)
 const POS_COLORS = {
-    noun: '#4FC3F7',
-    verb: '#66BB6A',
-    adjective: '#FFA726',
-    adverb: '#9575CD',
-    pronoun: '#FF8A65',
-    preposition: '#90A4AE',
-    conjunction: '#A1887F',
-    article: '#B0BEC5',
-    numeral: '#F06292',
-    default: '#BDBDBD'
+    noun: '#0A84FF',        // Blue
+    verb: '#30D158',        // Green
+    adjective: '#FF9F0A',   // Orange
+    adverb: '#BF5AF2',      // Purple
+    pronoun: '#FF453A',     // Red
+    preposition: '#64D2FF', // Teal
+    conjunction: '#FFD60A', // Yellow
+    article: '#8E8E93',     // Gray
+    numeral: '#E52B50',     // Amaranth Pink
+    default: '#48484A'      // Dark Gray
 };
 
 // 버튼 스타일
@@ -38,6 +38,17 @@ const buttonStyle = {
     whiteSpace: 'nowrap'
 };
 
+// 품사별 그룹핑 함수
+function groupWordsByPos(words) {
+    const groups = {};
+    words.forEach(word => {
+        const pos = word.pos || '기타';
+        if (!groups[pos]) groups[pos] = [];
+        groups[pos].push(word);
+    });
+    return groups;
+}
+
 const Pyramid = ({ words, setWords }) => {
     const navigate = useNavigate();
     const [viewMode, setViewMode] = useState('all');
@@ -52,6 +63,7 @@ const Pyramid = ({ words, setWords }) => {
     });
     const [user, setUser] = useState(null);
     const stageRef = useRef(null);
+    const isMobile = stageSize.width <= 768;
 
     // 사용자 정보 가져오기
     useEffect(() => {
@@ -133,16 +145,11 @@ const Pyramid = ({ words, setWords }) => {
 
         const levelCount = Math.ceil(words.length / 100);
         const levelStart = 1;
-        const minLayerHeight = 30;
-        const maxLayerWidth = Math.max(300, stageSize.width * 0.8);
+        const layerHeight = isMobile ? 44 : 40; // 모바일 터치 영역 확보
+        const maxLayerWidth = Math.max(300, stageSize.width * (isMobile ? 0.9 : 0.8)); // 모바일에서 너비 비율 조정
         const verticalSpacing = 12;
-        const topMargin = 80;
-        const bottomMargin = 200;
-
-        // 모든 계층이 표시되도록 충분한 높이 계산
-        const totalHeight = levelCount * (minLayerHeight + verticalSpacing) + topMargin + bottomMargin;
-        const layerHeight = Math.max(minLayerHeight, (totalHeight - topMargin - bottomMargin) / levelCount);
-
+        const topMargin = isMobile ? 120 : 80; // 모바일에서 상단 여백 추가
+        
         return Array.from({ length: levelCount }, (_, i) => {
             const level = levelStart + i;
             const startIdx = (level - 1) * 100;
@@ -168,17 +175,24 @@ const Pyramid = ({ words, setWords }) => {
                 endIdx
             };
         });
-    }, [words, stageSize]);
+    }, [words, stageSize.width, isMobile]);
+
+    // 전체 뷰의 총 높이 계산
+    const allViewTotalHeight = useMemo(() => {
+        if (allViewLayouts.length === 0) return stageSize.height;
+        const lastLayout = allViewLayouts[allViewLayouts.length - 1];
+        return lastLayout.y + lastLayout.height + (isMobile ? 200 : 280); // 모바일에서 하단 여백 조정
+    }, [allViewLayouts, stageSize.height, isMobile]);
 
     // 계층 뷰 레이아웃
     const layerViewLayouts = useMemo(() => {
         if (displayedWords.length === 0) return [];
         
-        const minBlockSize = 40;
-        const maxBlockSize = Math.min(60, Math.floor(stageSize.width / 25));
+        const minBlockSize = isMobile ? 48 : 52; // 모바일 터치 영역 확보
+        const maxBlockSize = Math.min(80, Math.floor(stageSize.width / (isMobile ? 8 : 25)));
         const blockSize = Math.max(minBlockSize, maxBlockSize);
-        const blockMargin = Math.max(4, Math.floor(blockSize * 0.1));
-        const horizontalPadding = 24;
+        const blockMargin = Math.max(5, Math.floor(blockSize * 0.1));
+        const horizontalPadding = isMobile ? 16 : 24;
         const topPadding = 120;
 
         const blocksPerRow = Math.floor(
@@ -200,7 +214,7 @@ const Pyramid = ({ words, setWords }) => {
                 height: blockSize
             };
         });
-    }, [displayedWords, stageSize.width]);
+    }, [displayedWords, stageSize.width, isMobile]);
 
 
     // 계층 뷰의 Stage 높이를 동적으로 조절
@@ -218,7 +232,7 @@ const Pyramid = ({ words, setWords }) => {
     // 블록 클릭 핸들러
     const handleBlockClick = useCallback((layout) => {
         if (viewMode === 'all') {
-            setSelectedLayer(layout.layer);
+            setSelectedLayer(layout.level);
             setViewMode('layer');
         } else {
             setHoveredWord({
@@ -255,42 +269,61 @@ const Pyramid = ({ words, setWords }) => {
                 left: 0,
                 width: '100%',
                 display: 'flex',
+                flexDirection: isMobile ? 'column' : 'row',
                 alignItems: 'center',
-                padding: '8px 24px',
+                padding: `8px ${isMobile ? '16px' : '24px'}`,
                 boxSizing: 'border-box',
                 zIndex: 1200,
                 background: '#1a1a1a',
                 borderBottom: '1px solid #333',
-                height: 56
+                height: isMobile ? 'auto' : 56,
+                minHeight: 56
             }}>
-                {viewMode === 'layer' && (
-                    <button 
-                        onClick={() => { setViewMode('all'); setSelectedLayer(null); }}
-                        style={{
-                            ...buttonStyle,
-                            marginLeft: 0,
-                            color: '#4FC3F7',
-                            background: 'none',
-                            fontWeight: 'bold',
-                            fontSize: '18px'
-                        }}
-                    >
-                        {'< Back to Pyramid'}
-                    </button>
-                )}
-                <span style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginRight: 'auto' }}>
-                    Vocabulario Inteligente
-                </span>
-                <div style={{ display: 'flex', gap: '12px' }}>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%',
+                    marginBottom: isMobile ? '8px' : 0,
+                }}>
+                    {viewMode === 'layer' && (
+                        <button 
+                            onClick={() => { setViewMode('all'); setSelectedLayer(null); }}
+                            style={{
+                                ...buttonStyle,
+                                marginLeft: 0,
+                                color: '#4FC3F7',
+                                background: 'none',
+                                fontWeight: 'bold',
+                                fontSize: isMobile ? '16px' : '18px',
+                                padding: isMobile ? '8px 12px' : buttonStyle.padding
+                            }}
+                        >
+                            {'< Back'}
+                        </button>
+                    )}
+                    <span style={{ 
+                        fontSize: isMobile ? '24px' : '32px', 
+                        fontWeight: 700, 
+                        color: 'white', 
+                        marginRight: 'auto',
+                        marginLeft: viewMode === 'layer' ? (isMobile ? '12px' : 0) : 0,
+                    }}>
+                        Vocabulario Inteligente
+                    </span>
+                </div>
+                <div style={{ display: 'flex', gap: '12px', width: isMobile ? '100%' : 'auto' }}>
                     <button style={{
                         ...buttonStyle,
                         background: '#2c2c2e',
-                        color: '#4FC3F7'
-                    }} onClick={() => navigate('/learn')}>학습 메뉴로 이동</button>
+                        color: '#4FC3F7',
+                        flex: isMobile ? 1 : 'auto'
+                    }} onClick={() => navigate('/learn')}>학습 메뉴</button>
                     <button style={{
                         ...buttonStyle,
                         background: 'transparent',
-                        border: '1px solid #444'
+                        border: '1px solid #444',
+                        flex: isMobile ? 1 : 'auto'
                     }} onClick={handleSignOut}>Sign Out</button>
                 </div>
             </div>
@@ -336,26 +369,26 @@ const Pyramid = ({ words, setWords }) => {
             {/* 스크롤 가능한 컨테이너 */}
             <div style={{
                 position: 'fixed',
-                top: viewMode === 'layer' ? 112 : 56,
+                top: viewMode === 'layer' ? 112 : (isMobile ? 100 : 56),
                 left: 0,
                 right: 0,
                 bottom: 0,
                 overflowY: 'auto',
-                overflowX: 'hidden'
+                overflowX: 'hidden',
+                paddingBottom: viewMode === 'all' ? (isMobile ? '160px' : '180px') : '0px'
             }}>
                 {/* 실제 콘텐츠 컨테이너 */}
                 <div style={{
                     position: 'relative',
                     width: '100%',
                     minHeight: '100%',
-                    paddingBottom: viewMode === 'all' ? 280 : 40 // 통계창을 위한 여백
                 }}>
                     <Stage 
                         ref={stageRef}
                         width={stageSize.width}
-                        height={stageSize.height}
+                        height={viewMode === 'all' ? allViewTotalHeight : stageSize.height}
                         style={{ 
-                            display: 'block',
+                            display: viewMode === 'layer' && sortMode === 'pos' ? 'none' : 'block',
                             position: 'relative'
                         }}
                     >
@@ -403,55 +436,165 @@ const Pyramid = ({ words, setWords }) => {
                                     ))}
                                 </>
                             ) : (
-                                <>
-                                    {layerViewLayouts.map((layout) => {
-                                        const { word } = layout;
-                                        const color = POS_COLORS[word.pos] || POS_COLORS.default;
-
-                                        return (
-                                            <Group 
-                                                key={word.id}
-                                                onClick={() => handleBlockClick(layout)}
-                                            >
-                                                <Rect
-                                                    x={layout.x}
-                                                    y={layout.y}
-                                                    width={layout.width}
-                                                    height={layout.height}
-                                                    fill={color}
-                                                    cornerRadius={4}
-                                                    shadowColor="black"
-                                                    shadowBlur={4}
-                                                    shadowOpacity={0.2}
-                                                />
-                                                {/* 빈도수 순위 */}
-                                                <Text
-                                                    x={layout.x + 4}
-                                                    y={layout.y + 4}
-                                                    text={`#${word.frequency_rank}`}
-                                                    fill="#222"
-                                                    fontSize={10}
-                                                    fontStyle="bold"
-                                                />
-                                                {/* 스페인어 단어 */}
-                                                <Text
-                                                    x={layout.x}
-                                                    y={layout.y + layout.height / 3}
-                                                    width={layout.width}
-                                                    height={layout.height / 2}
-                                                    text={word.spanish}
-                                                    fill="#111"
-                                                    fontSize={12}
-                                                    align="center"
-                                                    verticalAlign="middle"
-                                                />
-                                            </Group>
-                                        );
-                                    })}
-                                </>
+                                // 빈도수 정렬만 Konva로 렌더링
+                                sortMode === 'freq' && (
+                                    <>
+                                        {layerViewLayouts.map((layout) => {
+                                            const { word } = layout;
+                                            const color = POS_COLORS[word.pos] || POS_COLORS.default;
+                                            return (
+                                                <Group 
+                                                    key={word.id}
+                                                    onClick={() => handleBlockClick(layout)}
+                                                >
+                                                    <Rect
+                                                        x={layout.x}
+                                                        y={layout.y}
+                                                        width={layout.width}
+                                                        height={layout.height}
+                                                        fill={color}
+                                                        cornerRadius={8}
+                                                        shadowColor="black"
+                                                        shadowBlur={10}
+                                                        shadowOpacity={0.25}
+                                                        shadowOffset={{ x: 0, y: 5 }}
+                                                    />
+                                                    {/* 품사 */}
+                                                    <Text
+                                                        x={layout.x + 8}
+                                                        y={layout.y + 8}
+                                                        text={word.pos}
+                                                        fill="#fff"
+                                                        fontSize={10}
+                                                        opacity={0.6}
+                                                    />
+                                                    {/* 빈도수 순위 */}
+                                                    <Text
+                                                        x={layout.x + layout.width - 8}
+                                                        y={layout.y + layout.height - 18}
+                                                        text={`#${word.frequency_rank}`}
+                                                        fill="#fff"
+                                                        fontSize={10}
+                                                        width={-layout.width + 16}
+                                                        align="right"
+                                                        opacity={0.6}
+                                                    />
+                                                    {/* 스페인어 단어 */}
+                                                    <Text
+                                                        x={layout.x}
+                                                        y={layout.y}
+                                                        width={layout.width}
+                                                        height={layout.height}
+                                                        text={word.spanish}
+                                                        fill="#fff"
+                                                        fontSize={isMobile ? 14 : 16}
+                                                        fontStyle="600"
+                                                        align="center"
+                                                        verticalAlign="middle"
+                                                    />
+                                                </Group>
+                                            );
+                                        })}
+                                    </>
+                                )
                             )}
                         </Layer>
                     </Stage>
+
+                    {/* 레벨 뷰 - 품사별 그룹/빈도수 정렬 모두 DOM 박스 UI로 */}
+                    {viewMode === 'layer' && (
+                        <div style={{ padding: isMobile ? '12px 8px' : '24px 32px' }}>
+                            {sortMode === 'pos' ? (
+                                Object.entries(groupWordsByPos(displayedWords)).map(([pos, groupWords], idx) => {
+                                    const color = POS_COLORS[pos] || POS_COLORS.default;
+                                    return (
+                                        <React.Fragment key={pos}>
+                                            {/* 품사 헤더 */}
+                                            <div style={{
+                                                margin: '24px 0 8px 0',
+                                                fontWeight: 700,
+                                                fontSize: isMobile ? 16 : 18,
+                                                color: color,
+                                                letterSpacing: 1,
+                                                textTransform: 'uppercase',
+                                            }}>{pos}</div>
+                                            <div style={{
+                                                display: 'flex',
+                                                flexWrap: 'wrap',
+                                                gap: isMobile ? 8 : 12,
+                                                marginBottom: 8
+                                            }}>
+                                                {groupWords.map(word => (
+                                                    <div key={word.id} style={{
+                                                        background: color,
+                                                        color: '#fff',
+                                                        borderRadius: 10,
+                                                        boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                                                        padding: isMobile ? '12px 14px' : '14px 18px',
+                                                        fontSize: isMobile ? 15 : 17,
+                                                        fontWeight: 600,
+                                                        minWidth: 70,
+                                                        marginBottom: 4,
+                                                        display: 'flex',
+                                                        flexDirection: 'column',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        cursor: 'pointer',
+                                                        userSelect: 'none',
+                                                        transition: 'box-shadow 0.2s',
+                                                    }}
+                                                    onClick={() => handleBlockClick({ word })}
+                                                    >
+                                                        <span style={{ fontSize: 11, opacity: 0.7, marginBottom: 2 }}>{pos}</span>
+                                                        <span style={{ fontSize: isMobile ? 16 : 18 }}>{word.spanish}</span>
+                                                        <span style={{ fontSize: 10, opacity: 0.7, marginTop: 2 }}>{`#${word.frequency_rank}`}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </React.Fragment>
+                                    );
+                                })
+                            ) : (
+                                // 빈도수 정렬: 한 줄로 쭉 나열, 동일 박스 디자인
+                                <div style={{
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    gap: isMobile ? 8 : 12,
+                                    marginBottom: 8
+                                }}>
+                                    {displayedWords.map(word => {
+                                        const color = POS_COLORS[word.pos] || POS_COLORS.default;
+                                        return (
+                                            <div key={word.id} style={{
+                                                background: color,
+                                                color: '#fff',
+                                                borderRadius: 10,
+                                                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                                                padding: isMobile ? '12px 14px' : '14px 18px',
+                                                fontSize: isMobile ? 15 : 17,
+                                                fontWeight: 600,
+                                                minWidth: 70,
+                                                marginBottom: 4,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                cursor: 'pointer',
+                                                userSelect: 'none',
+                                                transition: 'box-shadow 0.2s',
+                                            }}
+                                            onClick={() => handleBlockClick({ word })}
+                                            >
+                                                <span style={{ fontSize: 11, opacity: 0.7, marginBottom: 2 }}>{word.pos}</span>
+                                                <span style={{ fontSize: isMobile ? 16 : 18 }}>{word.spanish}</span>
+                                                <span style={{ fontSize: 10, opacity: 0.7, marginTop: 2 }}>{`#${word.frequency_rank}`}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     {/* 전체 통계 */}
                     {viewMode === 'all' && (

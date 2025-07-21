@@ -1,0 +1,105 @@
+.learn-menu-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 24px 40px; /* 상단 헤더와의 간격 확보 */
+    color: #ffffff;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.learn-menu-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.learn-menu-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.learn-menu-header p {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.learn-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.learn-mode-card {
+    background: #2c2c2e;
+    border: 1px solid #444;
+    border-radius: 18px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.learn-mode-card.active {
+    cursor: pointer;
+}
+
+.learn-mode-card.active:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #5d5dff;
+}
+
+.learn-mode-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.learn-mode-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.learn-mode-card p {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+    flex-grow: 1; /* 카드의 높이를 같게 만듬 */
+}
+
+.learn-mode-card .card-status {
+    margin-top: 20px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.learn-mode-card.active .card-status {
+    background-color: #5d5dff;
+    color: #ffffff;
+}
+.learn-mode-card.active:hover .card-status {
+    background-color: #7a7aff;
+}
+
+
+.learn-mode-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.learn-mode-card.disabled .card-status {
+    background-color: #444;
+    color: #888;
+} 

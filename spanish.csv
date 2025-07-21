@@ -1,0 +1,5001 @@
+﻿순위,스페인어,품사,의미,분류코드
+1,"el, la",art,the,B-1
+2,de,prep,"of, from",B-1
+3,que,conj,"that, which",B-1
+4,y,conj,and,B-1
+5,a,prep,"to, at",B-1
+6,en,prep,"in, on",B-1
+7,un,art,"a, an",B-1
+8,ser,v,to be (norm),B-2
+9,se,pron,"[""reflexive"" marker]",B-1
+10,no,adv,no,A-1-a
+11,haber,v,to have (+Ved),B-2
+12,por,prep,"by, for, through",B-1
+13,con,prep,with,B-1
+14,su,adj,his/her/their/your (-fam),B-1
+15,para,prep,"for, to, in order to",B-1
+16,como,conj,"like, as",B-2
+17,estar,v,"to be (location, change from norm)",B-2
+18,tener,v,to have,B-2
+19,le,pron,[3rd person] (indir obj),B-1
+20,lo,art,the (+n),B-1
+21,lo,pron,[3rd person] (dir obj-m),B-1
+22,todo,adj,"all, every",B-2
+23,pero,conj,"but, yet, except",B-2
+24,más,adj,more,B-2
+25,hacer,v,"to do, make",B-2
+26,o,conj,or,A-1-a
+27,poder,v,"to be able to, can",B-2
+28,decir,v,"to tell, say",A-3
+29,este,adj,this (m) [esta (f)],B-2
+30,ir,v,to go,B-2
+31,otro,adj,"other, another",A-3
+32,ese,adj,that (m) [esa (f)],B-2
+33,la,pron,[3rd person] (dir obj-f),B-1
+34,si,conj,"if, whether",B-1
+35,me,pron,me (obj),A-1-a
+36,ya,adv,"already, still",B-2
+37,ver,v,to see,A-3
+38,porque,conj,because,B-2
+39,dar,v,to give,A-3
+40,cuando,conj,when,B-2
+41,él,pron,"he, [ellos] them (m)",B-2
+42,muy,adv,"very, really",B-2
+43,sin,prep,without,B-2
+44,vez,nf,time (specific occurrence),B-2
+45,mucho,adj,"much, many, a lot (adv)",B-2
+46,saber,v,"to know (a fact), find out",B-2
+47,qué,pron,"what?, which?, how (+ adj)!",B-2
+48,sobre,prep,"on top of, over, about",B-2
+49,mi,adj,my,A-1-b
+50,alguno,adj,"some, someone (pron)",B-2
+51,mismo,adj,same,B-2
+52,yo,pron,I (subj),B-2
+53,también,adv,also,B-2
+54,hasta,prep,"until, up to, even (adv)",B-2
+55,año,nm,year,A-3
+56,dos,num,two,A-3
+57,querer,v,"to want, love",B-2
+58,entre,prep,"between, among",A-3
+59,así,adv,like that,B-2
+60,primero,adj,first,A-3
+61,desde,prep,"from, since",B-2
+62,grande,adj,"large, great, big",A-3
+63,eso,pron,that (n),B-2
+64,ni,conj,"not even, neither, nor",B-1
+65,nos,pron,us (obj),A-1-a
+66,llegar,v,to arrive,B-2
+67,pasar,v,"to pass, spend (time)",A-3
+68,tiempo,nm,"time (general), weather",A-3
+69,ella,pron,"she, [ellas] them (f)",B-2
+70,sí,adv,yes,B-2
+71,día,nm,day,A-4
+72,uno,num,one,A-3
+73,bien,adv,well,B-2
+74,poco,adj,"little, few, a little bit (adv)",B-2
+75,deber,v,"should, ought to, to owe",A-3
+76,entonces,adv,"so, then",B-2
+77,poner,v,"to put (on), get (+adj)",B-2
+78,cosa,nf,thing,B-2
+79,tanto,adj,"so much, so many",B-2
+80,hombre,nm,"man, mankind, husband",A-3
+81,parecer,v,"to seem, look like",B-2
+82,nuestro,adj,our,B-2
+83,tan,adv,"such, as, too, so",B-2
+84,donde,conj,where,B-2
+85,ahora,adv,now,B-2
+86,parte,nf,"part, portion",A-1-b
+87,después,adv,after,B-2
+88,vida,nf,life,A-3
+89,quedar,v,"to remain, stay",A-3
+90,siempre,adv,"always, forever",B-2
+91,creer,v,"to believe, think",A-3
+92,hablar,v,"to speak, talk",A-3
+93,llevar,v,"to take, carry",B-2
+94,dejar,v,"to let, leave",B-2
+95,nada,pron,"nothing, (not) at all",B-2
+96,cada,adj,"each, every",B-2
+97,seguir,v,"to follow, keep on",A-3
+98,menos,adj,"less, fewer",A-3
+99,nuevo,adj,new,B-2
+100,encontrar,v,to find,B-2
+101,algo,pron,"something, somewhat",B-2
+102,sólo,adv,"only, just",A-3
+103,pues,conj,"then, well then",B-2
+104,llamar,v,"to call, name",A-3
+105,venir,v,to come,B-2
+106,pensar,v,to think,A-3
+107,aquel,adj,that (over there),B-2
+108,momento,nm,"moment, time",A-1-b
+109,sino,conj,"but, except, rather",B-1
+110,esto,pron,this (n),B-2
+111,salir,v,"to leave, go out",B-2
+112,volver,v,"to return, to V again",A-3
+113,forma,nf,"form, shape, way",A-1-b
+114,antes,adv,before,B-2
+115,bueno,adj,good,B-2
+116,casa,nf,house,B-2
+117,aunque,conj,"although, even though",B-2
+118,mundo,nm,world,B-2
+119,tres,num,three,A-3
+120,tal,adj,such (a),B-2
+121,mejor,adj,"best, better (adv)",B-2
+122,tomar,v,"to take, drink",B-2
+123,cierto,adj,"certain, sure, true",A-3
+124,conocer,v,to know (someone or place),A-3
+125,hacia,prep,"toward, towards",B-2
+126,cómo,adv,how?,B-2
+127,mujer,nf,"woman, wife",B-2
+128,vivir,v,to live,A-3
+129,aquí,adv,here,B-2
+130,caso,nm,"case, occasion",A-1-b
+131,sentir,v,"to feel, regret",A-3
+132,luego,adv,"later, afterwards",B-2
+133,país,nm,country,B-2
+134,tratar,v,"to try, treat, deal with",A-3
+135,lugar,nm,"place, position",B-2
+136,te,pron,you (obj/+fam),B-1
+137,persona,nf,person,A-1-a
+138,mayor,adj,"larger, older, main",A-3
+139,último,adj,"last, final",A-3
+140,propio,adj,"own, proper, typical",A-3
+141,quien,pron,"who, whom",B-1
+142,mirar,v,"to look, watch",A-3
+143,hora,nf,"hour, time (specific)",A-3
+144,ninguno,adj,"no, none, nobody (pron)",B-2
+145,trabajo,nm,"work, job, effort",B-2
+146,casi,adv,"almost, nearly",A-3
+147,punto,nm,"point, dot, period",A-3
+148,durante,adv,"during, for (time)",A-3
+149,cualquier,adj,"any, anyone (pron)",B-2
+150,mano,nf,hand,A-3
+151,nunca,adv,"never, ever",B-2
+152,manera,nf,"way, manner",B-2
+153,cual,pron,"which, who, whom",B-1
+154,mientras,conj,"while, whereas, as long as",B-2
+155,contar,v,"to tell, count",A-3
+156,fin,nm,end,A-3
+157,tipo,nm,"type, kind",A-1-b
+158,gente,nf,people,A-3
+159,además,adv,"also, as well, besides",B-2
+160,solo,adj,"lonely, alone",A-1-a
+161,empezar,v,"to begin, start",B-2
+162,ejemplo,nm,example,A-2
+163,esperar,v,"to wait, hope (for), expect",A-3
+164,hoy,adv,"today, nowadays",B-2
+165,lado,nm,side,B-2
+166,hijo,nm,"son, [pl] children",B-2
+167,allí,adv,"there, over there",B-2
+168,éste,pron,"this one (m), (ésta (f))",B-2
+169,problema,nm,problem,A-1-b
+170,cuenta,nf,"bill, account",B-2
+171,medio,nm,"means, middle; por medio: through",A-3
+172,contra,prep,"against, opposite",A-1-a
+173,buscar,v,to look for,B-2
+174,dentro,adv,inside,B-2
+175,largo,adj,long,B-3
+176,palabra,nf,word,B-2
+177,existir,v,to exist,A-1-a
+178,niño,nm,"child, little boy",B-2
+179,entrar,v,to enter,A-3
+180,embargo,nm,sin embargo: nevertheless,B-2
+181,único,adj,"only, unique, sole",A-2
+182,padre,nm,father,B-2
+183,trabajar,v,to work,B-2
+184,pequeño,adj,"little, small, young",B-2
+185,alto,adj,"tall, high",B-2
+186,cambio,nm,change,B-2
+187,escribir,v,to write,A-3
+188,cuatro,num,four,B-2
+189,ahí,adv,there,B-2
+190,perder,v,"to lose, miss",B-2
+191,nosotros,pron,we (subj),B-1
+192,historia,nf,"history, story",A-2
+193,idea,nf,idea,A-1-a
+194,agua,nf (el),water,A-3
+195,producir,v,"to produce, cause",A-2
+196,noche,nf,"night, evening",B-2
+197,ciudad,nf,city,A-2
+198,modo,nm,"way, manner",A-3
+199,nombre,nm,"name, noun",A-3
+200,ocurrir,v,"to happen, occur",A-2
+201,familia,nf,family,A-1-b
+202,realidad,nf,"reality, actuality",A-2
+203,entender,v,to understand,B-2
+204,pedir,v,"to ask for, request",A-3
+205,recibir,v,to receive,A-3
+206,obra,nf,"work, book, deed",B-2
+207,importante,adj,important,A-1-b
+208,medio,adj,"half, middle",A-3
+209,verdad,nf,truth,A-3
+210,mes,nm,month,B-2
+211,todavía,adv,"still, yet",B-2
+212,razón,nf,reason; tener razón: to be right,A-2
+213,cuanto,adj,"en cuanto a: in terms of, regarding",B-2
+214,bajo,prep,"under, underneath",B-2
+215,recordar,v,"to remember, remind",A-3
+216,grupo,nm,group,A-1-a
+217,mil,num,thousand,B-2
+218,humano,adj,human,A-1-a
+219,terminar,v,"to finish, end",A-3
+220,permitir,v,"to allow, permit",A-3
+221,aparecer,v,to appear,B-2
+222,conseguir,v,"to get, acquire, obtain",B-2
+223,comenzar,v,"to begin, start",A-3
+224,varios,adj,"several, various",A-2
+225,posible,adj,possible,A-1-b
+226,servir,v,to serve,A-1-a
+227,general,adj,general,A-1-a
+228,sacar,v,to take out,B-2
+229,necesitar,v,to need,A-2
+230,relación,nf,"relationship, relation",A-2
+231,cinco,num,five,B-2
+232,cuerpo,nm,body,A-3
+233,nadie,pron,"nobody, anybody",B-2
+234,mantener,v,"to keep, maintain",A-3
+235,hecho,nm,"fact, happening",B-2
+236,ante,prep,"before, in the presence of",B-1
+237,principio,nm,"beginning, principle",A-2
+238,resultar,v,"to result, turn out",A-2
+239,igual,adj,"equal, same (as)",A-2
+240,señor,nm,"sir, Mr, lord",B-2
+241,pueblo,nm,"people, village",B-2
+242,tarde,nf,"afternoon, evening",B-2
+243,segundo,adj,second,A-1-b
+244,leer,v,to read,B-2
+245,caer,v,to fall,B-2
+246,cambiar,v,to change,B-2
+247,ojo,nm,eye,A-3
+248,calle,nf,street,B-2
+249,presentar,v,"to introduce, present",A-2
+250,blanco,adj,white,B-2
+251,crear,v,to create,A-1-a
+252,abrir,v,to open,B-2
+253,libro,nm,book,B-2
+254,distinto,adj,"distinct, different",A-2
+255,fuerza,nf,"strength, force, power",B-2
+256,luz,nf,light,B-2
+257,según,prep,according to,B-1
+258,santo,nm,saint (m),A-3
+259,claro,adj,clear,A-3
+260,frente,nmf,al frente: facing; frente a: across from,A-3
+261,considerar,v,to consider,A-1-b
+262,amigo,nm,friend,B-2
+263,oír,v,to hear,A-3
+264,cuyo,adj,whose,B-2
+265,sentido,nm,"sense, feeling",A-3
+266,acabar,v,acabar de V: to have just Ved; finish,B-2
+267,paso,nm,"step, pace",B-2
+268,situación,nf,situation,A-2
+269,usted,pron,you (subj/-fam),B-1
+270,bastante,adj,"rather, fairly, quite a bit (adv)",B-2
+271,convertir,v,"to convert, change, become",A-2
+272,gracia,nf,"(pl) thank you; grace, favor",A-2
+273,siglo,nm,"century, age",B-2
+274,dios,nm,"god, divinity",A-3
+275,malo,adj,bad,B-2
+276,tierra,nf,"earth, land, ground",A-3
+277,papel,nm,"paper, role, part",A-1-a
+278,madre,nf,mother,B-2
+279,tampoco,adv,"neither, nor, either",B-2
+280,social,adj,social,A-1-a
+281,viejo,adj,"old, aged",B-2
+282,aún,adv,"still, yet",B-2
+283,tema,nm,"theme, subject, topic",A-3
+284,político,adj,political,A-2
+285,español,adj,Spanish,B-2
+286,ganar,v,"to win, earn",B-2
+287,formar,v,to form,A-1-b
+288,clase,nf,"kind, class, order",A-1-b
+289,traer,v,"to bring, carry",B-2
+290,partir,v,"to divide, leave; a partir de: starting",A-1-b
+291,dinero,nm,money,B-2
+292,quién,pron,"who?, whom?",B-1
+293,morir,v,to die,A-3
+294,incluso,adv,"including, even (adv)",A-2
+295,campo,nm,"field, country",A-3
+296,aceptar,v,to accept,A-2
+297,quizás,adv,"perhaps, maybe",B-2
+298,cabeza,nf,head (part of body),B-2
+299,realizar,v,"to fulfill, carry out",A-2
+300,ciento,num,hundred,A-3
+301,mal,adv,badly,B-2
+302,orden,nmf,"order; sequence (m), religious order (f)",A-1-b
+303,don,nm,"courtesy title (m), Mr, gift",B-2
+304,semana,nf,week,B-2
+305,suponer,v,"to suppose, assume",A-2
+306,comprender,v,to understand,A-3
+307,final,nmf,"al final: finally, in the end",A-1-a
+308,interés,nm,interest,A-1-b
+309,siguiente,adj,"following, next",B-2
+310,vista,nf,"view, sight",A-3
+311,lograr,v,"to achieve, get, manage",B-2
+312,demás,adj,"the rest, others",B-2
+313,acuerdo,nm,accord; de acuerdo: in agreement,A-3
+314,difícil,adj,"difficult, hard",A-2
+315,número,nm,number,A-1-b
+316,explicar,v,to explain,A-3
+317,negro,adj,black,B-2
+318,fondo,nm,"bottom, end",B-2
+319,camino,nm,"road, route, path",B-2
+320,voz,nf,voice,A-3
+321,estudio,nm,"study, learning",A-2
+322,necesario,adj,necessary,A-2
+323,preguntar,v,to ask (a question),B-2
+324,allá,adv,"there, over there",B-2
+325,tocar,v,"to touch, play (instrument)",B-2
+326,valor,nm,"value, worth",A-1-b
+327,reconocer,v,"to recognize, admit",A-3
+328,estudiar,v,to study,A-2
+329,alcanzar,v,"to reach, catch up with",B-2
+330,nacer,v,to be born,A-3
+331,dirigir,v,"to direct, manage",A-2
+332,correr,v,to run,B-2
+333,medida,nf,measure; a medida que: to the extent,A-3
+334,menor,adj,"younger, youngest",A-3
+335,demasiado,adj,"too much, too many",B-2
+336,solamente,adv,only,A-3
+337,bueno,adv,well...,B-2
+338,utilizar,v,"to use, utilize",A-2
+339,centro,nm,"center, middle, downtown",A-3
+340,necesidad,nf,"necessity, need",A-2
+341,condición,nf,condition,A-2
+342,pagar,v,to pay,B-2
+343,ello,pron,it (subj-n),B-1
+344,falta,nf,"lack, shortage",B-2
+345,ayudar,v,to help,A-3
+346,diez,num,ten,B-2
+347,través,adv,"a través: across, over, through",B-2
+348,antiguo,adj,"old, ancient, former",A-3
+349,tu,adj,your (sg/+fam),B-1
+350,edad,nf,age,B-2
+351,estado,nm,"state, condition, status",A-1-b
+352,ser,nm,being,B-2
+353,gustar,v,to be pleasing to,B-2
+354,puerta,nf,door,B-2
+355,jugar,v,to play (sport/game),B-2
+356,cara,nf,"face, expression",B-2
+357,mí,pron,me (obj prep),B-1
+358,época,nf,"time, age, period",A-3
+359,color,nm,color,A-1-a
+360,escuchar,v,to listen to,B-2
+361,experiencia,nf,experience,A-2
+362,movimiento,nm,movement,A-3
+363,cumplir,v,to fulfill,A-3
+364,especial,adj,special,A-2
+365,diferente,adj,"different, separate",A-1-b
+366,pesar,nm,sorrow; a pesar de: in spite of,B-2
+367,posibilidad,nf,possibility,A-2
+368,ofrecer,v,"to offer, present",A-3
+369,descubrir,v,to discover,A-3
+370,anterior,adj,"previous, preceding",A-2
+371,juego,nm,"game, play, sport",B-2
+372,levantar,v,"to raise, lift",B-2
+373,pobre,adj,poor,A-3
+374,aire,nm,"air, wind, appearance",A-1-b
+375,seis,num,six,B-2
+376,intentar,v,"to try, attempt",A-3
+377,guerra,nf,"war, warfare",A-3
+378,junto,adv,"together with, next to",A-3
+379,resultado,nm,"result, outcome",A-2
+380,usar,v,to use,A-1-a
+381,decidir,v,to decide,A-2
+382,repetir,v,to repeat,A-2
+383,olvidar,v,to forget,B-2
+384,ley,nf,"law, bill, rule",A-3
+385,aspecto,nm,"aspect, appearance",A-2
+386,pie,nm,"foot, base",A-3
+387,valer,v,"to be worth, cost",A-3
+388,especie,nf,"kind, sort, species",A-2
+389,comer,v,to eat,B-2
+390,servicio,nm,"service, helpfulness",A-1-b
+391,cerca,adv,"close, near",B-2
+392,mostrar,v,to show,B-2
+393,actividad,nf,"activity, action",A-2
+394,tercero,adj,third,B-2
+395,cuál,pron,which?,B-2
+396,pronto,adv,"soon, quick",B-2
+397,ocupar,v,"to occupy, use",A-2
+398,cuestión,nf,"question, matter",A-2
+399,duda,nf,doubt,B-2
+400,diferencia,nf,difference,A-2
+401,mañana,nf,"morning, tomorrow",B-2
+402,mover,v,"to move, incite",A-1-a
+403,continuar,v,to continue,A-2
+404,cantidad,nf,"quantity, amount",A-2
+405,acción,nf,"action, act, deed",A-2
+406,suceder,v,to happen,A-3
+407,fijar,v,"to set, fix, [se] notice",A-1-a
+408,sociedad,nf,society,A-2
+409,referir,v,to refer (to),A-1-a
+410,acercar,v,to come near,B-2
+411,capaz,adj,"capable, able",A-2
+412,bajo,adj,"short, low",B-2
+413,libre,adj,"free, vacant",A-3
+414,natural,adj,natural,A-1-a
+415,dedicar,v,"to dedicate, devote",A-2
+416,realmente,adv,"really, actually, in fact",A-2
+417,peso,nm,"peso (money), weight, load",B-2
+418,efecto,nm,effect,A-2
+419,objeto,nm,"object, thing",A-2
+420,verdadero,adj,"true, real",B-2
+421,dónde,adv,where?,B-2
+422,aprender,v,to learn,A-3
+423,amor,nm,love,A-3
+424,muerte,nf,death,A-3
+425,partido,nm,"party, group, (sports) match",A-1-b
+426,económico,adj,economic,A-2
+427,derecho,nm,"right, justice, law",B-2
+428,poder,nm,power,A-1-b
+429,importancia,nf,importance,A-2
+430,sistema,nm,system,A-1-b
+431,viaje,nm,"travel, trip",A-3
+432,suelo,nm,"ground, floor",B-2
+433,respecto,nm,"respect, con respecto a: with regards to",A-2
+434,conocimiento,nm,knowledge,B-2
+435,libertad,nf,"freedom, liberty",A-2
+436,encima,adv,"above, on top, in addition",B-2
+437,comprar,v,to buy,B-2
+438,común,adj,common,A-1-b
+439,abierto,adj,"open, unlocked",B-2
+440,próximo,adj,next,A-3
+441,atención,nf,attention,A-2
+442,joven,adj,young,B-2
+443,subir,v,to go up,B-2
+444,esfuerzo,nm,"effort, endeavor",B-2
+445,pasado,adj,"past, last",A-1-b
+446,evitar,v,"to avoid, prevent",A-3
+447,resto,nm,"rest, remainder, leftover",A-1-a
+448,interesar,v,to interest,A-2
+449,zona,nf,"area, zone",A-1-a
+450,miedo,nm,fear,B-2
+451,fuera,adv,"out, outside, away",B-2
+452,proceso,nm,"process, procedure",A-1-b
+453,vivo,adj,"alive, bright",A-3
+454,cerrar,v,to close,B-2
+455,echar,v,"to throw, cast",B-2
+456,responder,v,"to answer, respond",A-2
+457,sufrir,v,"to suffer, undergo",A-1-b
+458,completo,adj,complete,A-2
+459,minuto,nm,minute,A-1-b
+460,contrario,adj,"contrary, opposite",A-1-a
+461,mesa,nf,"table, board",B-2
+462,real,adj,"royal, real, authentic",A-1-a
+463,ocasión,nf,"opportunity, occasion",A-2
+464,importar,v,"to matter, import",A-2
+465,público,adj,public,A-2
+466,obtener,v,to obtain,A-3
+467,programa,nm,"program, plan",A-1-a
+468,favor,nm,"favor, benefit",A-1-a
+469,lejos,adv,"far (away, off)",B-2
+470,siete,num,seven,B-2
+471,enorme,adj,"enormous, vast",A-2
+472,respuesta,nf,"answer, reply",B-2
+473,línea,nf,"line, course",A-1-b
+474,espacio,nm,"space, room",A-2
+475,nivel,nm,level,A-1-b
+476,gobierno,nm,government,B-2
+477,cabo,nm,"end, bit; llevar a cabo: to carry out",B-2
+478,observar,v,to observe,A-1-a
+479,indicar,v,to indicate,A-2
+480,alguien,pron,"somebody, someone, anyone",B-2
+481,pregunta,nf,question,B-2
+482,claro,adv,"of course, clearly",A-3
+483,atrás,adv,"back, behind, ago",B-2
+484,imagen,nf,"image, picture",A-2
+485,carrera,nf,"career, course, race",B-2
+486,imaginar,v,to imagine,A-2
+487,soler,v,to be accustomed to,B-2
+488,ambos,adj,both,B-2
+489,profundo,adj,"deep, profound",A-3
+490,detener,v,"to stop, detain",A-3
+491,desarrollar,v,to develop,B-2
+492,ocho,num,eight,B-2
+493,señalar,v,"to point (out), signal",B-2
+494,elegir,v,"to choose, elect",A-3
+495,figura,nf,figure,A-1-a
+496,principal,adj,"main, principal",A-1-a
+497,animal,nm,animal,A-1-a
+498,base,nf,"base, basis",A-1-b
+499,preparar,v,to prepare,A-2
+500,proponer,v,to propose,A-2
+501,demostrar,v,"show, demonstrate",A-2
+502,significar,v,mean,A-3
+503,posición,nf,position,A-2
+504,motivo,nm,"motive, cause",A-1-b
+505,prueba,nf,"proof, trial, test",B-2
+506,política,nf,"politics, policy",A-2
+507,nacional,adj,national,A-2
+508,lleno,adj,"full, filled",B-2
+509,reunir,v,"gather, meet, collect",A-3
+510,faltar,v,be lacking,B-2
+511,supuesto,adj,supposed; por supuesto: of course,A-2
+512,acompañar,v,accompany,A-2
+513,dato,nm,"data, fact",A-1-a
+514,fácil,adj,easy,A-3
+515,desear,v,"want, desire, wish for",A-3
+516,adelante,adv,"forward, further",B-2
+517,empresa,nf,"firm, company, venture",A-3
+518,asunto,nm,"matter, issue, affair",B-2
+519,presencia,nf,"presence, appearance",A-2
+520,suyo,pron,"his, hers, yours (-fam), theirs",B-1
+521,cultura,nf,culture,A-1-b
+522,serie,nf,series,A-1-a
+523,millón,num,"million, fortune",A-2
+524,enseñar,v,"teach, show",B-2
+525,construir,v,"construct, build",A-2
+526,vender,v,sell,B-2
+527,representar,v,represent,A-2
+528,desaparecer,v,"disappear, vanish",B-2
+529,mandar,v,"send, order",A-3
+530,carácter,nm,"personality, nature",A-2
+531,mayoría,nf,majority,A-2
+532,escuela,nf,school,A-2
+533,rojo,adj,red,B-2
+534,tras,prep,"after, behind",B-1
+535,superior,adj,"superior, upper",A-1-a
+536,andar,v,"walk, function",B-2
+537,corto,adj,"short, brief",B-2
+538,autor,nm/f,"writer, author",A-2
+539,hermano,nm,"brother, [pl] siblings",B-2
+540,conocido,adj,"known, well-known",B-2
+541,preferir,v,prefer,A-1-b
+542,asegurar,v,"assure, secure, insure",A-3
+543,función,nf,"function, meeting",A-2
+544,arriba,adv,"up, above",B-2
+545,serio,adj,serious,A-3
+546,causa,nf,cause,A-1-b
+547,suficiente,adj,"sufficient, enough",A-2
+548,grave,adj,"serious, solemn",A-3
+549,decisión,nf,decision,A-2
+550,música,nf,music,A-1-b
+551,extraño,adj,"strange, foreign",A-3
+552,crecer,v,"grow, increase",A-3
+553,surgir,v,"appear, spring (forth)",A-3
+554,tú,pron,you (subj-sg/+fam),B-1
+555,expresión,nf,expression,A-2
+556,alrededor,adv,"about, around, round",B-2
+557,matar,v,kill,B-2
+558,entregar,v,deliver,B-2
+559,río,nm,river,A-3
+560,seguridad,nf,"security, safety",A-2
+561,término,nm,"term (language), end",A-3
+562,colocar,v,"place, position",A-3
+563,metro,nm,"meter, subway",A-1-a
+564,médico,nm/f,doctor,A-2
+565,establecer,v,establish,A-2
+566,guardar,v,"keep, save",B-2
+567,arte,nm,"art, skill",A-1-a
+568,iniciar,v,"initiate, start",A-2
+569,bajar,v,"come down, let down",B-2
+570,consecuencia,nf,consequence,A-2
+571,notar,v,notice,A-1-b
+572,acto,nm,"act, action",A-1-a
+573,meter,v,put (into),B-2
+574,absoluto,adj,absolute,A-2
+575,pena,nf,trouble; valer la pena: be of worth,B-2
+576,actuar,v,act,A-1-a
+577,segundo,nm,second,A-1-b
+578,altura,nf,"height, altitude",A-3
+579,deseo,nm,"desire, wish",A-3
+580,precisamente,adv,precisely,A-2
+581,joven,nc,"teenager, young person",B-2
+582,veinte,num,twenty,B-2
+583,sueño,nm,"dream, sleep",B-2
+584,pretender,v,attempt,A-3
+585,tarea,nf,"task, job",B-2
+586,carta,nf,"letter, (playing) card",A-3
+587,apenas,adv,"hardly, barely",B-2
+588,propiedad,nf,property,A-2
+589,producto,nm,product,A-2
+590,personal,adj,personal,A-1-a
+591,simplemente,adv,"simply, just",A-2
+592,imposible,adj,impossible,A-2
+593,gusto,nm,"pleasure, taste, preference",B-2
+594,ayuda,nf,"help, aid",A-3
+595,acordar,v,"remember, remind",A-3
+596,lengua,nf,"language, tongue, strip (of land)",A-3
+597,cortar,v,cut,B-2
+598,plan,nm,plan,A-1-a
+599,corresponder,v,correspond with,A-2
+600,vuelta,nf,"return, turn",B-2
+601,romper,v,break,A-3
+602,siquiera,adv,even (if),B-2
+603,adquirir,v,"acquire, get",A-2
+604,proyecto,nm,"project, plan",A-2
+605,memoria,nf,memory,A-2
+606,origen,nm,"origin, cause",A-1-b
+607,elemento,nm,element,A-1-b
+608,inglés,adj,English,A-1-b
+609,mercado,nm,market,A-3
+610,curso,nm,"course, direction",A-1-b
+611,lanzar,v,"throw, launch",B-2
+612,aprovechar,v,take advantage of,B-2
+613,sangre,nf,blood,B-2
+614,interior,nm,"interior, inside",A-1-a
+615,duro,adj,hard,A-3
+616,apoyar,v,"support, lean on",B-2
+617,negar,v,"deny, refuse",A-3
+618,avanzar,v,"advance, progress",A-2
+619,uso,nm,use,A-1-a
+620,brazo,nm,arm,B-2
+621,profesor,nm/f,"professor, teacher",A-2
+622,resolver,v,"resolve, settle, work out",A-3
+623,futuro,nm,future,A-1-a
+624,oportunidad,nf,"opportunity, chance",A-2
+625,mitad,nf,"half, middle",B-2
+626,costar,v,"cost, be hard",A-1-b
+627,rico,adj,"rich, tasty",A-1-a
+628,recuerdo,nm,"memory, keepsake",B-2
+629,total,adj,"total, entire",A-1-a
+630,exigir,v,demand,A-3
+631,abajo,adv,"down, below, downward",B-2
+632,opinión,nf,"opinion, view",A-2
+633,aumentar,v,increase,A-3
+634,recoger,v,pick up,B-2
+635,boca,nf,"mouth, entrance, opening",B-2
+636,dirección,nf,"direction, address",A-2
+637,puro,adj,"pure, clean",A-1-a
+638,abandonar,v,"abandon, leave (a place)",A-2
+639,pieza,nf,"piece, part",B-2
+640,profesional,adj,professional,A-2
+641,imponer,v,"impose, enforce",A-3
+642,obligar,v,"obligate, force",A-3
+643,físico,adj,physical,A-2
+644,actitud,nf,attitude,A-2
+645,mar,nmf,sea,A-3
+646,francés,adj,French,B-2
+647,entrada,nf,"entrance, admission ticket",B-2
+648,contacto,nm,contact,A-2
+649,corazón,nm,"heart, core",B-2
+650,aplicar,v,apply,A-2
+651,capital,nmf,"capital; city (f), money (m)",A-1-a
+652,rápido,adj,"quick, fast",A-2
+653,título,nm,"title, heading",A-1-b
+654,pertenecer,v,to belong,A-3
+655,cuarto,nm,"room, chamber",B-2
+656,material,nm,"material, element",A-1-a
+657,golpe,nm,"hit, strike, punch",B-2
+658,disponer,v,"have means, dispose",B-2
+659,comunicación,nf,communication,A-2
+660,expresar,v,express,A-2
+661,simple,adj,"simple, mere, simple-minded",A-1-a
+662,totalmente,adv,"totally, completely",A-2
+663,provocar,v,"cause, provoke",A-3
+664,normal,adj,"normal, usual, regular",A-1-a
+665,defender,v,"defend, protect",A-2
+666,enfermedad,nf,"illness, sickness",B-2
+667,bien,nm,"goods, property, benefit",B-2
+668,materia,nf,"matter, subject",A-1-b
+669,quitar,v,"remove, take away",B-2
+670,conservar,v,"conserve, preserve",A-2
+671,moderno,adj,modern,A-1-b
+672,sitio,nm,"place, space",B-2
+673,depender,v,depend on,A-2
+674,naturaleza,nf,"nature, character",B-2
+675,capacidad,nf,capacity,A-2
+676,actual,adj,current,A-2
+677,marcar,v,"mark, note, dial",A-1-a
+678,distancia,nf,distance,A-2
+679,pleno,adj,"complete, full",B-2
+680,cerrado,adj,closed,B-2
+681,compartir,v,share,B-2
+682,información,nf,information,A-2
+683,ambiente,nm,"environment, atmosphere",A-3
+684,especialmente,adv,especially,A-2
+685,desarrollo,nm,development,B-2
+686,sol,nm,sun,A-3
+687,muerto,adj,dead,B-2
+688,consistir,v,consist of,A-2
+689,constituir,v,"constitute, consist of",A-2
+690,dispuesto,adj,"willing, ready",B-2
+691,cubrir,v,cover,B-2
+692,funcionar,v,"work, function",A-2
+693,compañero,nm,"companion, classmate",A-3
+694,salida,nf,"exit, escape, outcome",B-2
+695,caber,v,fit (into),B-2
+696,conciencia,nf,"conscience, consciousness",A-2
+697,atender,v,"serve, attend to",A-2
+698,enfermo,adj,"ill, sick",B-2
+699,insistir,v,insist on,A-2
+700,costumbre,nf,"habit, custom, usage",A-3
+701,detrás,adv,behind,B-2
+702,paz,nf,peace,B-2
+703,noticia,nf,news,B-2
+704,circunstancia,nf,circumstance,A-2
+705,dolor,nm,"pain, ache, sorrow",A-3
+706,privado,adj,private,A-2
+707,estilo,nm,style,A-2
+708,precio,nm,"price, cost, value",A-3
+709,popular,adj,popular,A-1-a
+710,sentar,v,"sit (down), seat",B-2
+711,planta,nf,"plant, floor",A-1-b
+712,personaje,nm,character (e.g. movie),B-2
+713,famoso,adj,"famous, well-known",A-2
+714,éxito,nm,success,B-3
+715,hija,nf,daughter,B-2
+716,merecer,v,"deserve, be worthy (of)",A-3
+717,edificio,nm,building,A-3
+718,autoridad,nf,authority,A-2
+719,piedra,nf,"stone, rock",B-2
+720,incluir,v,include,A-2
+721,conjunto,nm,"group, set",B-2
+722,treinta,num,thirty,B-2
+723,cuánto,adj,how much?,B-2
+724,inmediato,adj,immediate,A-2
+725,suerte,nf,"luck, fortune",B-2
+726,cruzar,v,cross,A-1-b
+727,tender,v,"tend to, lay out",A-2
+728,finalmente,adv,"finally, at last",A-2
+729,junto,adj,together,A-3
+730,anunciar,v,"announce, advertise",A-2
+731,espíritu,nm,"spirit, ghost",A-2
+732,miembro,nm,"member, limb",A-3
+733,directo,adj,"direct, straight",A-2
+734,despertar,v,"wake (up), arouse",B-2
+735,recurso,nm,"resource, recourse, means",A-3
+736,pared,nf,(interior) wall,B-2
+737,equipo,nm,"team, equipment, outfit",B-2
+738,error,nm,"error, mistake",A-1-a
+739,preciso,adj,"precise, necessary",A-2
+740,diverso,adj,"different, several, diverse",A-2
+741,dificultad,nf,"difficulty, obstacle",A-2
+742,comentar,v,comment on,A-2
+743,publicar,v,publish,A-2
+744,familiar,adj,"familiar, of the family",A-1-a
+745,voluntad,nf,"will, willpower, intention",B-2
+746,reunión,nf,"meeting, reunion",A-2
+747,modelo,nc,"model, pattern",A-1-a
+748,cargar,v,"load (up), carry",A-3
+749,fecha,nf,"date, day",B-2
+750,participar,v,participate,A-2
+751,impedir,v,"prevent, hinder",A-3
+752,propósito,nm,"intention, purpose",A-2
+753,salvar,v,"save, rescue",A-3
+754,cuidado,nm,"care, carefulness",B-2
+755,puesto,nm,"job, place, position",A-3
+756,grado,nm,"degree, grade",A-3
+757,escapar,v,escape,A-2
+758,lucha,nf,"fight, struggle, wrestle",B-2
+759,tirar,v,"throw, pull",B-2
+760,entero,adj,"entire, whole, complete",A-3
+761,jefe,nm/f,"leader, boss, manager",A-3
+762,interesante,adj,interesting,A-2
+763,amplio,adj,"wide, ample, broad",B-2
+764,contestar,v,"answer, reply",A-3
+765,periódico,nm,"newspaper, periodical",A-2
+766,preocupar,v,worry,A-3
+767,prestar,v,lend,B-2
+768,par,nmf,"pair, couple (m); a la par: at same time",A-1-b
+769,público,nm,"public, audience",A-2
+770,pesar,v,weigh,B-2
+771,final,adj,final,A-1-a
+772,calidad,nf,quality,A-2
+773,exponer,v,"expound, expose",A-3
+774,civil,adj,civil,A-1-a
+775,ciencia,nf,"science, knowledge",A-1-b
+776,tamaño,nm,"size, dimension",B-2
+777,mas,conj,"but, however",B-1
+778,doctor,nm/f,doctor,A-1-a
+779,cuadro,nm,"painting, picture",B-2
+780,caballo,nm,horse,B-2
+781,responsabilidad,nf,responsibility,A-2
+782,cincuenta,num,fifty,B-2
+783,interno,adj,internal,A-2
+784,detalle,nm,detail,A-2
+785,marcha,nf,"march, progress",A-1-b
+786,nueve,num,nine,B-2
+787,carne,nf,"meat, flesh",A-3
+788,jamás,adv,never,B-2
+789,pensamiento,nm,"thought, thinking",B-2
+790,viajar,v,travel,A-3
+791,cargo,nm,"position, charge, fee",A-3
+792,separar,v,separate,A-2
+793,santa,nf,saint (f),A-3
+794,construcción,nf,construction,A-2
+795,juicio,nm,judgment,A-3
+796,terreno,nm,"ground, earth, terrain",A-3
+797,piso,nm,"floor, story",B-2
+798,compañía,nf,company,A-2
+799,regresar,v,return (to a place),A-3
+800,texto,nm,text,A-1-a
+801,fuente,nf,source; fountain,B-2
+802,presente,nm,present,A-1-b
+803,definitivo,adj,"definitive, conclusive",A-2
+804,revista,nf,"magazine, journal",B-2
+805,esperanza,nf,hope,B-2
+806,máquina,nf,machine,A-3
+807,contemplar,v,contemplate,A-2
+808,recorrer,v,"travel, cover (distance)",B-2
+809,frase,nf,phrase,A-3
+810,perfecto,adj,perfect,A-1-b
+811,sala,nf,"room, hall",B-2
+812,durar,v,last,A-3
+813,instrumento,nm,instrument,A-1-b
+814,aquello,pron,that over there (n),B-1
+815,defensa,nf,"defense, plea",A-2
+816,director,nm/f,"director, manager, principal",A-2
+817,retirar,v,"take away, retire",A-3
+818,explicación,nf,explanation,A-2
+819,artículo,nm,"article, product, item",A-2
+820,debajo,adv,"underneath, below",B-2
+821,permanecer,v,"stay, remain",A-3
+822,asistir,v,attend,B-3
+823,doce,num,twelve,B-2
+824,radio,nmf,"radio; set (m), communication (f)",A-1-a
+825,organizar,v,organize,A-2
+826,película,nf,"movie, film",B-2
+827,elección,nf,"election, choice",A-2
+828,visita,nf,"visit, visitor, guest",A-1-b
+829,contener,v,contain,A-2
+830,apoyo,nm,"support, backing",B-2
+831,presidente,nm,president,A-2
+832,arma,nf (el),weapon,B-2
+833,árbol,nm,tree,A-3
+834,visitar,v,visit,A-1-b
+835,informar,v,inform,A-2
+836,encuentro,nm,"meeting, game, skirmish",B-2
+837,parecido,adj,similar,B-2
+838,corriente,nf,"current, flow",A-2
+839,lectura,nf,reading,A-3
+840,existencia,nf,"existence, life",A-2
+841,lenguaje,nm,"language, speech",A-3
+842,enviar,v,send,B-2
+843,aun,adv,"even (though), still",B-2
+844,destino,nm,"destination, destiny",A-2
+845,educación,nf,education,A-2
+846,cuidar,v,take care of,B-2
+847,intervenir,v,intervene,A-2
+848,operación,nf,operation,A-2
+849,raro,adj,"strange, rare, scarce",A-1-b
+850,perfectamente,adv,perfectly,A-2
+851,extender,v,"extend, spread",A-2
+852,comprobar,v,"verify, prove",B-2
+853,nota,nf,"note, grade",A-1-b
+854,particular,adj,"particular, peculiar",A-1-a
+855,ése,pron,"that one (m), [ésa (f)]",B-1
+856,militar,adj,military,A-2
+857,dormir,v,sleep,A-3
+858,unido,adj,united,A-2
+859,discutir,v,"argue, discuss",A-2
+860,extraordinario,adj,"extraordinary, exceptional",A-2
+861,teatro,nm,"theater, drama",A-2
+862,enfrentar,v,"confront, face",B-2
+863,recién,adv,"recently, just",A-2
+864,negocio,nm,"business, transaction",B-2
+865,letra,nf,"letter, handwriting, lyrics",B-2
+866,peor,adv,worse,B-2
+867,sentimiento,nm,"feeling, sentiment",A-3
+868,conducir,v,"lead, drive",A-3
+869,completamente,adv,completely,A-2
+870,firmar,v,sign,A-1-a
+871,solución,nf,"solution, answer",A-2
+872,mío,pron,mine,B-1
+873,comida,nf,"food, meal",B-2
+874,impresión,nf,"impression, printing",A-2
+875,plano,nm,"plane, map, level",A-1-b
+876,intención,nf,intention,A-2
+877,ritmo,nm,rhythm,A-1-b
+878,verde,adj,green,B-2
+879,exacto,adj,"exact, faithful, true",A-2
+880,respetar,v,respect,A-2
+881,banco,nm,"(financial) bank, bench",A-1-b
+882,inmediatamente,adv,immediately,A-2
+883,sostener,v,"support, hold up",A-3
+884,piel,nf,"skin, hide, fur",B-2
+885,delante,adv,"(in) front (of), ahead",B-2
+886,religioso,adj,religious,A-2
+887,advertir,v,"notice, warn",B-2
+888,oscuro,adj,"dark, obscure",A-3
+889,control,nm,control,A-1-a
+890,investigación,nf,investigation,A-2
+891,transformar,v,"transform, change",A-2
+892,conversación,nf,conversation,A-2
+893,verano,nm,summer,B-2
+894,respeto,nm,"respect, regard",A-2
+895,norte,nm,north,A-1-b
+896,mediante,prep,by means of,B-2
+897,cuarto,adj,fourth,B-2
+898,tradición,nf,tradition,A-2
+899,bastar,v,be sufficient,B-2
+900,población,nf,population,A-2
+901,pareja,nf,"couple, pair",B-2
+902,pasado,nm,past,A-1-b
+903,diario,nm,newspaper,A-3
+904,azul,adj,blue,B-2
+905,mencionar,v,"mention, cite",A-2
+906,generación,nf,generation,A-2
+907,frío,adj,cold,B-2
+908,visión,nf,vision,A-1-b
+909,concreto,adj,"concrete, real",A-2
+910,plantear,v,"propose, present",B-2
+911,probar,v,"test, prove, try",A-3
+912,derecho,adj,"right, straight",B-2
+913,peligro,nm,"danger, menace",A-3
+914,oro,nm,gold,B-2
+915,justo,adv,just,A-1-a
+916,manejar,v,"drive, handle",B-2
+917,vino,nm,wine,A-1-a
+918,unir,v,"unite, join (together)",A-2
+919,caminar,v,walk,B-2
+920,coincidir,v,"coincide, agree",A-2
+921,etapa,nf,"stage, period",B-2
+922,sencillo,adj,"simple, plain, easy",B-2
+923,silencio,nm,silence,A-2
+924,salvo,adv,"except (for), but",A-3
+925,llenar,v,fill,B-2
+926,dominar,v,"dominate, master",A-2
+927,determinado,adj,"determined, fixed",A-2
+928,artista,nc,"artist, performer",A-2
+929,medir,v,measure,A-3
+930,labor,nf,"labor, work, task",A-1-a
+931,perdido,adj,lost,B-2
+932,cielo,nm,"sky, heaven, ceiling",B-2
+933,práctica,nf,"practice, skill",A-2
+934,límite,nm,limit,A-1-b
+935,masa,nf,"mass, dough, bulk, crowd",A-1-a
+936,directamente,adv,"directly, straight away",A-2
+937,atravesar,v,cross,B-2
+938,formación,nf,"formation, education",A-2
+939,perro,nm,dog,B-2
+940,izquierda,nf,left,B-2
+941,destacar,v,"emphasize, stand out",B-2
+942,cercano,adj,near,B-2
+943,cuarenta,num,forty,B-2
+944,pronunciar,v,pronounce,A-2
+945,distinguir,v,distinguish,A-2
+946,energía,nf,"energy, power",A-2
+947,confianza,nf,"confidence, trust",A-2
+948,adecuado,adj,"adequate, suitable",B-2
+949,introducir,v,"introduce, bring in",A-2
+950,flor,nf,flower,B-2
+951,esposa,nf,wife,A-3
+952,comunicar,v,communicate,A-2
+953,italiano,adj,Italian,A-2
+954,invitar,v,invite,A-2
+955,responsable,adj,responsible,A-2
+956,feliz,adj,"happy, fortunate",A-3
+957,revolución,nf,revolution,A-2
+958,instalar,v,install,A-2
+959,tardar,v,"delay, take long",B-2
+960,mejorar,v,"improve, get better",B-2
+961,maestro,nm,"teacher (m), master",A-3
+962,emplear,v,employ,A-2
+963,alemán,adj,German,B-2
+964,convenir,v,"be agreeable, be convenient",A-3
+965,recuperar,v,"recuperate, recover",A-2
+966,fenómeno,nm,phenomenon,A-2
+967,presión,nf,pressure,A-2
+968,dado,adj,given,B-2
+969,alumno,nm,"student, pupil",A-3
+970,teoría,nf,theory,A-2
+971,probablemente,adv,probably,A-2
+972,tono,nm,tone,A-1-a
+973,salud,nf,health,B-2
+974,definir,v,define,A-2
+975,superar,v,"overcome, surpass",A-3
+976,señora,nf,"Mrs., lady, madam",B-2
+977,exactamente,adv,exactly,A-2
+978,afirmar,v,"assert, affirm",A-2
+979,diario,adj,daily,A-3
+980,histórico,adj,historical,A-2
+981,debido,adj,debido a: due to,B-2
+982,vía,nf,"por vía: by means; road, way",A-1-b
+983,interpretar,v,interpret,A-2
+984,alma,nf (el),soul,B-2
+985,admitir,v,admit,A-2
+986,identificar,v,identify,A-2
+987,madera,nf,wood,B-2
+988,fiesta,nf,"party, feast",B-2
+989,calor,nm,"heat, warmth",B-2
+990,mínimo,adj,minimum,A-2
+991,afectar,v,affect,A-2
+992,hogar,nm,"home, hearth",B-2
+993,mente,nf,mind,A-3
+994,seguramente,adv,"surely, securely",A-2
+995,preocupación,nf,"worry, concern",A-3
+996,reducir,v,reduce,A-2
+997,concepto,nm,concept,A-2
+998,montar,v,"ride, mount, assemble",A-3
+999,teléfono,nm,"phone, telephone",A-2
+1000,hoja,nf,"sheet, leaf",B-2
+1001,parar,v,to stop (moving),B-2
+1002,doble,adj,double,A-1-b
+1003,devolver,v,"return, give back",B-2
+1004,ejercer,v,"practice, exercise",A-2
+1005,poseer,v,"possess, own",A-3
+1006,proteger,v,protect,A-2
+1007,causar,v,"cause, bring about",A-1-b
+1008,rápidamente,adv,"rapidly, quickly",A-2
+1009,determinar,v,"determine, decide",A-2
+1010,fuerte,adj,strong,B-2
+1011,escritor,nm/f,writer,A-3
+1012,intento,nm,"attempt, try",A-3
+1013,cobrar,v,charge (money),B-2
+1014,regla,nf,"rule, ruler, regulation",A-3
+1015,dividir,v,divide,A-2
+1016,riesgo,nm,risk,B-2
+1017,policía,nc,"police, police force, police officer",A-2
+1018,inventar,v,"invent, make up",A-2
+1019,estudiante,nc,student,A-2
+1020,plaza,nf,"square, marketplace",B-2
+1021,limitar,v,limit,A-1-b
+1022,llamada,nf,"call, knock",B-2
+1023,sensación,nf,"sensation, feeling",A-2
+1024,enemigo,nm,enemy,A-3
+1025,unidad,nf,"unit, unity",A-2
+1026,luchar,v,"fight, wrestle",B-2
+1027,idioma,nm,(specific) language,A-3
+1028,raíz,nf,root,B-2
+1029,compromiso,nm,"compromise, engagement",A-2
+1030,comentario,nm,"remark, comment",A-2
+1031,carga,nf,"load, charge, cargo",A-3
+1032,marido,nm,husband,B-2
+1033,quince,num,fifteen,B-2
+1034,constante,adj,constant,A-2
+1035,derecha,nf,"right, right hand",B-2
+1036,extremo,nm,"edge, border, end",A-3
+1037,individuo,nm,"individual, person",A-2
+1038,contenido,nm,"contents, content",A-2
+1039,semejante,adj,"similar, such, alike",B-2
+1040,obligación,nf,obligation,A-2
+1041,corte,nmf,"court (f), cut (m)",A-3
+1042,extranjero,adj,"foreign, alien",A-3
+1043,total,nm,(sum) total,A-1-a
+1044,acudir,v,"attend, go to, frequent",B-2
+1045,daño,nm,"harm, injury, damage",B-2
+1046,tarde,adv,late,B-2
+1047,mensaje,nm,message,A-2
+1048,analizar,v,analyze,A-2
+1049,lista,nf,"list, roster, roll",A-1-b
+1050,región,nf,region,A-2
+1051,evidente,adj,"evident, obvious",A-2
+1052,niña,nf,"child, young girl",B-2
+1053,culpa,nf,"blame, fault",B-2
+1054,encargar,v,"entrust, [se] take charge of",B-2
+1055,discusión,nf,"discussion, argument",A-2
+1056,pelo,nm,hair,B-2
+1057,destinar,v,"assign, appoint",A-3
+1058,comparar,v,compare,A-2
+1059,celebrar,v,celebrate,A-2
+1060,fe,nf,faith,A-3
+1061,fijo,adj,"fixed, steady",A-1-a
+1062,central,adj,central,A-1-a
+1063,referencia,nf,"reference, allusion",A-2
+1064,sur,nm,south,B-2
+1065,gesto,nm,gesture,A-3
+1066,perspectiva,nf,perspective,A-2
+1067,preparado,adj,prepared,A-2
+1068,sonar,v,"sound, ring",A-3
+1069,manifestar,v,"express, show",A-2
+1070,controlar,v,control,A-2
+1071,saltar,v,"jump, leap, hop",B-2
+1072,acaso,adv,"by chance, maybe",B-2
+1073,colegio,nm,"(high) school, college",A-3
+1074,inmenso,adj,"immense, vast, huge",A-2
+1075,venta,nf,sale,B-2
+1076,documento,nm,document,A-1-b
+1077,citar,v,"cite, quote",A-1-a
+1078,televisión,nf,"TV, television",A-2
+1079,chico,nm,boy,B-2
+1080,novela,nf,novel,A-1-b
+1081,requerir,v,require,A-2
+1082,moral,adj,moral,A-1-a
+1083,alcance,nm,"reach, scope",B-2
+1084,curioso,adj,"curious, strange",A-2
+1085,crisis,nf,crisis,A-1-a
+1086,fundamental,adj,fundamental,A-1-b
+1087,incorporar,v,"incorporate, include",A-2
+1088,presente,adj,"present, current",A-1-b
+1089,máximo,adj,maximum,A-3
+1090,literatura,nf,literature,A-2
+1091,batalla,nf,battle,B-2
+1092,europeo,adj,European,B-2
+1093,dueño,nm,"owner, landlord (m)",B-2
+1094,perseguir,v,"persecute, pursue, chase",A-3
+1095,vecino,nm,neighbor,B-2
+1096,sector,nm,"sector, area, section",A-1-a
+1097,pintura,nf,"painting, paint",B-2
+1098,accidente,nm,"accident, irregularity",A-2
+1099,oficial,adj,"official, authorized",A-2
+1100,procurar,v,"try, seek",A-3
+1101,numeroso,adj,numerous,A-2
+1102,influencia,nf,influence,A-2
+1103,intelectual,adj,intellectual,A-2
+1104,empleado,nm,employee,A-2
+1105,casar,v,marry,B-2
+1106,prácticamente,adv,practically,A-2
+1107,moneda,nf,"coins, currency",B-2
+1108,facilidad,nf,"ease, facility",A-2
+1109,matrimonio,nm,"marriage, married couple",A-3
+1110,escaso,adj,"scarce, very little",B-2
+1111,iglesia,nf,church,A-3
+1112,ayer,adv,yesterday,B-2
+1113,oficina,nf,office,B-2
+1114,cristiano,adj,Christian,A-2
+1115,institución,nf,institution,A-2
+1116,someter,v,subject,A-3
+1117,fundar,v,"found, base",A-3
+1118,seguro,adj,"safe, sure, secure",A-2
+1119,intenso,adj,"intense, acute",A-2
+1120,frío,nm,cold,B-2
+1121,domingo,nm,Sunday,A-3
+1122,reacción,nf,reaction,A-2
+1123,elevar,v,"elevate, raise",A-2
+1124,cantar,v,sing,B-2
+1125,acontecimiento,nm,"event, happening",B-2
+1126,costa,nf,coast,A-1-b
+1127,peligroso,adj,dangerous,B-2
+1128,lento,adj,slow,B-2
+1129,método,nm,method,A-1-a
+1130,comunidad,nf,community,A-2
+1131,coche,nm,"car, carriage",B-2
+1132,asumir,v,"assume, take on",A-2
+1133,aclarar,v,"clarify, clear up",B-2
+1134,arrastrar,v,"drag, pull",B-2
+1135,página,nf,page,A-3
+1136,declarar,v,"declare, testify",A-2
+1137,frecuencia,nf,frequency,A-2
+1138,conclusión,nf,"conclusion, end",A-2
+1139,escena,nf,"scene, stage, setting",A-3
+1140,falso,adj,FALSE,A-1-b
+1141,estructura,nf,structure,A-2
+1142,beneficio,nm,"benefit, profit",A-2
+1143,alimento,nm,"food, nourishment",A-3
+1144,tranquilo,adj,"calm, tranquil, relaxed",B-2
+1145,velocidad,nf,"speed, velocity",A-2
+1146,barrio,nm,"neighborhood, district",B-2
+1147,nombrar,v,"name, appoint",A-3
+1148,análisis,nm,analysis,A-2
+1149,confundir,v,confuse,A-2
+1150,frontera,nf,"border, frontier",A-3
+1151,describir,v,describe,A-3
+1152,lejano,adj,distant,B-2
+1153,breve,adj,"brief, short",A-3
+1154,temor,nm,fear,A-3
+1155,calcular,v,"calculate, figure out",A-2
+1156,conformar,v,conform,A-2
+1157,ataque,nm,"attack, raid",B-2
+1158,pintar,v,paint,A-1-b
+1159,cine,nm,"cinema, US movie theater",A-3
+1160,rama,nf,"branch, bough, limb",A-3
+1161,repartir,v,"divide, deliver, distribute",B-2
+1162,comienzo,nm,"start, beginning",B-2
+1163,exterior,adj,"exterior, outside",A-1-a
+1164,barco,nm,"boat, ship",B-2
+1165,partida,nf,"game, match, departure",A-1-b
+1166,hallar,v,find (out),B-2
+1167,ordenar,v,"put in order, organize",A-2
+1168,aparato,nm,"apparatus, device",A-2
+1169,convencer,v,"convince, persuade",A-2
+1170,médico,adj,medical,A-2
+1171,extranjero,nm,foreigner,A-3
+1172,cámara,nf,"camera, chamber",A-1-a
+1173,creación,nf,creation,A-2
+1174,rodear,v,surround,B-2
+1175,ajeno,adj,"not belonging to, detached",B-2
+1176,reflejar,v,reflect,A-2
+1177,gana,nf,desire,B-2
+1178,seco,adj,"dry, arid",B-2
+1179,quinto,adj,fifth,B-2
+1180,moda,nf,"fashion, form",A-1-a
+1181,absolutamente,adv,"absolutely, completely",A-2
+1182,rechazar,v,reject,A-3
+1183,contribuir,v,contribute,A-2
+1184,ruido,nm,noise,B-2
+1185,cama,nf,bed (furniture),B-2
+1186,infantil,adj,"of children, childlike, infantile",A-2
+1187,técnica,nf,"technique, skill",A-2
+1188,consejo,nm,"advice, council, counsel",A-3
+1189,internacional,adj,international,A-2
+1190,violencia,nf,violence,A-2
+1191,original,adj,original,A-1-a
+1192,sonido,nm,sound,A-3
+1193,vencer,v,"overcome, conquer",B-2
+1194,estrella,nf,star,B-2
+1195,útil,adj,useful,A-3
+1196,alejar,v,move away,B-2
+1197,mirada,nf,"gaze, look",B-2
+1198,tremendo,adj,"tremendous, dreadful, huge",A-2
+1199,cuándo,adv,when?,B-2
+1200,temprano,adj,early,B-2
+1201,pierna,nf,leg,B-2
+1202,transmitir,v,"transmit, broadcast",A-2
+1203,marchar,v,"go, leave, march",A-1-a
+1204,hambre,nf (el),"hunger, starvation",B-2
+1205,placer,nm,pleasure,B-2
+1206,profesión,nf,"profession, occupation",A-2
+1207,destruir,v,"destroy, ruin",A-2
+1208,separado,adj,separate,A-2
+1209,opinar,v,"think, be of the opinion",A-2
+1210,objetivo,nm,objective,A-2
+1211,honor,nm,"honor, honesty",A-1-a
+1212,montaña,nf,mountain,A-3
+1213,cometer,v,commit,A-2
+1214,lógico,adj,logical,A-2
+1215,instante,nm,"instant, moment",A-2
+1216,viento,nm,"wind, scent",A-3
+1217,lluvia,nf,rain,A-3
+1218,ejército,nm,army,B-2
+1219,trasladar,v,"move, transfer",A-3
+1220,tren,nm,"train, convoy",A-1-b
+1221,concluir,v,"conclude, finish",A-2
+1222,círculo,nm,"circle, club",A-2
+1223,auténtico,adj,authentic,A-2
+1224,hermoso,adj,"beautiful, lovely",B-2
+1225,oponer,v,oppose,A-2
+1226,ventaja,nf,"advantage, benefit",B-2
+1227,figurar,v,"appear, represent, figure (in)",A-2
+1228,terrible,adj,terrible,A-1-b
+1229,isla,nf,island,A-3
+1230,torno,nm,"en torno a: about, regarding",B-2
+1231,sentado,adj,seated,B-2
+1232,amistad,nf,friendship,B-2
+1233,concentrar,v,concentrate,A-2
+1234,correcto,adj,"correct, suitable",A-2
+1235,mañana,adv,tomorrow,B-2
+1236,cadena,nf,chain,B-2
+1237,político,nm/f,politician,A-2
+1238,rey,nm,king,B-2
+1239,permanente,adj,permanent,A-2
+1240,ánimo,nm,"zest, spirit, heart",B-2
+1241,trato,nm,"treatment, manner, agreement",B-2
+1242,ejercicio,nm,"exercise, practice",A-2
+1243,organización,nf,organization,A-2
+1244,agosto,nm,August,A-3
+1245,secretario,nm/f,secretary,A-2
+1246,norteamericano,adj,North American,B-2
+1247,ignorar,v,be unaware,A-1-a
+1248,dedo,nm,"finger, toe, digit",B-2
+1249,gasto,nm,"expense, expenditure",B-2
+1250,café,nm,"coffee, café",A-1-b
+1251,diálogo,nm,"dialogue, conversation",A-2
+1252,dudar,v,(have) doubt,B-2
+1253,comercial,adj,"commercial, shopping",A-2
+1254,discurso,nm,"lecture, discourse, talk",B-2
+1255,obligado,adj,"obliged, required",A-3
+1256,hermana,nf,sister,B-2
+1257,descansar,v,rest,B-2
+1258,caja,nf,"bank, box, safe",B-2
+1259,juez,nc,judge,A-3
+1260,particular,nm,"particular, detail, individual",A-1-a
+1261,americano,adj,American,A-2
+1262,poeta,nc,poet,A-1-b
+1263,interior,adj,"interior, inside",A-1-a
+1264,sorpresa,nf,surprise,A-2
+1265,ventana,nf,window,B-2
+1266,característica,nf,"characteristic, aspect",A-2
+1267,adoptar,v,adopt,A-2
+1268,arrancar,v,"start (machine), uproot",B-2
+1269,disfrutar,v,enjoy,B-2
+1270,práctico,adj,"practical, skillful",A-2
+1271,suma,nf,"sum, amount, summary",A-1-b
+1272,molestar,v,"bother, disturb, upset",B-2
+1273,excelente,adj,excellent,A-2
+1274,volumen,nm,volume,A-1-b
+1275,estación,nf,"station, season",A-2
+1276,atrever,v,dare,B-2
+1277,cultural,adj,cultural,A-2
+1278,complejo,adj,"complex, complicated",A-1-b
+1279,argumento,nm,"argument, plot",A-2
+1280,categoría,nf,category,A-2
+1281,plata,nf,"silver, money",B-2
+1282,conflicto,nm,conflict,A-2
+1283,avión,nm,"plane, airplane, aircraft",A-3
+1284,débil,adj,weak,B-2
+1285,ropa,nf,"clothes, clothing",B-3
+1286,examen,nm,"examination, exam",A-2
+1287,habitante,nm,inhabitant,A-2
+1288,acerca,adv,"about, concerning",B-2
+1289,ceder,v,"give way, yield",B-2
+1290,justicia,nf,"justice, fairness",A-2
+1291,independiente,adj,"independent, self-sufficient",A-2
+1292,criterio,nm,criterion,A-2
+1293,atraer,v,attract,A-2
+1294,convencido,adj,"convinced, persuaded",B-2
+1295,plazo,nm,"deadline, installment",B-2
+1296,pendiente,adj,"aware of, pending",A-3
+1297,kilómetro,nm,kilometer,A-2
+1298,hospital,nm,hospital,A-1-a
+1299,satisfacción,nf,satisfaction,A-2
+1300,futuro,adj,future,A-1-a
+1301,acumular,v,"accumulate, amass",A-2
+1302,desconocido,adj,unknown,B-2
+1303,practicar,v,practice,A-2
+1304,gozar,v,enjoy,B-2
+1305,muchísimo,adj,"great many, great amount",B-2
+1306,sesenta,num,sixty,B-2
+1307,silla,nf,"chair, seat",B-2
+1308,justificar,v,"justify, excuse",A-2
+1309,tradicional,adj,traditional,A-2
+1310,soportar,v,"endure, stand (something)",A-3
+1311,juventud,nf,youth,B-2
+1312,resistir,v,"resist, endure",A-2
+1313,aparte,adv,"apart, aside, separately",B-2
+1314,triste,adj,"sad, unhappy",B-2
+1315,acceso,nm,"access, entry",A-2
+1316,marco,nm,"frame, mark, setting",B-2
+1317,vestir,v,"wear, dress",A-3
+1318,prensa,nf,press,B-2
+1319,excepción,nf,exception,A-2
+1320,sorprender,v,surprise,A-2
+1321,ausencia,nf,absence,A-2
+1322,proceder,v,"proceed, start",A-2
+1323,condenar,v,"convict, condemn",A-2
+1324,sombra,nf,"shade, shadow",B-2
+1325,similar,adj,similar,A-1-a
+1326,consumir,v,"consume, take in",A-2
+1327,sugerir,v,"suggest, hint at",A-2
+1328,activo,adj,active,A-1-a
+1329,clásico,adj,classic,A-2
+1330,profundidad,nf,"depth, profundity",B-2
+1331,conceder,v,"grant, concede",A-2
+1332,reciente,adj,recent,A-2
+1333,eléctrico,adj,electric,A-2
+1334,leche,nf,milk,B-2
+1335,consideración,nf,"consideration, regard",A-2
+1336,componer,v,"compose, be part of",A-2
+1337,premio,nm,"prize, reward",B-2
+1338,bello,adj,"beautiful, fine",B-2
+1339,nacimiento,nm,"birth, origin",B-2
+1340,invierno,nm,winter,B-2
+1341,diciembre,nm,December,A-3
+1342,brillante,adj,"brilliant, shiny, sparkling",A-2
+1343,comportamiento,nm,"behavior, conduct",B-2
+1344,crítica,nf,"criticism, critique",A-2
+1345,femenino,adj,"feminine, female",A-2
+1346,fuego,nm,"fire, gunfire",B-2
+1347,tendencia,nf,"tendency, style",A-2
+1348,fino,adj,"fine, delicate",A-1-a
+1349,norma,nf,"standard, pattern, norm",A-1-a
+1350,inferior,adj,"lower, inferior",A-1-a
+1351,arreglar,v,"fix, arrange",B-2
+1352,rueda,nf,wheel,B-2
+1353,puente,nm,bridge,B-2
+1354,animar,v,cheer up,A-2
+1355,rasgo,nm,"feature, trait",B-2
+1356,positivo,adj,positive,A-2
+1357,cuento,nm,"story, tale",B-2
+1358,definitivamente,adv,"definitely, finally",A-2
+1359,signo,nm,"sign, mark, symbol",A-1-a
+1360,señal,nf,"sign, mark, token",B-2
+1361,apuntar,v,"point, note, aim",B-2
+1362,campaña,nf,campaign,A-3
+1363,liberar,v,"free, liberate",A-2
+1364,puerto,nm,"port, harbor",A-1-b
+1365,profundamente,adv,"profoundly, deeply",A-3
+1366,aventura,nf,adventure,A-2
+1367,pesado,adj,"heavy, boring, tiresome",B-2
+1368,complicado,adj,"complicated, complex",A-2
+1369,añadir,v,add,B-2
+1370,marca,nf,"mark, brand, trademark",A-1-a
+1371,girar,v,"rotate, revolve",A-3
+1372,ilusión,nf,"illusion, hope, dream",A-2
+1373,os,pron,you (obj-pl/+fam),B-1
+1374,compra,nf,"shopping, buy, purchase",B-2
+1375,inteligencia,nf,intelligence,A-2
+1376,volar,v,fly,B-2
+1377,loco,adj,"crazy, insane",B-2
+1378,virtud,nf,"virtue, quality",A-2
+1379,remedio,nm,"alternative, cure, solution",A-3
+1380,delicado,adj,delicate,A-2
+1381,facilitar,v,facilitate,A-2
+1382,territorio,nm,territory,A-2
+1383,facultad,nf,"faculty, ability",A-2
+1384,solicitar,v,"solicit, request",A-2
+1385,fotografía,nf,photograph,A-2
+1386,techo,nm,roof,B-2
+1387,temer,v,fear,B-2
+1388,conducta,nf,"conduct, behavior",A-2
+1389,violento,adj,violent,A-2
+1390,aquél,pron,that one over there (m),B-1
+1391,salto,nm,"jump, hop, skip",B-2
+1392,pan,nm,bread,A-3
+1393,atacar,v,attack,B-2
+1394,sano,adj,"healthy, wholesome",B-2
+1395,pegar,v,"hit, stick (on)",B-2
+1396,juzgar,v,judge,A-3
+1397,limpio,adj,clean,B-2
+1398,disposición,nf,"disposal, disposition",A-2
+1399,posterior,adj,"rear, backside",A-2
+1400,general,nm,general,A-1-a
+1401,disciplina,nf,"discipline, subject",A-2
+1402,relacionado,adj,"related, regarding",A-2
+1403,habitual,adj,"usual, habitual, customary",A-2
+1404,personal,nm,"personnel, staff, staffing",A-1-a
+1405,interrumpir,v,interrupt,A-2
+1406,columna,nf,"column, spine",A-2
+1407,verdaderamente,adv,truly,B-2
+1408,fabricar,v,manufacture,A-3
+1409,únicamente,adv,only,B-2
+1410,nervioso,adj,"nervous, uptight",A-2
+1411,indio,nm,Indian,A-2
+1412,gato,nm,cat,A-4
+1413,margen,nmf,"edge, margin, border, brink",A-1-b
+1414,material,adj,material,A-1-a
+1415,resistencia,nf,"resistance, opposition",A-2
+1416,consciente,adj,"conscious, aware",A-2
+1417,pérdida,nf,loss,B-2
+1418,tratamiento,nm,"treatment, processing",A-3
+1419,entrevista,nf,"interview, meeting",B-2
+1420,espectáculo,nm,"spectacle, show",B-2
+1421,personalidad,nf,"personality, celebrity",A-2
+1422,mayo,nm,May,B-2
+1423,confiar,v,"trust, confide",B-2
+1424,operar,v,operate,A-2
+1425,representación,nf,representation,A-2
+1426,régimen,nm,"regime, diet",A-3
+1427,punta,nf,"tip, point",B-2
+1428,vital,adj,"vital, lively, essential",A-1-a
+1429,alegría,nf,"joy, happiness",B-2
+1430,basar,v,"base on, base upon",A-1-b
+1431,igualmente,adv,equally,A-2
+1432,misión,nf,"mission, task",A-2
+1433,estimar,v,"estimate, hold in esteem",A-2
+1434,cotidiano,adj,daily,B-2
+1435,confirmar,v,confirm,A-2
+1436,empleo,nm,"work, job, occupation",A-2
+1437,previo,adj,previous,A-3
+1438,participación,nf,"participation, involvement",A-2
+1439,integrar,v,"integrate, fit in",A-2
+1440,período,nm,"period, time",A-2
+1441,busca,nf,"search, hunt",B-2
+1442,superficie,nf,"surface, area",A-2
+1443,aprobar,v,"pass (test), approve",A-3
+1444,chino,adj,Chinese,B-2
+1445,pasión,nf,"passion, desire",A-2
+1446,vehículo,nm,"vehicle, car",A-2
+1447,inteligente,adj,intelligent,A-2
+1448,grabar,v,"record, engrave",A-3
+1449,enero,nm,January,B-2
+1450,capítulo,nm,chapter,A-3
+1451,fracaso,nm,"failure, collapse",B-2
+1452,experto,nm,expert,A-1-b
+1453,inquietud,nf,"restlessness, anxiety",B-2
+1454,nuevamente,adv,"anew, again",B-2
+1455,once,num,eleven,B-2
+1456,listo,adj,"ready, clever, smart",B-2
+1457,equivocar,v,be wrong,B-2
+1458,organismo,nm,"organization, organism, (human) body",A-2
+1459,canción,nf,song,B-2
+1460,religión,nf,religion,A-2
+1461,correspondiente,adj,corresponding,A-2
+1462,departamento,nm,"department, apartment",A-2
+1463,generalmente,adv,"generally, usually",A-2
+1464,periodista,nc,journalist,A-2
+1465,seguido,adj,"in a row, successive",B-2
+1466,llorar,v,cry,B-2
+1467,griego,adj,Greek,B-2
+1468,interpretación,nf,"interpretation, interpreting",A-2
+1469,maestro,adj,master,A-3
+1470,barato,adj,inexpensive,B-2
+1471,proyectar,v,project,A-2
+1472,belleza,nf,beauty,B-2
+1473,universidad,nf,"university, college",A-2
+1474,riqueza,nf,"riches, wealth",B-2
+1475,notable,adj,"outstanding, noteworthy",A-2
+1476,beber,v,drink,B-2
+1477,claramente,adv,clearly,A-2
+1478,rato,nm,"moment, while, time",B-2
+1479,encargado,adj,in charge of,B-2
+1480,técnico,adj,technical,A-2
+1481,ciego,adj,blind,B-2
+1482,individual,adj,individual,A-1-a
+1483,apreciar,v,appreciate,A-2
+1484,experimentar,v,"experience, experiment",A-2
+1485,justamente,adv,"just, exactly",A-2
+1486,amar,v,love,A-3
+1487,equilibrio,nm,balance,B-2
+1488,universal,adj,universal,A-1-a
+1489,ah,interj,oh,B-1
+1490,fruto,nm,"fruit, result",A-3
+1491,representante,nc,representative,A-2
+1492,robar,v,"rob, steal",B-2
+1493,reír,v,laugh (at),A-3
+1494,literario,adj,literary,A-2
+1495,exceso,nm,excess,A-2
+1496,capa,nf,"layer, coat",B-2
+1497,defecto,nm,defect,A-2
+1498,fábrica,nf,"factory, manufacture",A-3
+1499,espalda,nf,back (body),B-2
+1500,mezclar,v,mix,B-2
+1501,género,nm,"sort, gender, genre",A-3
+1502,continuo,adj,continuous,A-2
+1503,distribuir,v,"distribute, deliver",A-2
+1504,economía,nf,"economy, economics, thriftiness",A-2
+1505,apartar,v,"move away, separate",B-2
+1506,bosque,nm,forest,B-2
+1507,reclamar,v,"demand, require",A-3
+1508,paisaje,nm,landscape,B-2
+1509,quemar,v,burn,B-2
+1510,llamado,nm,"call, calling",B-2
+1511,paciente,nc,patient,A-2
+1512,elevado,adj,"elevated, high, lofty",A-2
+1513,obedecer,v,obey,B-2
+1514,tensión,nf,"tension, stress, strain",A-2
+1515,establecido,adj,established,A-2
+1516,local,adj,local,A-1-a
+1517,satisfacer,v,satisfy,A-3
+1518,concebir,v,"conceive, understand",A-3
+1519,ministro,nm/f,"(government) secretary, minister",A-3
+1520,impulso,nm,"impulse, momentum",A-2
+1521,reaccionar,v,react,A-2
+1522,comercio,nm,"commerce, trade",A-3
+1523,naturalmente,adv,naturally,A-2
+1524,acusar,v,accuse,A-2
+1525,espera,nf,wait,B-2
+1526,gastar,v,spend (money),B-2
+1527,reserva,nf,"reservation, reserve",A-2
+1528,regalar,v,give (as a gift),B-2
+1529,competencia,nf,"competition, contest",A-3
+1530,quejar,v,complain,B-2
+1531,penetrar,v,"penetrate, come in",A-2
+1532,vacío,adj,"empty, vacant",B-2
+1533,aislado,adj,isolated,A-3
+1534,rendir,v,[se] to give in; to render,A-3
+1535,observación,nf,observation,A-2
+1536,registrar,v,"register, record",A-3
+1537,limpiar,v,clean,B-2
+1538,vacío,nm,"emptiness, void",B-2
+1539,atribuir,v,attribute,A-2
+1540,cifra,nf,"figure, number, amount",B-2
+1541,ocultar,v,hide,A-3
+1542,escala,nf,"scale, ladder, rank",A-3
+1543,enterar,v,find out [se],B-2
+1544,procedimiento,nm,"procedure, proceedings",A-2
+1545,ajustar,v,"adjust, tighten",B-2
+1546,fórmula,nf,formula,A-1-b
+1547,ámbito,nm,"sphere, space",B-2
+1548,informe,nm,report,A-3
+1549,dimensión,nf,"dimension, size",A-2
+1550,cliente,nc,"client, customer",A-1-b
+1551,manifestación,nf,"protest, manifestation",A-2
+1552,aspirar,v,"aspire, want",A-2
+1553,pico,nm,"y pico: and a bit; beak, peak",B-2
+1554,sensibilidad,nf,sensitivity,A-2
+1555,recurrir,v,resort to,B-2
+1556,múltiple,adj,"multiple, many",A-2
+1557,regreso,nm,return,B-2
+1558,temperatura,nf,temperature,A-2
+1559,julio,nm,July,B-2
+1560,poderoso,adj,powerful,B-2
+1561,digno,adj,worthy,A-3
+1562,bomba,nf,"bomb, explosion, pump",A-1-b
+1563,órgano,nm,organ,A-1-a
+1564,inútil,adj,useless,A-2
+1565,avance,nm,"advance, progress",B-2
+1566,humanidad,nf,"humanity, mankind",A-2
+1567,firma,nf,"company, signature, signing",A-1-a
+1568,soldado,nm/f,soldier,A-3
+1569,sólido,adj,"solid, strong",A-2
+1570,firme,adj,"firm, steady",A-1-a
+1571,extremo,adj,extreme,A-2
+1572,conforme,adj,in agreement,A-3
+1573,esencial,adj,essential,A-2
+1574,huir,v,"flee, run away",B-2
+1575,percibir,v,"perceive, notice",A-2
+1576,clima,nm,climate,A-2
+1577,emoción,nf,"emotion, excitement",A-2
+1578,automóvil,nm,automobile,A-2
+1579,transcurrir,v,"occur, take place",B-2
+1580,mal,nm,evil,B-2
+1581,recomendar,v,recommend,A-2
+1582,habilidad,nf,"ability, skill, talent",A-2
+1583,identidad,nf,identity,A-2
+1584,desgracia,nf,"misfortune, bad luck",A-3
+1585,corregir,v,"correct, rectify",A-2
+1586,amarillo,adj,yellow,B-2
+1587,consultar,v,consult,A-2
+1588,deber,nm,"duty, obligation",A-3
+1589,cola,nf,"line, queue, tail",B-2
+1590,padecer,v,suffer,B-2
+1591,progreso,nm,progress,A-1-b
+1592,elaborar,v,"make, develop",A-2
+1593,soñar,v,dream,B-2
+1594,muestra,nf,"proof, sample, sign",B-2
+1595,acostumbrado,adj,accustomed,A-3
+1596,hábito,nm,habit,A-1-a
+1597,gritar,v,shout,B-2
+1598,artístico,adj,artistic,A-2
+1599,mecanismo,nm,mechanism,A-2
+1600,vivienda,nf,"housing, dwelling",B-2
+1601,ocupado,adj,"busy, occupied",B-2
+1602,área,nf (el),"area, zone",A-1-a
+1603,traducir,v,translate,A-2
+1604,efectivamente,adv,"in fact, actually, indeed",A-2
+1605,interesado,adj,(self) interested,A-2
+1606,mezcla,nf,"mixture, blend",B-2
+1607,excesivo,adj,excessive,A-2
+1608,sumar,v,"add up, amount to",A-1-b
+1609,alimentar,v,"feed, support",A-3
+1610,habitación,nf,"room, bedroom, habitat",A-2
+1611,instrucción,nf,instruction,A-2
+1612,eliminar,v,"eliminate, exclude",A-2
+1613,versión,nf,"version, account",A-2
+1614,lujo,nm,luxury,A-3
+1615,intervención,nf,intervention,A-2
+1616,llegada,nf,arrival,B-2
+1617,alrededor,nm,"surrounding area, vicinity",B-2
+1618,testigo,nm,witness,B-2
+1619,dominio,nm,"power, control",A-3
+1620,raza,nf,"race, lineage",A-1-b
+1621,renunciar,v,"give up, renounce",A-3
+1622,descubrimiento,nm,discovery,B-2
+1623,vacaciones,nf,vacation,A-2
+1624,provincia,nf,"province, region",A-2
+1625,saber,nm,knowledge,B-2
+1626,argentino,adj,Argentine,A-3
+1627,cómodo,adj,"comfortable, convenient",A-3
+1628,acostumbrar,v,be accustomed to,A-3
+1629,fácilmente,adv,easily,A-3
+1630,claridad,nf,"clearness, clarity",A-2
+1631,negativo,adj,"negative, pessimistic",A-2
+1632,revisar,v,"check, revise, inspect",A-2
+1633,carecer,v,be without,B-2
+1634,científico,adj,scientific,A-2
+1635,arena,nf,sand,B-2
+1636,postura,nf,"posture, position, attitude",A-3
+1637,salón,nm,"hall, room",B-2
+1638,escenario,nm,"stage, setting, scene",A-3
+1639,armado,adj,armed,B-2
+1640,largo,nm,a lo largo: throughout; length,B-3
+1641,prometer,v,promise,A-2
+1642,contento,adj,"happy, content",A-3
+1643,hotel,nm,hotel,A-1-a
+1644,oficio,nm,"job, occupation, function",A-3
+1645,descender,v,descend,A-2
+1646,cubierto,adj,covered,B-2
+1647,fila,nf,"line, row, file",B-2
+1648,patrón,nm,"employer, landlord, patron saint",A-3
+1649,pecho,nm,"chest, breast",B-2
+1650,tienda,nf,"shop, store, tent",B-2
+1651,típico,adj,typical,A-2
+1652,protección,nf,protection,A-2
+1653,funcionario,nm,civil servant,A-2
+1654,reproducir,v,"reproduce, repeat",A-2
+1655,constar,v,"consist of, comprise",A-2
+1656,crítico,adj,critical,A-2
+1657,transporte,nm,"transportation, transport",A-2
+1658,red,nf,"network, net, system",B-2
+1659,caída,nf,"fall, drop, falling",B-2
+1660,castellano,adj,"Castilian, Spanish",B-2
+1661,asociar,v,associate with,A-2
+1662,desconocer,v,"not know, not recognize",B-2
+1663,valle,nm,valley,A-1-b
+1664,fallar,v,"fail, miss",B-2
+1665,vuelo,nm,flight,B-2
+1666,vecino,adj,"nearby, neighboring",B-2
+1667,sexo,nm,sex,A-1-a
+1668,iniciativa,nf,initiative,A-2
+1669,increíble,adj,"incredible, unbelievable",A-2
+1670,concentración,nf,"concentration, gathering",A-2
+1671,grito,nm,"cry, shout, scream",B-2
+1672,esencia,nf,essence,A-2
+1673,cocina,nf,kitchen,B-2
+1674,mental,adj,mental,A-1-a
+1675,reflejo,nm,reflection,A-2
+1676,definición,nf,definition,A-2
+1677,preocupado,adj,"worried, concerned",A-3
+1678,perdonar,v,"forgive, excuse",A-3
+1679,obstante,adj,no + obstante: nevertheless,B-2
+1680,abogado,nm/f,lawyer,A-3
+1681,agradecer,v,thank for,B-2
+1682,admirar,v,admire,A-2
+1683,sesión,nf,"session, meeting",A-2
+1684,íntimo,adj,"close, intimate",A-3
+1685,reloj,nm,"clock, watch",B-2
+1686,estrecho,adj,narrow,B-2
+1687,muchacho,nm,boy,B-2
+1688,octubre,nm,October,A-3
+1689,exposición,nf,"exhibition, display",A-2
+1690,ingreso,nm,"entrance, admission, income",A-3
+1691,revelar,v,"reveal, disclose",A-2
+1692,dibujo,nm,"drawing, sketch",B-2
+1693,frecuente,adj,frequent,A-2
+1694,inevitable,adj,"inevitable, unavoidable",A-2
+1695,hueso,nm,bone,A-3
+1696,ligero,adj,"light (in weight), slight",B-2
+1697,militar,nm,"soldier, military person",A-2
+1698,motor,nm,"engine, motor",A-1-a
+1699,oposición,nf,opposition,A-2
+1700,patio,nm,"courtyard, playground, yard",A-1-a
+1701,fruta,nf,fruit,A-1-a
+1702,ideal,nm,"ideal, goal",A-1-a
+1703,izquierdo,adj,left (opposite of right),B-2
+1704,ti,pron,you (obj prep-sg/+fam),B-1
+1705,actor,nm,actor,A-1-a
+1706,confusión,nf,confusion,A-2
+1707,bonito,adj,"pretty, nice",B-2
+1708,agregar,v,"add, gather",A-3
+1709,corriente,adj,"current, common",A-2
+1710,traje,nm,"suit, dress, costume",B-2
+1711,exigencia,nf,"requirement, demand",B-2
+1712,víctima,nf,"victim, casualty",A-1-b
+1713,playa,nf,"beach, seaside",B-2
+1714,trabajador,nm/f,"worker, laborer",B-2
+1715,primario,adj,primary,A-2
+1716,hierro,nm,iron,B-2
+1717,ideal,adj,ideal,A-1-a
+1718,completar,v,complete,A-2
+1719,tela,nf,"cloth, fabric",B-2
+1720,ancho,adj,wide,B-2
+1721,producción,nf,production,A-2
+1722,febrero,nm,February,A-3
+1723,símbolo,nm,symbol,A-2
+1724,agradable,adj,"nice, pleasant",B-2
+1725,medicina,nf,medicine,A-2
+1726,combatir,v,fight against,A-2
+1727,búsqueda,nf,search,B-2
+1728,colectivo,adj,"collective, joint",A-2
+1729,tranquilidad,nf,"tranquility, peace",A-2
+1730,espejo,nm,"mirror, reflection",B-2
+1731,secreto,adj,secret,A-1-b
+1732,comprensión,nf,understanding,A-2
+1733,incapaz,adj,incapable,A-2
+1734,cerebro,nm,brain,B-2
+1735,satisfecho,adj,satisfied,B-2
+1736,reducido,adj,"reduced, limited",A-2
+1737,tiro,nm,"throw, shot",B-2
+1738,aportar,v,"provide, contribute",B-2
+1739,derivar,v,"derive, come (from)",A-2
+1740,abuelo,nm,grandfather,B-2
+1741,prohibir,v,"prohibit, forbid",A-2
+1742,proporcionar,v,supply,A-2
+1743,maravilloso,adj,"wonderful, marvelous",B-2
+1744,saludar,v,"greet, say hello",A-3
+1745,relacionar,v,relate,A-2
+1746,declaración,nf,"declaration, statement",A-2
+1747,relativo,adj,relative,A-2
+1748,sujeto,nm,"subject, individual",A-2
+1749,investigar,v,investigate,A-2
+1750,ubicar,v,"find, locate",B-2
+1751,enseñanza,nf,"teaching, instruction",B-2
+1752,musical,adj,musical,A-2
+1753,permiso,nm,"permission, permit",A-2
+1754,evolución,nf,"evolution, development",A-2
+1755,tío,nm,"uncle, guy",B-2
+1756,moral,nf,"morals, ethics",A-1-a
+1757,redondo,adj,round,B-2
+1758,modificar,v,modify,A-2
+1759,sujeto,adj,"fastened, subject to",A-2
+1760,parque,nm,park,A-1-a
+1761,ingeniero,nm/f,engineer,A-2
+1762,lavar,v,wash,B-2
+1763,borde,nm,edge,B-2
+1764,invadir,v,"invade, overcome",A-2
+1765,entusiasmo,nm,enthusiasm,A-2
+1766,evidentemente,adv,"evidently, obviously",A-2
+1767,independencia,nf,independence,A-2
+1768,mentira,nf,lie,B-2
+1769,exclusivamente,adv,exclusively,A-2
+1770,sueldo,nm,"salary, pay",B-2
+1771,desplazar,v,"replace, move, shift",B-2
+1772,comparación,nf,comparison,A-2
+1773,setenta,num,seventy,B-2
+1774,romano,adj,Roman,A-1-b
+1775,sagrado,adj,sacred,A-3
+1776,seno,nm,"breast, bosom, cavity",B-2
+1777,adelantar,v,move forward,B-2
+1778,canto,nm,"singing, chant",B-2
+1779,potencia,nf,"power, potential",A-3
+1780,examinar,v,"examine, inspect",A-2
+1781,oficial,nc,"official, officer",A-2
+1782,fortuna,nf,"fortune, fate",A-1-b
+1783,crimen,nm,"crime, murder",A-1-b
+1784,suave,adj,"soft, gentle, mild",B-2
+1785,opuesto,adj,"opposite, contrary",B-2
+1786,sustituir,v,"substitute, replace",A-2
+1787,ciudadano,nm,citizen,B-2
+1788,implicar,v,"implicate, imply",A-3
+1789,baño,nm,"bathroom, bath, swim",B-2
+1790,sabio,adj,"wise, learned",B-2
+1791,ingresar,v,"join, deposit, admit",B-2
+1792,respirar,v,breathe,A-3
+1793,caliente,adj,"hot, warm, spirited",B-2
+1794,reconocimiento,nm,"recognition, acknowledgment",B-2
+1795,exterior,nm,"exterior, outside",A-1-a
+1796,sexual,adj,sexual,A-2
+1797,respectivo,adj,respective,A-2
+1798,situado,adj,"situated, located",A-2
+1799,crédito,nm,"credit, reputation",A-2
+1800,alternativa,nf,alternative,A-2
+1801,rodeado,adj,surrounded,B-2
+1802,esconder,v,"hide, conceal",B-2
+1803,cuando,adv,when,B-2
+1804,canal,nm,"channel, canal",A-1-a
+1805,suficientemente,adv,enough,A-2
+1806,agente,nc,agent,A-2
+1807,pago,nm,payment,B-2
+1808,filosofía,nf,philosophy,A-2
+1809,alterar,v,"alter, modify",A-1-b
+1810,lector,nm,"reader, lecturer",A-3
+1811,emitir,v,"emit, give (off)",A-2
+1812,magnífico,adj,"magnificent, splendid",A-2
+1813,triunfo,nm,"triumph, victory",A-2
+1814,inclinar,v,"bow, tilt, incline",A-2
+1815,campesino,adj,rural,A-3
+1816,sábado,nm,Saturday,B-2
+1817,amiga,nf,friend (f),B-2
+1818,carretera,nf,"highway, road",B-2
+1819,desprender,v,"detach, release, remove",B-2
+1820,efectivo,adj,effective,A-2
+1821,victoria,nf,"victory, triumph",A-1-b
+1822,circular,v,"circulate, go around, flow",A-2
+1823,pelear,v,"fight, struggle",B-2
+1824,pájaro,nm,bird,B-2
+1825,biblioteca,nf,library,A-3
+1826,reflexión,nf,reflection,A-2
+1827,aplicado,adj,applied,A-2
+1828,aconsejar,v,"advise, counsel",B-2
+1829,vocación,nf,"vocation, calling",A-2
+1830,casado,adj,married,B-2
+1831,continente,nm,continent,A-2
+1832,severo,adj,severe,A-1-b
+1833,tabla,nf,"chart, board, table, plank",A-1-b
+1834,justo,adj,"fair, just",A-1-a
+1835,ensayo,nm,"essay, rehearsal",B-2
+1836,plato,nm,"plate, dish",B-2
+1837,jardín,nm,garden,B-2
+1838,imaginación,nf,"imagination, fantasy",A-2
+1839,precioso,adj,"beautiful, precious",A-3
+1840,probable,adj,probable,A-2
+1841,poesía,nf,"poetry, poem",A-3
+1842,guardia,nc,"guard, watch, lookout",A-3
+1843,privilegio,nm,privilege,A-2
+1844,monte,nm,mountain,A-3
+1845,conmigo,pron,with me,B-1
+1846,arrojar,v,"throw, fling",B-2
+1847,precisión,nf,precision,A-2
+1848,sacrificio,nm,sacrifice,A-2
+1849,criticar,v,criticize,A-2
+1850,hundir,v,"sink, submerge",B-2
+1851,hilo,nm,"thread, yarn, wire",A-3
+1852,entendido,adj,understood,B-2
+1853,aparentemente,adv,apparently,A-2
+1854,aparición,nf,"appearance, apparition",A-2
+1855,poema,nm,poem,A-1-b
+1856,avanzado,adj,advanced,A-2
+1857,curiosidad,nf,"curiosity, quaintness",A-2
+1858,afuera,adv,outside,B-2
+1859,diente,nm,"tooth, cog",A-3
+1860,primo,nm,cousin,A-3
+1861,encerrar,v,shut (in),B-2
+1862,latino,adj,Latin,A-1-a
+1863,apariencia,nf,"appearance, aspect",B-2
+1864,novedad,nf,"latest news, newness",B-2
+1865,espiritual,adj,spiritual,A-2
+1866,limitado,adj,limited,A-2
+1867,castigo,nm,"punishment, penalty",B-2
+1868,constantemente,adv,constantly,A-2
+1869,denominar,v,"call, name",A-2
+1870,vestido,adj,dressed,B-2
+1871,carro,nm,"car, cart",A-1-b
+1872,eterno,adj,eternal,A-2
+1873,aumento,nm,"increase, rise",B-2
+1874,pobreza,nf,"poverty, lack, scarcity",B-2
+1875,impulsar,v,"push, promote, drive",A-2
+1876,caro,adj,"expensive, difficult, dear",B-2
+1877,empujar,v,"push, shove",B-2
+1878,dólar,nm,dollar,A-1-a
+1879,inicial,adj,initial,A-1-a
+1880,local,nm,"place, quarters",A-1-a
+1881,dictar,v,"dictate, announce",A-3
+1882,dulce,adj,sweet,B-2
+1883,chocar,v,"crash into, collide with",B-2
+1884,industria,nf,"industry, factory",A-2
+1885,caballero,nm,"gentleman, knight",B-2
+1886,especialista,nc,specialist,A-2
+1887,temporada,nf,"season, period, time",A-3
+1888,divino,adj,divine,A-1-b
+1889,humor,nm,"mood, humor",A-1-a
+1890,borrar,v,erase,B-2
+1891,nación,nf,nation,A-2
+1892,felicidad,nf,happiness,A-3
+1893,amante,nc,lover,B-2
+1894,alejado,adj,"remote, distant, aloof",B-2
+1895,aguantar,v,"endure, put up with",B-2
+1896,coger,v,"hold, take, catch",B-2
+1897,cálculo,nm,"calculation, calculus",A-2
+1898,composición,nf,"composition, make-up, essay",A-2
+1899,rapidez,nf,"speed, velocity",B-2
+1900,huevo,nm,egg,B-2
+1901,elemental,adj,"elemental, basic",A-2
+1902,crecimiento,nm,"growth, increase",B-2
+1903,clave,nf,key,B-2
+1904,golpear,v,"hit, strike",B-2
+1905,tragedia,nf,tragedy,A-2
+1906,colección,nf,collection,A-2
+1907,chica,nf,"girl, female",B-2
+1908,prestigio,nm,prestige,A-2
+1909,ascender,v,"ascend, be promoted",A-2
+1910,sección,nf,"section, cut",A-2
+1911,complicar,v,"complicate, make difficult",A-2
+1912,anciano,adj,"elderly, aged",B-2
+1913,fiel,adj,"faithful, loyal",A-3
+1914,roto,adj,"broken, torn",B-2
+1915,bolsa,nf,"bag, purse, stock exchange",B-2
+1916,cinta,nf,"tape, ribbon, film, strip",B-2
+1917,engañar,v,"trick, deceive",B-2
+1918,elegante,adj,"elegant, smart, stylish",A-2
+1919,agotar,v,"exhaust, wear out, run out",B-2
+1920,cuello,nm,"neck, collar",B-2
+1921,continuación,nf,"continuation, follow-up",A-2
+1922,abril,nm,April,A-3
+1923,precisar,v,"do exactly, specify",A-2
+1924,actuación,nf,"performance, acting",B-2
+1925,factor,nm,"factor, cause, influence",A-1-a
+1926,esquina,nf,corner,B-2
+1927,hombro,nm,shoulder,B-2
+1928,infancia,nf,"infancy, childhood",A-2
+1929,suspender,v,"suspend, hang, fail",A-2
+1930,descanso,nm,"rest, interval, break",B-2
+1931,ampliar,v,"enlarge, increase, expand",B-2
+1932,zapato,nm,shoe,B-2
+1933,parecer,nm,"opinion, looks",B-2
+1934,familiar,nm,relative,A-1-a
+1935,mérito,nm,"worth, merit",A-1-b
+1936,cultivar,v,"cultivate, produce",A-2
+1937,oportuno,adj,"opportune, timely",A-2
+1938,explotar,v,"explode, exploit",A-2
+1939,significativo,adj,"significant, meaningful",A-2
+1940,despedir,v,"say goodbye (to), dismiss",B-2
+1941,suelto,adj,loose,B-2
+1942,muro,nm,"(outer) wall, rampart",A-3
+1943,colaborar,v,"collaborate, work together",A-2
+1944,menudo,adv,a menudo: often,B-2
+1945,invertir,v,invest,A-2
+1946,montón,nm,"lot of, heap, pile",B-2
+1947,revolucionario,adj,revolutionary,A-2
+1948,disco,nm,"disc, disk, record",A-1-b
+1949,indispensable,adj,"indispensable, essential",A-2
+1950,demanda,nf,"petition, request, demand",A-2
+1951,mundial,adj,worldwide,B-2
+1952,mueble,nm,(piece of) furniture,B-2
+1953,desastre,nm,disaster,A-2
+1954,secreto,nm,secret,A-1-b
+1955,oriental,adj,"eastern, oriental",A-2
+1956,regular,adj,regular,A-1-a
+1957,angustia,nf,"anguish, distress",B-2
+1958,provenir,v,"come from, be from",B-2
+1959,forzar,v,force,A-1-b
+1960,doméstico,adj,domestic,A-2
+1961,nube,nf,cloud,B-2
+1962,criar,v,"bring up, rear",B-2
+1963,miseria,nf,"misery, wretchedness",A-1-b
+1964,personalmente,adv,personally,A-2
+1965,peor,adj,"worse, worst",B-2
+1966,significado,nm,meaning,A-3
+1967,fama,nf,"reputation, fame",A-1-b
+1968,palacio,nm,palace,A-1-b
+1969,oído,nm,"hearing, ear",B-2
+1970,conveniente,adj,convenient,A-2
+1971,polvo,nm,"dust, powder",B-2
+1972,confesar,v,"confess, admit",A-2
+1973,mecánico,adj,mechanical,A-2
+1974,sacerdote,nm,priest,B-2
+1975,lentamente,adv,slowly,B-2
+1976,eficaz,adj,effective,A-3
+1977,lección,nf,lesson,A-3
+1978,rosa,nf,rose,A-1-a
+1979,nocturno,adj,"nocturnal, evening",A-2
+1980,posiblemente,adv,possibly,A-2
+1981,doblar,v,"bend, turn",B-2
+1982,disminuir,v,"decrease, diminish",A-3
+1983,averiguar,v,"investigate, find out",B-2
+1984,sospechar,v,"suspect, suppose",A-2
+1985,pasear,v,"go for a walk, ride",B-2
+1986,olor,nm,"smell, odor, fragrance",A-3
+1987,radical,adj,radical,A-1-a
+1988,decidido,adj,"determined, resolute",B-2
+1989,contrato,nm,"contract, agreement",A-2
+1990,presentación,nf,"presentation, introduction",A-2
+1991,cárcel,nf,"jail, prison",A-3
+1992,división,nf,division,A-2
+1993,revés,nm,"al revés: backwards, upside down, inside out",B-2
+1994,sucio,adj,"dirty, filthy, underhanded",B-2
+1995,depositar,v,"deposit, place, store",A-2
+1996,captar,v,"capture, attract",B-2
+1997,cualidad,nf,"quality, attribute",B-2
+1998,empeñar,v,[se] to insist on,B-2
+1999,sobrevivir,v,"survive, outlive",A-3
+2000,índice,nm,"index, forefinger",A-3
+2001,salvaje,adj,"wild, savage, uncultivated",A-3
+2002,marzo,nm,March,A-3
+2003,atmósfera,nf,"atmosphere, environment",A-2
+2004,planeta,nm,planet,A-1-b
+2005,industrial,adj,industrial,A-2
+2006,orgullo,nm,pride,B-2
+2007,jornada,nf,"(working) day, shift",A-3
+2008,desnudo,adj,"nude, naked",B-2
+2009,querido,adj,"dear, beloved",B-2
+2010,absurdo,adj,absurd,A-2
+2011,dramático,adj,dramatic,A-2
+2012,palo,nm,"stick, pole",B-2
+2013,diseño,nm,design,A-3
+2014,liberal,adj,liberal,A-1-a
+2015,lógica,nf,logic,A-2
+2016,herencia,nf,"inheritance, legacy",A-3
+2017,legal,adj,legal,A-1-a
+2018,artificial,adj,artificial,A-2
+2019,deporte,nm,sport,B-2
+2020,reina,nf,queen,A-3
+2021,bandera,nf,flag,B-2
+2022,influir,v,(have) influence,A-2
+2023,maravilla,nf,"wonder, marvel",B-2
+2024,modesto,adj,"modest, humble",A-2
+2025,banda,nf,"(musical) band, sash",A-1-b
+2026,cristal,nm,"glass, crystal, window",A-1-a
+2027,objetivo,adj,"objective, impartial",A-2
+2028,anécdota,nf,anecdote,A-2
+2029,universitario,adj,university,A-2
+2030,sensible,adj,"sensitive, sentient",A-2
+2031,leyenda,nf,legend,A-2
+2032,muerto,nm,dead person,B-2
+2033,azúcar,nm,sugar,A-3
+2034,multiplicar,v,multiply,A-2
+2035,inclinación,nf,"slope, incline, tendency",A-2
+2036,formal,adj,"formal, polite",A-1-a
+2037,doler,v,hurt,B-2
+2038,primitivo,adj,primitive,A-2
+2039,oculto,adj,"hidden, occult",A-3
+2040,rostro,nm,"face, countenance",B-2
+2041,separación,nf,separation,A-2
+2042,eco,nm,"echo, response",A-1-a
+2043,definido,adj,definite,A-2
+2044,favorecer,v,"favor, help",A-3
+2045,cita,nf,"appointment, date, quotation",B-2
+2046,actualidad,nf,present (time),B-2
+2047,externo,adj,"external, outward",A-2
+2048,escoger,v,choose,B-2
+2049,colgar,v,hang (up),B-2
+2050,fantasía,nf,"fantasy, fancy",A-2
+2051,promesa,nf,promise,A-2
+2052,pata,nf,"leg, paw",B-2
+2053,llover,v,to rain,B-2
+2054,foto,nf,"photo, picture",A-1-a
+2055,administración,nf,administration,A-2
+2056,absorber,v,"absorb, soak up",A-2
+2057,civilización,nf,civilization,A-2
+2058,organizado,adj,organized,A-2
+2059,ocupación,nf,"occupation, use",A-2
+2060,mero,adj,mere,A-1-b
+2061,asiento,nm,"seat, chair",B-2
+2062,compuesto,adj,"composite, mixed",A-3
+2063,imitar,v,"imitate, copy, mimic",A-2
+2064,solitario,adj,"solitary, lonely",A-2
+2065,pista,nf,"clue, track, trace",B-2
+2066,testimonio,nm,"testimony, evidence",A-2
+2067,regalo,nm,"gift, present",B-2
+2068,educar,v,educate,A-2
+2069,comprometer,v,compromise,A-2
+2070,aproximar,v,"come near, closer",A-3
+2071,bailar,v,dance,B-2
+2072,inspirar,v,"inspire, inhale",A-2
+2073,contradicción,nf,contradiction,A-2
+2074,agarrar,v,"grasp, catch",B-2
+2075,metal,nm,metal,A-1-a
+2076,aceite,nm,oil,B-2
+2077,prolongar,v,"extend, prolong",A-2
+2078,código,nm,code,A-2
+2079,estricto,adj,"strict, rigorous",A-2
+2080,doloroso,adj,painful,A-3
+2081,unión,nf,union,A-2
+2082,extensión,nf,"extension, area, expanse",A-2
+2083,duro,nm,duro (money),B-2
+2084,adentro,adv,inside,B-2
+2085,idéntico,adj,identical,A-2
+2086,previsto,adj,"foreseen, planned",B-2
+2087,adaptar,v,adapt,A-2
+2088,varón,nm,"male, man",B-2
+2089,situar,v,"situate, place, locate",A-2
+2090,característico,adj,characteristic,A-2
+2091,evidencia,nf,"evidence, certainty",A-2
+2092,dignidad,nf,dignity,A-2
+2093,escándalo,nm,scandal,A-2
+2094,colega,nc,colleague,A-3
+2095,horario,nm,"schedule, timetable",B-2
+2096,orilla,nf,"shore, edge",B-2
+2097,curar,v,cure,A-1-a
+2098,copia,nf,copy,A-1-b
+2099,huella,nf,"trace, track, footstep",B-2
+2100,desempeñar,v,"carry out, fulfill",B-2
+2101,ejemplar,nm,"copy, issue",A-2
+2102,extraer,v,"extract, take out",A-2
+2103,cura,nmf,"priest (m), cure (f)",A-3
+2104,apagar,v,"turn off, extinguish",B-2
+2105,prever,v,"foresee, anticipate, forecast",A-3
+2106,garantía,nf,"guarantee, warranty",B-2
+2107,vaso,nm,"(drinking) glass, vase",B-2
+2108,perfil,nm,"profile, outline",A-1-a
+2109,proporción,nf,proportion,A-2
+2110,expulsar,v,"expel, throw out",A-3
+2111,ceremonia,nf,ceremony,A-2
+2112,vidrio,nm,"glass, pane",B-2
+2113,ruta,nf,route,A-3
+2114,anuncio,nm,"advertisement, announcement",B-2
+2115,trece,num,thirteen,B-2
+2116,soledad,nf,"loneliness, solitude",B-2
+2117,tesis,nf,"thesis, exposition",A-1-b
+2118,rincón,nm,"corner, nook",B-2
+2119,nariz,nf,nose,B-2
+2120,ochenta,num,eighty,B-2
+2121,bolsillo,nm,pocket,B-2
+2122,exhibir,v,"exhibit, show off",A-2
+2123,asociación,nf,association,A-2
+2124,fresco,adj,"cool, healthy, fresh",B-2
+2125,mando,nm,"command, authority",B-2
+2126,sabor,nm,"taste, flavor, sensation",B-2
+2127,década,nf,decade,A-2
+2128,preparación,nf,"preparation, training",A-2
+2129,tapar,v,"cover, wrap",B-2
+2130,acceder,v,"consent, agree, accede",A-3
+2131,atractivo,adj,attractive,A-2
+2132,afecto,nm,"affection, fondness",A-2
+2133,encender,v,turn on,B-2
+2134,protesta,nf,"objection, protest",A-1-b
+2135,patria,nf,"native land, fatherland",A-3
+2136,consumo,nm,consumption,A-2
+2137,católico,adj,Catholic,A-2
+2138,selva,nf,"forest, jungle",B-2
+2139,deuda,nf,debt,B-2
+2140,horizonte,nm,horizon,A-2
+2141,disparar,v,shoot (at),B-2
+2142,masculino,adj,"masculine, manly, male",A-2
+2143,talento,nm,"talent, skill",A-1-a
+2144,gas,nm,gas,A-1-a
+2145,té,nm,tea,B-2
+2146,gloria,nf,"glory, fame",A-1-b
+2147,cansado,adj,"tired, tiresome",B-2
+2148,noviembre,nm,November,A-3
+2149,candidato,nm,candidate,A-2
+2150,llave,nf,"key, faucet, wrench",B-2
+2151,inconveniente,nm,"inconvenience, drawback",A-2
+2152,afán,nm,"eagerness, zeal, effort",B-2
+2153,atar,v,tie (up),B-2
+2154,etcétera,n,etcetera,A-1-a
+2155,comisión,nf,"commission, committee",A-2
+2156,desesperado,adj,"desperate, hopeless",B-2
+2157,generar,v,generate,A-2
+2158,posesión,nf,possession,A-2
+2159,dama,nf,"lady, dame",B-2
+2160,onda,nf,"wave, ripple",B-2
+2161,botella,nf,"bottle, flask",B-2
+2162,torre,nf,tower,B-2
+2163,abarcar,v,"encompass, comprise",B-2
+2164,combinación,nf,combination,A-2
+2165,cadáver,nm,"corpse, body",A-3
+2166,paquete,nm,"package, packet",A-1-b
+2167,apellido,nm,last name,B-2
+2168,caído,adj,fallen,B-2
+2169,japonés,adj,Japanese,B-2
+2170,brindar,v,offer,B-2
+2171,conferencia,nf,"conference, lecture",A-2
+2172,espontáneo,adj,spontaneous,A-2
+2173,propuesta,nf,"proposal, proposition",B-2
+2174,intensidad,nf,"intensity, force",A-2
+2175,explosión,nf,explosion,A-2
+2176,urbano,adj,"urban, city, urbane",A-2
+2177,odio,nm,hatred,B-2
+2178,valioso,adj,"valuable, precious",B-2
+2179,universo,nm,universe,A-2
+2180,agudo,adj,"sharp, acute",B-2
+2181,milagro,nm,miracle,A-2
+2182,entrega,nf,delivery,B-2
+2183,repente,adv,de + repente: suddenly.,B-2
+2184,solucionar,v,"solve, settle",A-2
+2185,mapa,nm,map,A-1-b
+2186,héroe,nm,hero,A-1-a
+2187,lunes,nm,Monday,B-2
+2188,tráfico,nm,"traffic, trade",A-2
+2189,terror,nm,"terror, horror",A-1-a
+2190,casualidad,nf,"chance, coincidence",B-2
+2191,tonto,adj,"stupid, dumb",B-2
+2192,risa,nf,"laugh, chuckle",A-3
+2193,cuerda,nf,"cord, rope",B-2
+2194,consulta,nf,"consultation, advice",A-2
+2195,edición,nf,"edition, publication",A-2
+2196,acomodar,v,be/make comfortable,A-3
+2197,rayo,nm,"ray, beam, lightning",A-1-a
+2198,cuadrado,adj,square,B-2
+2199,tía,nf,aunt,B-2
+2200,adulto,nm,"adult, grown-up",A-1-a
+2201,voto,nm,vote,A-3
+2202,calma,nf,"calm, lull",A-1-b
+2203,sorprendente,adj,"surprising, astonishing",B-2
+2204,favorable,adj,"favorable, suitable",A-2
+2205,oferta,nf,"offer, bid, supply",A-1-a
+2206,vergüenza,nf,embarrassment,B-2
+2207,ave,nm,bird,A-3
+2208,rodilla,nf,knee,B-2
+2209,paseo,nm,"walk, ride",B-2
+2210,variar,v,"change, vary",A-1-a
+2211,culpable,adj,guilty,A-3
+2212,normalmente,adv,normally,A-2
+2213,secundario,adj,secondary,A-2
+2214,registro,nm,"register, record",A-3
+2215,infinito,adj,infinite,A-2
+2216,válido,adj,valid,A-1-a
+2217,gordo,adj,"fat, thick",B-2
+2218,pintor,nm/f,painter,A-3
+2219,delito,nm,"crime, offense",B-2
+2220,vestido,nm,dress,B-2
+2221,relato,nm,"tale, story",B-2
+2222,baile,nm,"dance, ball",B-2
+2223,misterio,nm,mystery,A-2
+2224,otorgar,v,"give, grant, award",B-2
+2225,ciclo,nm,cycle,A-2
+2226,principalmente,adv,"principally, mainly",A-2
+2227,cesar,v,"cease, stop",A-3
+2228,síntoma,nm,symptom,A-2
+2229,amenaza,nf,threat,B-2
+2230,acá,adv,"here, around here",B-2
+2231,recorrido,nm,"journey, itinerary, route",B-2
+2232,concepción,nf,conception,A-2
+2233,tristeza,nf,sadness,B-2
+2234,vaca,nf,cow,A-3
+2235,criatura,nf,"creature, child",A-2
+2236,creencia,nf,belief,B-2
+2237,desagradable,adj,unpleasant,B-2
+2238,núcleo,nm,"nucleus, core",A-2
+2239,amenazar,v,threaten,B-2
+2240,perdón,nm,"forgiveness, pardon",A-3
+2241,madrugada,nf,"dawn, daybreak",B-2
+2242,agresivo,adj,aggressive,A-2
+2243,obrero,nm/f,"worker, laborer",B-2
+2244,parado,adj,"stopped, standing",B-2
+2245,callar,v,be/make quiet,B-2
+2246,cariño,nm,"love, affection",A-3
+2247,vigilar,v,"watch over, guard",A-3
+2248,ángel,nm,angel,A-1-a
+2249,rigor,nm,"harshness, rigor",A-1-a
+2250,orientar,v,"guide, show the way",A-2
+2251,contraste,nm,contrast,A-2
+2252,turno,nm,"turn, shift; en turno a: around",A-1-a
+2253,exclusivo,adj,exclusive,A-2
+2254,portar,v,"behave [se], carry",A-3
+2255,reino,nm,"kingdom, reign",B-2
+2256,aproximadamente,adv,approximately,A-2
+2257,prohibido,adj,prohibited,A-2
+2258,funcionamiento,nm,"functioning, operation",B-2
+2259,auto,nm,"auto, car",A-1-a
+2260,ala,nf (el),"wing, flank",B-2
+2261,debate,nm,debate,A-1-b
+2262,grueso,adj,thick,B-2
+2263,aplicación,nf,application,A-2
+2264,laboratorio,nm,laboratory,A-2
+2265,urgente,adj,urgent,A-2
+2266,vendedor,nm/f,salesperson,B-2
+2267,copa,nf,"cup, glass, top (tree)",B-2
+2268,avisar,v,"inform, announce",B-2
+2269,renovar,v,"renew, renovate",A-2
+2270,tratado,nm,"treaty, treatise",B-2
+2271,democrático,adj,democratic,A-2
+2272,soltar,v,"release, loosen, let out",B-2
+2273,abordar,v,"board, get in/on",B-2
+2274,castigar,v,punish,B-2
+2275,rechazo,nm,"rejection, refusal",B-2
+2276,totalidad,nf,"whole, totality",A-2
+2277,fracasar,v,"fail, to be unsuccessful",B-2
+2278,catorce,num,fourteen,B-2
+2279,calificar,v,"grade, rate, qualify",A-3
+2280,juntar,v,bring together,B-2
+2281,papá,nm,dad,A-1-a
+2282,necesariamente,adv,necessarily,A-2
+2283,considerable,adj,considerable,A-2
+2284,cero,num,"zero, naught, nil",A-1-a
+2285,ejecutar,v,"execute, carry out",A-2
+2286,mamá,nf,mom,B-2
+2287,vela,nf,"candle, sail, vigil",B-2
+2288,protestar,v,"protest, object",A-2
+2289,establecimiento,nm,establishment,A-2
+2290,gris,adj,"gray, gloomy",B-2
+2291,matiz,nm,"shade, tint, nuance",B-2
+2292,impresionar,v,impress,A-2
+2293,meta,nf,"goal, aim, purpose",B-2
+2294,comportar,v,behave,A-3
+2295,básico,adj,"basic, essential",A-2
+2296,comodidad,nf,"comfort, convenience",A-2
+2297,pariente,nc,relative,A-3
+2298,abandonado,adj,abandoned,A-2
+2299,distribución,nf,distribution,A-2
+2300,invitación,nf,invitation,A-2
+2301,destrucción,nf,destruction,A-2
+2302,indígena,adj,"indigenous, native",A-2
+2303,moreno,adj,"dark, brown",B-2
+2304,alegre,adj,"happy, lively, cheerful",B-2
+2305,opción,nf,"option, choice",A-2
+2306,extenso,adj,"extensive, large",A-2
+2307,ruso,adj,Russian,B-2
+2308,máximo,nm,maximum,A-3
+2309,tarjeta,nf,card,A-3
+2310,fase,nf,"phase, stage",A-3
+2311,veinticinco,num,twenty-five,B-2
+2312,tropa,nf,"troops, forces",A-3
+2313,remoto,adj,"remote, far-off",A-2
+2314,socio,nm,"member, partner",A-3
+2315,comunista,adj,Communist,A-2
+2316,abundante,adj,"abundant, plentiful",A-2
+2317,dibujar,v,"draw, sketch",B-2
+2318,guía,nc,"guide, leader",B-2
+2319,judío,adj,Jewish,B-2
+2320,impresionante,adj,"impressive, astonishing",A-2
+2321,hielo,nm,ice,B-2
+2322,gobernar,v,govern,A-2
+2323,occidental,adj,"occidental, western",A-2
+2324,deshacer,v,"undo, destroy, take apart",B-2
+2325,primavera,nf,"spring, spring-like",B-2
+2326,mutuo,adj,mutual,A-2
+2327,simpatía,nf,"sympathy, affinity",A-2
+2328,reconstruir,v,reconstruct,A-2
+2329,centímetro,nm,centimeter,A-2
+2330,pantalla,nf,"screen, monitor",B-2
+2331,toro,nm,bull,A-3
+2332,denunciar,v,denounce,A-3
+2333,cultivo,nm,"cultivation, crop",A-2
+2334,horror,nm,"horror, atrocity",A-1-a
+2335,bienestar,nm,"wellbeing, welfare",B-2
+2336,paciencia,nf,patience,A-2
+2337,ay,interj,"oh no!, oh my!",B-1
+2338,romántico,adj,romantic,A-2
+2339,convicción,nf,conviction,A-2
+2340,plenamente,adv,fully,B-2
+2341,uniforme,nm,uniform,A-1-a
+2342,media,nf,average; a medias: halfways,A-3
+2343,mínimo,nm,minimum,A-2
+2344,doscientos,num,two hundred,B-2
+2345,garantizar,v,guarantee,A-2
+2346,compañera,nf,female companion,A-3
+2347,pintado,adj,painted,B-2
+2348,combinar,v,combine,A-2
+2349,junio,nm,June,B-2
+2350,drama,nm,drama,A-1-a
+2351,distante,adj,"distant, far, remote",A-2
+2352,sencillamente,adv,simply,B-2
+2353,equivocado,adj,"mistaken, wrong",B-2
+2354,doble,nm,double,A-1-b
+2355,episodio,nm,"episode, incident",A-2
+2356,divertir,v,"amuse, entertain",A-3
+2357,afirmación,nf,"statement, assertion",A-2
+2358,conquistar,v,"conquer, win (over)",A-2
+2359,bar,nm,"(snack) bar, café",A-1-a
+2360,fantástico,adj,"fantastic, unreal",A-2
+2361,liberación,nf,liberation,A-2
+2362,actualmente,adv,"now, at present",A-2
+2363,envolver,v,wrap,B-2
+2364,estancia,nf,"stay, stance, ranch",B-2
+2365,emprender,v,"undertake, embark on",B-2
+2366,anticipar,v,"anticipate, advance",A-2
+2367,humilde,adj,"humble, modest",A-3
+2368,variedad,nf,variety,A-2
+2369,desarrollado,adj,"developed, grown",B-2
+2370,capitán,nm,"captain, chief",A-2
+2371,droga,nf,drug,B-2
+2372,específico,adj,specific,A-2
+2373,taller,nm,"workshop, shop",B-2
+2374,desorden,nm,"disorder, mess",B-2
+2375,quebrar,v,"break, bend, weaken",B-2
+2376,encerrado,adj,locked (up),B-2
+2377,esclavo,nm,slave,B-2
+2378,injusto,adj,"unfair, unjust",A-2
+2379,sucesivo,adj,"successive, following",A-2
+2380,sumamente,adv,"extremely, highly",B-2
+2381,feo,adj,"ugly, nasty, rude",B-2
+2382,equilibrar,v,balance,B-2
+2383,asomar,v,"appear, show, stick (out)",B-2
+2384,optar,v,"choose, opt for",A-1-a
+2385,manejo,nm,"handling, management",B-2
+2386,lágrima,nf,"tear, teardrop",B-2
+2387,colaboración,nf,collaboration,A-2
+2388,orgulloso,adj,"proud, arrogant",B-2
+2389,ángulo,nm,angle,A-1-b
+2390,impacto,nm,impact,A-2
+2391,urgencia,nf,urgency,A-2
+2392,excepcional,adj,"exceptional, unusual",A-2
+2393,creador,nm,creator,A-2
+2394,luna,nf,moon,A-3
+2395,instalación,nf,"installation, facilities",A-2
+2396,homenaje,nm,"homage, tribute",B-2
+2397,ruina,nf,"ruin, collapse",A-1-a
+2398,generoso,adj,generous,A-2
+2399,académico,adj,academic,A-2
+2400,azar,nm,"random, chance, hazard",B-2
+2401,estallar,v,"break out, explode, start",B-2
+2402,copiar,v,copy,A-1-a
+2403,inaugurar,v,"inaugurate, start",A-2
+2404,apretar,v,"squeeze, tighten, compress",B-2
+2405,razonable,adj,reasonable,A-2
+2406,ola,nf,"wave, billow",B-2
+2407,oreja,nf,ear,B-2
+2408,abuela,nf,grandmother,B-2
+2409,amable,adj,"kind, nice, friendly",B-2
+2410,doña,nf,"courtesy title (f), Mrs.",B-2
+2411,rígido,adj,"rigid, stiff, firm",A-1-a
+2412,arco,nm,"arch, arc, bow",A-1-a
+2413,oriente,nm,East,A-2
+2414,rumbo,nm,"direction, course, bearing",B-2
+2415,ejecución,nf,"performance, execution",A-2
+2416,mentir,v,(tell a) lie,B-2
+2417,ordenado,adj,"organized, clean",A-2
+2418,contratar,v,"hire, contract",A-2
+2419,caos,nm,chaos,A-1-a
+2420,colonia,nf,"colony, cologne",A-2
+2421,alcohol,nm,alcohol,A-1-a
+2422,apropiado,adj,appropriate,A-2
+2423,nieve,nf,snow,B-2
+2424,multitud,nf,multitude,A-2
+2425,ganado,nm,"livestock, cattle",B-2
+2426,pez,nm,(alive) fish,A-3
+2427,líder,nc,leader,A-3
+2428,resuelto,adj,"resolved, determined",B-2
+2429,club,nm,"club, society",A-1-a
+2430,posteriormente,adv,afterwards,A-2
+2431,desierto,nm,desert,A-1-b
+2432,escritura,nf,"writing, scripture",A-3
+2433,árabe,adj,Arab,B-2
+2434,danza,nf,dance,B-2
+2435,concierto,nm,"concert, concerto",A-2
+2436,partidario,nm,"supporter, partisan",B-2
+2437,templo,nm,"temple, church",A-2
+2438,líquido,nm,liquid,A-2
+2439,debilidad,nf,weakness,B-2
+2440,ambición,nf,ambition,A-2
+2441,locura,nf,"madness, insanity",B-2
+2442,comerciante,nc,"merchant, businessman",A-3
+2443,camisa,nf,shirt,A-3
+2444,pluma,nf,"pen, feather",B-2
+2445,pelota,nf,ball,A-3
+2446,pasaje,nm,"fare, passage, lane",B-2
+2447,limpieza,nf,"cleanliness, purity",B-2
+2448,admiración,nf,admiration,A-2
+2449,fantasma,nm,"ghost, phantom",A-3
+2450,transformación,nf,transformation,A-2
+2451,caza,nf,hunting (game),B-2
+2452,retener,v,"keep, retain",A-3
+2453,cruel,adj,"cruel, harsh",A-1-a
+2454,prender,v,"turn on, apprehend",B-2
+2455,almacén,nm,"warehouse, store",B-2
+2456,expectativa,nf,"expectation, hope, prospect",A-2
+2457,ruptura,nf,"break-up, rupture",A-2
+2458,inversión,nf,"investment, outlay",A-2
+2459,visible,adj,visible,A-2
+2460,herida,nf,"wound, injury",B-2
+2461,hipótesis,nf,hypothesis,A-2
+2462,formular,v,formulate,A-2
+2463,poquito,adj,little bit,B-2
+2464,variado,adj,"varied, mixed",A-2
+2465,giro,nm,"turn, draft, expression",B-2
+2466,esquema,nm,"outline, diagram, plan",A-3
+2467,mito,nm,myth,A-1-a
+2468,oscuridad,nf,darkness,B-2
+2469,pensión,nf,boarding house,A-2
+2470,desaparición,nf,disappearance,B-2
+2471,repetido,adj,repeated,A-2
+2472,fumar,v,smoke,B-2
+2473,envuelto,adj,wrapped,B-2
+2474,especializar,v,"specialize, major in",A-2
+2475,últimamente,adv,"lately, recently",B-2
+2476,caracterizar,v,"characterize, portray",A-2
+2477,paralelo,adj,parallel,A-1-a
+2478,ordinario,adj,"vulgar, ordinary",A-2
+2479,designar,v,designate,A-2
+2480,bloque,nm,block,A-1-a
+2481,cierre,nm,"zipper, closing",B-2
+2482,broma,nf,joke,B-2
+2483,viernes,nm,Friday,B-2
+2484,creciente,adj,"growing, increasing",A-3
+2485,tumba,nf,"tomb, grave",A-1-b
+2486,competir,v,compete,A-2
+2487,despacho,nm,"office, study",B-2
+2488,viuda,nf,widow,B-2
+2489,pantalón,nm,"pants, trousers",B-2
+2490,intercambio,nm,"exchange, interchange",B-2
+2491,mancha,nf,"stain, spot",B-2
+2492,retrato,nm,"portrait, photograph",A-3
+2493,lata,nf,(tin) can,B-2
+2494,combate,nm,"combat, battle, fight",A-2
+2495,instancia,nf,instance,A-2
+2496,secar,v,dry,B-2
+2497,roca,nf,rock,A-1-a
+2498,herramienta,nf,tool,B-2
+2499,anónimo,adj,anonymous,A-2
+2500,panorama,nm,"panorama, landscape",A-2
+2501,trágico,adj,tragic,A-2
+2502,imprimir,v,to print,A-3
+2503,camión,nm,"truck, van, tanker",B-2
+2504,olvido,nm,"forgetfulness, omission",B-2
+2505,estrategia,nf,strategy,A-2
+2506,muchacha,nf,girl,B-2
+2507,conversar,v,"converse, talk",A-2
+2508,propaganda,nf,"advertising, propaganda",A-1-a
+2509,lamentar,v,to regret,A-3
+2510,misa,nf,(religious) mass,B-2
+2511,alzar,v,"lift, raise",B-2
+2512,inicio,nm,"beginning, start",B-2
+2513,fútbol,nm,soccer,A-1-b
+2514,esfera,nf,"sphere, globe",A-3
+2515,iluminar,v,"illuminate, light up",A-2
+2516,arquitectura,nf,architecture,A-2
+2517,especialidad,nf,"specialty, specialized field",A-2
+2518,músico,nm/f,musician,A-2
+2519,relativamente,adv,relatively,A-2
+2520,eh,interj,eh,B-1
+2521,eje,nm,"axis, shaft, crux",A-3
+2522,guiar,v,"guide, lead, steer",A-3
+2523,efectuar,v,"carry out, cause to happen",B-2
+2524,abandono,nm,"abandonment, desertion",A-2
+2525,museo,nm,museum,A-2
+2526,propietario,nm,owner,A-3
+2527,trozo,nm,"piece, chunk",B-2
+2528,riguroso,adj,"rigorous, severe",A-2
+2529,armonía,nf,harmony,A-2
+2530,pacto,nm,"pact, agreement",A-1-b
+2531,calentar,v,"warm, heat",B-2
+2532,atento,adj,"attentive, polite",A-2
+2533,selección,nf,"selection, choice",A-2
+2534,proseguir,v,"continue, carry on",B-2
+2535,incómodo,adj,uncomfortable,B-2
+2536,protagonista,nc,"protagonist, main character",A-2
+2537,ferrocarril,nm,railway,A-3
+2538,inocente,adj,"innocent, naïve",A-2
+2539,fatal,adj,"fateful, deadly, awful",A-1-a
+2540,intimidad,nf,"private life, intimacy",A-2
+2541,enfrente,adv,in front (of),B-2
+2542,nave,nf,"spacecraft, ship",A-3
+2543,oración,nf,prayer,A-3
+2544,cansancio,nm,"tiredness, weariness",B-2
+2545,noble,adj,noble,A-1-a
+2546,escondido,adj,hidden,B-2
+2547,tejido,nm,"fabric, tissue",B-2
+2548,trampa,nf,"trick, trap; hacer trampa: to cheat",A-1-b
+2549,hondo,adj,deep,B-2
+2550,descripción,nf,description,A-2
+2551,pecado,nm,sin,B-2
+2552,cansar,v,"tire, annoy",B-2
+2553,divertido,adj,"funny, amusing",A-3
+2554,injusticia,nf,injustice,A-2
+2555,heredar,v,to inherit,A-3
+2556,librar,v,"liberate, set free",A-2
+2557,adiós,nm,goodbye,B-2
+2558,brillar,v,"shine, twinkle, be outstanding",B-2
+2559,rescatar,v,"rescue, save",B-2
+2560,tabaco,nm,"tobacco, cigarette, cigar",A-1-a
+2561,juvenil,adj,"young, juvenile",A-2
+2562,ausente,adj,absent,A-2
+2563,suceso,nm,"event, incident",A-3
+2564,extrañar,v,"miss, long for",B-2
+2565,asustar,v,"frighten, scare",B-2
+2566,mediado,adj,"mid, middle",A-3
+2567,antecedente,nm,antecedent,A-2
+2568,barrera,nf,"barrier, obstacle",B-2
+2569,estético,adj,esthetic,A-2
+2570,anotar,v,"annotate, jot, note",A-2
+2571,tribunal,nm,court,A-2
+2572,bravo,adj,"fierce, angry",B-2
+2573,invasión,nf,invasion,A-2
+2574,septiembre,nm,September,A-3
+2575,dependencia,nf,"dependence, dependency",A-2
+2576,democracia,nf,democracy,A-2
+2577,sutil,adj,subtle,A-2
+2578,maduro,adj,"mature, ripe",A-2
+2579,mezclado,adj,mixed,B-2
+2580,remontar,v,to go back to (time),B-2
+2581,limitación,nf,limitation,A-2
+2582,lindo,adj,"pretty, nice, lovely",B-2
+2583,invitado,nm,guest,B-2
+2584,pescado,nm,fish,B-2
+2585,continuamente,adv,continuously,A-2
+2586,obvio,adj,obvious,A-2
+2587,estrictamente,adv,strictly,A-2
+2588,obstáculo,nm,obstacle,A-2
+2589,aspiración,nf,"ambition, aspiration",A-2
+2590,simpático,adj,"nice, likeable, friendly",B-2
+2591,corredor,nm/f,"broker, corridor, runner",B-2
+2592,exquisito,adj,"exquisite, superb",A-2
+2593,resumen,nm,summary,B-2
+2594,basura,nf,"garbage, rubbish",B-2
+2595,escalera,nf,"stairs, ladder",B-2
+2596,gravedad,nf,"seriousness, gravity",A-2
+2597,fundamento,nm,"foundation, ground",A-2
+2598,sustancia,nf,"substance, essence",A-2
+2599,convocar,v,"convene, summon",B-2
+2600,harto,adj,fed up with,B-2
+2601,derrota,nf,"defeat, loss",B-2
+2602,sospecha,nf,suspicion,A-2
+2603,exagerado,adj,exaggerated,A-2
+2604,huelga,nf,"strike, protest",B-2
+2605,abuso,nm,"abuse, misuse",A-1-b
+2606,jueves,nm,Thursday,B-2
+2607,arreglo,nm,arrangement,B-2
+2608,sal,nf,salt,A-1-a
+2609,dosis,nf,dose,A-1-b
+2610,acento,nm,"accent, stress",A-2
+2611,aviso,nm,warning,B-2
+2612,lazo,nm,"bow, knot, tie, lasso",B-2
+2613,conservador,adj,conservative,A-2
+2614,entorno,nm,"environment, surroundings",B-2
+2615,nieto,nm,grandchild,B-2
+2616,príncipe,nm,prince,A-2
+2617,imprescindible,adj,"essential, indispensable",B-2
+2618,mediodía,nm,"noon, midday",B-2
+2619,gota,nf,drop,B-2
+2620,cajón,nm,drawer,B-2
+2621,generalizar,v,"generalize, popularize",A-2
+2622,señorita,nf,young woman,B-2
+2623,preferencia,nf,preference,A-2
+2624,habitar,v,to inhabit,A-2
+2625,pozo,nm,"well, shaft",B-2
+2626,rumor,nm,"rumor, murmur",A-1-a
+2627,armar,v,"arm, put together",B-2
+2628,concurso,nm,"competition, gathering",B-2
+2629,tesoro,nm,"treasure, thesaurus",B-2
+2630,presupuesto,nm,budget,B-2
+2631,rural,adj,"rural, country",A-1-a
+2632,vigilancia,nf,"surveillance, vigilance",A-2
+2633,supremo,adj,supreme,A-2
+2634,confuso,adj,"confused, mixed up",A-2
+2635,presa,nf,"dam, prisoner (f)",B-2
+2636,estómago,nm,stomach,B-2
+2637,anular,v,"annul, cancel",B-2
+2638,decisivo,adj,"decisive, conclusive",A-2
+2639,bola,nf,"ball, sphere",B-2
+2640,determinación,nf,determination,A-2
+2641,reforma,nf,"reform, improvement",A-2
+2642,bruto,adj,"brutal, coarse, clumsy",A-1-b
+2643,verso,nm,"verse, poem",A-1-b
+2644,requisito,nm,"prerequisite, requirement",A-2
+2645,adolescente,nc,adolescent,A-2
+2646,sentimental,adj,sentimental,A-1-a
+2647,herido,adj,"wounded, injured",B-2
+2648,kilo,nm,kilogram,A-1-a
+2649,alargar,v,"enlarge, elongate",B-2
+2650,conquista,nf,conquest,A-3
+2651,luminoso,adj,"bright, luminous",A-2
+2652,particularmente,adv,"particularly, personally",A-2
+2653,filósofo,nm,philosopher,A-2
+2654,genio,nm,"genius, disposition",A-3
+2655,sucesión,nf,"succession, series",A-2
+2656,componente,nm,"component, ingredient",A-2
+2657,transparente,adj,"transparent, clear",A-2
+2658,sufrimiento,nm,suffering,B-2
+2659,aparente,adj,apparent,A-2
+2660,entidad,nf,entity,A-2
+2661,saludo,nm,greeting,B-2
+2662,estimular,v,"stimulate, encourage",A-2
+2663,certeza,nf,certainty,B-2
+2664,depósito,nm,"deposit, sediment",A-2
+2665,húmedo,adj,"humid, damp",B-2
+2666,pasillo,nm,"hall, corridor",B-2
+2667,pisar,v,step on,B-2
+2668,solidaridad,nf,"solidarity, togetherness",A-2
+2669,papa,nmf,"Pope (m), potato (f)",B-2
+2670,geografía,nf,geography,A-2
+2671,leve,adj,"slight, trifling, light",B-2
+2672,juguete,nm,toy,B-2
+2673,violar,v,"violate, trespass, rape",A-2
+2674,chiste,nm,"joke, funny story",B-2
+2675,aprendizaje,nm,"learning, apprenticeship",B-2
+2676,esposo,nm,"husband, spouse",B-2
+2677,boda,nf,"marriage, wedding",B-2
+2678,realista,adj,realistic,A-2
+2679,fresco,nm,"freshness, coolness",B-2
+2680,lago,nm,lake,B-2
+2681,enriquecer,v,to enrich,B-2
+2682,prestado,adj,"borrowed, lent",B-2
+2683,orientación,nf,"orientation, direction",A-2
+2684,madurez,nf,"maturity, ripeness",B-2
+2685,adulto,adj,"adult, grown-up",A-1-a
+2686,municipal,adj,"municipal, town",A-2
+2687,demostración,nf,demonstration,A-2
+2688,fundamentalmente,adv,"fundamentally, basically",A-2
+2689,alegrar,v,be/make happy,B-2
+2690,transportar,v,"transport, carry",A-2
+2691,cumplimiento,nm,"fulfillment, compliment",B-2
+2692,respaldo,nm,"support, backing, back",B-2
+2693,superficial,adj,superficial,A-2
+2694,dieciocho,num,eighteen,B-2
+2695,incendio,nm,"fire, conflagration",B-2
+2696,dorado,adj,"golden, gold-plated",B-2
+2697,triunfar,v,to triumph,B-2
+2698,joya,nf,"jewel, treasure",B-2
+2699,favorito,adj,favorite,A-2
+2700,cementerio,nm,"cemetery, graveyard",A-3
+2701,escolar,adj,"school, scholastic",A-3
+2702,publicación,nf,publication,A-2
+2703,variación,nf,variation,A-2
+2704,cálido,adj,warm,B-2
+2705,inconsciente,adj,"unconscious, thoughtless",B-2
+2706,promoción,nf,promotion,A-2
+2707,enseguida,adv,"immediately, at once",B-2
+2708,mágico,adj,"magic, magical",A-2
+2709,sentencia,nf,"(legal) sentence, judgment",A-2
+2710,amargo,adj,"bitter, sour, painful",B-2
+2711,resolución,nf,resolution,A-2
+2712,afortunadamente,adv,"luckily, fortunately",A-2
+2713,coincidencia,nf,coincidence,A-2
+2714,estímulo,nm,"stimulus, encouragement",A-2
+2715,acoger,v,"welcome, accept",B-2
+2716,filosófico,adj,philosophical,A-2
+2717,sembrar,v,"sow, plant",B-2
+2718,acentuar,v,"accent, stress",A-2
+2719,anteriormente,adv,previously,A-2
+2720,marino,adj,"marine, naval",A-2
+2721,barra,nf,"bar, rod, rail",A-1-b
+2722,entretener,v,"entertain, amuse",B-2
+2723,desviar,v,"deviate, divert, change",B-2
+2724,retroceder,v,go back,B-2
+2725,culto,adj,"cultured, educated",A-2
+2726,novia,nf,"girlfriend, bride",B-2
+2727,piano,nm,piano,A-1-a
+2728,pretensión,nf,"pretension, claim",A-2
+2729,habla,nf (el),"speech, talking",B-2
+2730,novio,nm,"boyfriend, groom",B-2
+2731,sonreír,v,to smile,B-2
+2732,espectador,nm,"spectator, onlooker",A-2
+2733,relatar,v,"tell, narrate",A-3
+2734,pensado,adj,"thought-out, designed",B-2
+2735,bota,nf,"boot, wineskin",B-2
+2736,oh,interj,oh,B-1
+2737,pretexto,nm,"pretext, excuse",A-3
+2738,horrible,adj,horrible,A-1-a
+2739,fiebre,nf,"fever, excitement",A-3
+2740,difundir,v,spread (out),A-2
+2741,lucir,v,"show (off), shine",B-2
+2742,síntesis,nf,synthesis,A-2
+2743,este,nm,East,B-2
+2744,nervio,nm,nerve,A-1-b
+2745,científico,nm/f,scientist,A-2
+2746,peculiar,adj,peculiar,A-2
+2747,ejemplar,adj,"exemplary, model",A-2
+2748,grano,nm,"grain, kernel",A-1-b
+2749,recientemente,adv,recently,A-2
+2750,reservar,v,"reserve, book",A-2
+2751,asistencia,nf,"attendance, assistance",A-2
+2752,sacrificar,v,to sacrifice,A-2
+2753,puramente,adv,"purely, simply",A-2
+2754,sonrisa,nf,smile,B-2
+2755,exagerar,v,to exaggerate,A-2
+2756,león,nm,lion,B-2
+2757,bárbaro,adj,"savage, horrible",A-2
+2558,aceptación,nf,"acceptance, approval",A-2
+2759,labio,nm,lip,B-2
+2760,visitante,nc,visitor,B-2
+2761,autónomo,adj,autonomous,A-2
+2762,sonoro,adj,"loud, resounding",A-3
+2763,traslado,nm,transfer,B-2
+2764,residir,v,"reside, live (in)",A-2
+2765,tentación,nf,temptation,A-2
+2766,porvenir,nm,"future, time to come",B-2
+2767,promover,v,to promote,A-2
+2768,atracción,nf,attraction,A-2
+2769,jurídico,adj,"legal, juridical",A-2
+2770,reparar,v,"repair, restore",A-2
+2771,ilustre,adj,"renowned, illustrious",A-2
+2772,corona,nf,crown,B-2
+2773,administrar,v,"administer, manage",A-2
+2774,docena,nf,dozen,B-2
+2775,ahorrar,v,"save (money, time)",B-2
+2776,perfección,nf,perfection,A-2
+2777,humedad,nf,humidity,A-2
+2778,cosecha,nf,"harvest, crop",B-2
+2779,enterrar,v,to bury,B-2
+2780,desesperación,nf,"desperation, exasperation",A-2
+2781,curva,nf,curve,A-1-a
+2782,contraer,v,"contract, shrink, abbreviate",A-2
+2783,blando,adj,"soft, limp, gentle",B-2
+2784,estable,adj,"stable, steady",A-2
+2785,ciertamente,adv,"certainly, indeed",A-3
+2786,dormido,adj,"asleep, sleeping",B-2
+2787,amo,nm,"master, boss (m)",B-2
+2788,reflexionar,v,"reflect, consider on",A-2
+2789,humo,nm,smoke,B-2
+2790,realización,nf,"fulfillment, realization",A-2
+2791,cuartel,nm,"quarters, barracks",B-2
+2792,tránsito,nm,"traffic, transit",A-2
+2793,dieciséis,num,sixteen,B-2
+2794,énfasis,nm,emphasis,A-2
+2795,tímido,adj,"timid, shy, half-hearted",A-2
+2796,empresario,nm,"manager, entrepreneur",B-2
+2797,tuyo,pron,yours (sg/+fam),B-1
+2798,saco,nm,"sack, bag, plunder",A-1-b
+2799,vasto,adj,"vast, immense, huge",A-1-b
+2800,cruz,nf,"cross, burden",A-1-b
+2801,frustrado,adj,frustrated,A-2
+2802,pausa,nf,pause,A-1-b
+2803,comprometido,adj,"committed, engaged",B-2
+2804,libremente,adv,freely,A-3
+2805,vicio,nm,"vice, bad habit, defect",A-1-b
+2806,impuesto,nm,tax,B-2
+2807,consiguiente,adj,consequent; por consiguiente: consequently,A-2
+2808,arquitecto,nm/f,architect,A-2
+2809,cruce,nm,"crossing, intersection",B-2
+2810,centrar,v,"center, focus, base (on)",A-3
+2811,convivencia,nf,"coexistence, living together",B-2
+2812,cable,nm,"cable, wiring",A-1-b
+2813,aburrido,adj,"boring, bored",B-2
+2814,bondad,nf,"goodness, kindness",B-2
+2815,experimento,nm,experiment,A-1-b
+2816,recto,adj,"right, straight, honest",A-3
+2817,crónica,nf,"account, chronicle",A-2
+2818,seguida,adv,"en seguida: right away, at once",B-2
+2819,originar,v,"give rise (to), cause",A-2
+2820,socialista,adj,socialist,A-2
+2821,ahogar,v,"drown, choke, flood",B-2
+2822,espléndido,adj,"splendid, generous",A-2
+2823,esforzar,v,"make an effort, exert oneself",B-2
+2824,dictadura,nf,dictatorship,A-2
+2825,eficacia,nf,"efficiency, effectiveness",A-3
+2826,detectar,v,detect,A-2
+2827,vapor,nm,"vapor, steam",A-1-a
+2828,bebida,nf,"drink, beverage",B-2
+2829,autorizar,v,"authorize, legalize",A-2
+2830,charla,nf,"talk, chat",B-2
+2831,gestión,nf,"management, step, negotiation",B-2
+2832,afrontar,v,"face, confront",B-2
+2833,existente,adj,existing,A-2
+2834,cartera,nf,"wallet, satchel",B-2
+2835,inclinado,adj,"inclined, slanting",A-2
+2836,restar,v,"subtract, minimize",A-3
+2837,circulación,nf,"circulation, traffic",A-2
+2838,denuncia,nf,accusation,A-3
+2839,concretar,v,"materialize, fulfill",A-2
+2840,picar,v,"bite, sting, itch",B-2
+2841,tormenta,nf,storm,A-3
+2842,metálico,adj,metallic,A-2
+2843,foco,nm,focus,A-2
+2844,residencia,nf,residence,A-2
+2845,espectacular,adj,spectacular,A-2
+2846,jurar,v,"swear, take an oath",B-2
+2847,rezar,v,"pray, recite",B-2
+2848,cuero,nm,"leather, skin",B-2
+2849,misterioso,adj,mysterious,A-2
+2850,hierba,nf,"herb, grass, weed",A-1-a
+2851,obrero,adj,working class,B-2
+2852,administrativo,adj,administrative,A-2
+2853,manzana,nf,"apple, (city) block",B-2
+2854,singular,adj,"single, singular",A-1-a
+2855,pedazo,nm,"piece, bit",B-2
+2856,sabiduría,nf,"wisdom, knowledge",B-2
+2857,inducir,v,lead to,A-2
+2858,cigarrillo,nm,cigarette,B-2
+2859,encantar,v,be very pleasing to,B-2
+2860,crudo,adj,"raw, crude, natural",A-1-b
+2861,agotado,adj,"tired, used up, sold out",B-2
+2862,deportivo,adj,"sports, sporty",A-2
+2863,magnitud,nf,"magnitude, extent",A-2
+2864,químico,adj,chemical,A-2
+2865,botón,nm,button,B-2
+2866,teórico,adj,theoretical,A-2
+2867,igualdad,nf,equality,A-2
+2868,privar,v,deprive (of),B-2
+2869,deducir,v,"deduce, infer",A-2
+2870,redactar,v,"edit, write, compose",B-2
+2871,noción,nf,"notion, idea",A-2
+2872,planear,v,plan,B-2
+2873,abrazar,v,"hug, embrace",B-2
+2874,tolerar,v,"tolerate, put up with",A-2
+2875,semilla,nf,seed,B-2
+2876,avenida,nf,avenue,B-2
+2877,descartar,v,"discard, reject, rule out",B-2
+2878,diablo,nm,devil,A-3
+2879,sujetar,v,"fasten, attach, hold",B-2
+2880,hueco,nm,"hole, cavity",B-2
+2881,colaborador,nm,collaborator,A-2
+2882,capricho,nm,"caprice, whim",B-2
+2883,ciudadano,adj,"community, citizen",B-2
+2884,prudente,adj,"sensible, prudent",A-2
+2885,guitarra,nf,guitar,A-1-a
+2886,agencia,nf,"agency, branch",A-2
+2887,rabia,nf,rage,B-2
+2888,telefónico,adj,telephone,A-2
+2889,monumento,nm,monument,A-2
+2890,racional,adj,rational,A-2
+2891,previamente,adv,previously,A-3
+2892,trazar,v,"draw, trace",B-2
+2893,correspondencia,nf,"correspondence, connection",A-2
+2894,barro,nm,"clay, mud",B-2
+2895,fuga,nf,"flight, escape",B-2
+2896,presionar,v,"press, pressure",A-2
+2897,identificación,nf,identification,A-2
+2898,contexto,nm,context,A-1-a
+2899,sombrero,nm,"hat, sombrero",B-2
+2900,reiterar,v,"reiterate, repeat",A-2
+2901,ayudante,nc,"helper, assistant",B-2
+2902,indiferente,adj,indifferent,A-2
+2903,maniobra,nf,"maneuver, operation",B-2
+2904,inesperado,adj,"unexpected, unforeseen",B-2
+2905,distraer,v,distract,A-2
+2906,prejuicio,nm,prejudice,A-2
+2907,tropezar,v,"trip, stumble",B-2
+2908,recomendación,nf,recommendation,A-2
+2909,francamente,adv,"frankly, openly",B-2
+2910,diseñar,v,"design, develop",A-2
+2911,proveer,v,provide,A-2
+2912,seleccionar,v,select,A-2
+2913,convivir,v,coexist,B-2
+2914,instinto,nm,instinct,A-2
+2915,sincero,adj,sincere,A-2
+2916,progresar,v,to progress,A-2
+2917,ideológico,adj,ideological,A-2
+2918,precaución,nf,"caution, forethought",A-2
+2919,robo,nm,"theft, robbery",B-2
+2920,cabello,nm,hair,B-2
+2921,utilidad,nf,"usefulness, utility",A-2
+2922,queja,nf,complaint,B-2
+2923,abundar,v,be plentiful,A-3
+2924,celo,nm,"jealousy, zeal",A-3
+2925,publicidad,nf,"advertising, publicity",A-2
+2926,ligado,adj,"linked, joined",B-2
+2927,índole,nf,"nature, temperament",B-2
+2928,asimilar,v,assimilate,A-2
+2929,prolongado,adj,"prolonged, lengthy",A-2
+2930,choque,nm,"crash, collision",B-2
+2931,tecnología,nf,technology,A-2
+2932,tubo,nm,"tube, pipe",A-1-b
+2933,sordo,adj,"deaf, dull",B-2
+2934,admirable,adj,admirable,A-2
+2935,mercancía,nf,"goods, merchandise",A-3
+2936,tronco,nm,"trunk, torso",B-2
+2937,culto,nm,"worship, cult",A-2
+2938,palma,nf,"palm tree, palm",A-1-a
+2939,prenda,nf,piece of clothing,B-2
+2940,coro,nm,"choir, chorus",B-2
+2941,tejer,v,"sew, weave",B-2
+2942,túnel,nm,tunnel,A-1-b
+2943,cercanía,nf,"nearness, proximity",B-2
+2944,proclamar,v,proclaim,A-2
+2945,cuchillo,nm,knife,B-2
+2946,desprecio,nm,"contempt, disdain",B-2
+2947,plástico,nm,plastic,A-2
+2948,complejo,nm,complex,A-1-b
+2949,plantar,v,plant,A-1-b
+2950,naranja,nf,orange (fruit),B-2
+2951,derrotar,v,"defeat, beat",B-2
+2952,frenar,v,"brake, restrain",B-2
+2953,voluntario,adj,"voluntary, volunteer",A-2
+2954,adivinar,v,"guess, solve",B-2
+2955,cuota,nf,"quota, share, dues",B-2
+2956,mosca,nf,fly (insect),B-2
+2957,judicial,adj,judicial,A-2
+2958,pescar,v,to fish,B-2
+2959,doctrina,nf,"doctrine, teachings",A-2
+2960,reservado,adj,"reserved, booked",A-2
+2961,laguna,nf,lagoon,B-2
+2962,distinción,nf,distinction,A-2
+2963,tribu,nf,tribe,A-1-b
+2964,refugio,nm,"shelter, refuge",A-3
+2965,tragar,v,to swallow,B-2
+2966,legítimo,adj,legitimate,A-2
+2967,flotar,v,"float, flutter",B-2
+2968,convencional,adj,conventional,A-2
+2969,sacudir,v,"shake, jolt",B-2
+2970,gigantesco,adj,"giant, gigantic",A-2
+2971,cena,nf,dinner,B-2
+2972,incertidumbre,nf,uncertainty,B-2
+2973,tierno,adj,"tender, soft",B-2
+2974,ligeramente,adv,"slightly, lightly",B-2
+2975,aéreo,adj,"aerial, air",A-2
+2976,suprimir,v,"suppress, delete",A-2
+2977,ahorro,nm,"saving, thrift",B-2
+2978,sobrar,v,"be too much, left over",B-2
+2979,brotar,v,to sprout,B-2
+2980,prisión,nf,"prison, imprisonment",A-2
+2981,investigador,nm/f,"researcher, investigator",A-2
+2982,técnico,nm/f,technician,A-2
+2983,paraíso,nm,paradise,A-2
+2984,automático,adj,automatic,A-2
+2985,postre,nmf,dessert; a la postre: in the end,B-2
+2986,inquieto,adj,"restless, anxious",B-2
+2987,helado,adj,"iced, freezing, icy",B-2
+2988,plástico,adj,plastic,A-2
+2989,alimentación,nf,"feeding, food",A-3
+2990,miel,nf,honey,B-2
+2991,vulgar,adj,"vulgar, common, banal",A-1-a
+2992,desafío,nm,"challenge, provocation",A-3
+2993,aeropuerto,nm,airport,A-2
+2994,valorar,v,to value,B-2
+2995,diferenciar,v,"differentiate, distinguish",A-2
+2996,abrigo,nm,"overcoat, shelter",B-2
+2997,hábil,adj,"skillful, clever",B-2
+2998,veinticuatro,num,twenty-four,B-2
+2999,sello,nm,"stamp, seal",B-2
+3000,campana,nf,bell,B-2
+3001,destacado,adj,"outstanding, leading",B-2
+3002,encendido,adj,"turned on, burning",B-2
+3003,incidente,nm,incident,A-2
+3004,fragmento,nm,"fragment, passage",A-2
+3005,plano,adj,"flat, plain, even, level",B-2
+3006,compensar,v,"compensate, make up for",A-2
+3007,obligatorio,adj,"obligatory, compulsory",A-2
+3008,asignar,v,"assign, allocate",A-3
+3009,contemporáneo,adj,contemporary,A-2
+3010,suscitar,v,"arouse, provoke",B-2
+3011,finalizar,v,"end, finalize",A-2
+3012,reforzar,v,"reinforce, strengthen",A-3
+3013,mina,nf,mine,A-1-b
+3014,restaurante,nm,restaurant,A-2
+3015,porcentaje,nm,percentage,A-3
+3016,conductor,nm/f,"driver, conductor",A-2
+3017,contigo,pron,with you,B-1
+3018,evolucionar,v,"evolve, develop",A-2
+3019,magia,nf,magic,A-2
+3020,presidir,v,preside over,A-3
+3021,comedor,nm,dining room,B-2
+3022,seriedad,nf,seriousness,B-2
+3023,gallina,nf,"hen, coward",B-2
+3024,espada,nf,sword,A-3
+3025,discreto,adj,"discreet, tactful",A-2
+3026,excelencia,nf,excellence,A-2
+3027,agitar,v,"shake, move",A-3
+3028,amoroso,adj,"loving, affectionate",A-2
+3029,músculo,nm,muscle,A-2
+3030,optimista,adj,optimistic,A-2
+3031,persecución,nf,"pursuit, persecution",A-2
+3032,imperio,nm,"empire, fortune",A-3
+3033,casco,nm,helmet,B-2
+3034,pelea,nf,"fight, quarrel",B-2
+3035,retorno,nm,return,B-2
+3036,oler,v,to smell,B-2
+3037,aludir,v,to allude to,A-3
+3038,vera,nf,"de veras: really, for real",B-2
+3039,delgado,adj,"thin, skinny",B-2
+3040,latín,nm,Latin,A-1-a
+3041,resumir,v,to summarize,B-2
+3042,rutina,nf,routine,A-2
+3043,tenso,adj,"tight, tense",A-2
+3044,mejora,nf,improvement,B-2
+3045,domicilio,nm,"residence, address",A-3
+3046,porquería,nf,"filth, junk",B-2
+3047,burlar,v,to mock,B-2
+3048,susto,nm,"fright, scare",B-2
+3049,encajar,v,"insert, fit well",B-2
+3050,nadar,v,to swim,B-2
+3051,amanecer,nm,"daybreak, dawn",B-2
+3052,célula,nf,cell (biology),A-1-b
+3053,acelerar,v,"accelerate, speed (up)",A-2
+3054,crítico,nm,critic,A-2
+3055,inspiración,nf,"inspiration, inhalation",A-2
+3056,ladrillo,nm,brick,B-2
+3057,proyección,nf,"projection, screening",A-2
+3058,desplegar,v,"unfold, deploy",B-2
+3059,desembocar,v,"flow, lead into",B-2
+3060,lana,nf,wool,B-2
+3061,indirecto,adj,indirect,A-2
+3062,infierno,nm,"hell, inferno",A-3
+3063,aliviar,v,"lighten, relieve, comfort",B-2
+3064,acero,nm,steel,B-2
+3065,ejecutivo,adj,executive,A-2
+3066,cazar,v,to hunt,B-2
+3067,ojalá,adv,I hope that,B-2
+3068,aplaudir,v,"clap, applaud",A-3
+3069,preso,nm,prisoner,B-2
+3070,billete,nm,"ticket, bill, note",A-3
+3071,motivar,v,"motivate, cause",A-2
+3072,descuidar,v,to neglect,B-2
+3073,referente,adj,concerning,A-2
+3074,tontería,nf,"stupidity, stupid thing",B-2
+3075,cauce,nm,"(river) bed, ditch",B-2
+3076,ignorancia,nf,ignorance,A-2
+3077,acostar,v,put/go to bed,B-2
+3078,encanto,nm,"charm, spell",B-2
+3079,propiamente,adv,"exactly, properly",A-3
+3080,sed,nf,thirst,B-2
+3081,escudo,nm,"shield, coat of arms",B-2
+3082,muñeca,nf,"doll, wrist",B-2
+3083,dotado,adj,"endowed, gifted",B-2
+3084,conectar,v,"connect, plug in",A-2
+3085,rango,nm,"rank, range",B-2
+3086,invento,nm,invention,A-2
+3087,arder,v,"burn, glow",B-2
+3088,recinto,nm,"grounds, precincts",B-2
+3089,tinta,nf,ink,B-2
+3090,garganta,nf,"throat, gorge",B-2
+3091,viajero,nm,"traveler, passenger",B-2
+3092,asesino,nm,"killer, assassin",A-2
+3093,rito,nm,"rite, ritual",A-2
+3094,atractivo,nm,"attraction, charm",A-2
+3095,callado,adj,"quiet, reserved",B-2
+3096,frustración,nf,frustration,A-2
+3097,flexible,adj,flexible,A-2
+3098,cemento,nm,"cement, concrete",A-2
+3099,catástrofe,nf,catastrophe,A-2
+3100,dulce,nm,"candy, sweets",B-2
+3101,recuperación,nf,"recovery, recuperation",A-2
+3102,localizar,v,"locate, find, localize",A-2
+3103,mediano,adj,"average, medium, ordinary",A-3
+3104,almuerzo,nm,lunch,B-2
+3105,pacífico,adj,peaceful,A-2
+3106,uña,nf,"nail, fingernail, toenail",B-2
+3107,contradictorio,adj,contradictory,A-2
+3108,excepto,prep,except (for),A-2
+3109,herir,v,"wound, hurt",B-2
+3110,costo,nm,"price, cost, expense",A-1-b
+3111,manifiesto,nm,poner de manifiesto: to show,A-2
+3112,mortal,adj,"mortal, lethal, deadly",A-1-a
+3113,repetición,nf,repetition,A-2
+3114,patrimonio,nm,"patrimony, inheritance",A-3
+3115,solemne,adj,solemn,A-2
+3116,estatua,nf,statue,A-2
+3117,decadencia,nf,"decline, decay",A-3
+3118,mudo,adj,"mute, silent",B-2
+3119,precipitar,v,"plunge, hurl, rush",A-3
+3120,sorprendido,adj,surprised,B-2
+3121,excluir,v,"exclude, reject",A-2
+3122,enfermero,nm/f,nurse,B-2
+3123,psicológico,adj,psychological,A-2
+3124,adorar,v,"worship, adore",A-2
+3125,aficionado,nm,"fan, devotee",B-2
+3126,preferible,adj,preferable,A-2
+3127,célebre,adj,"famous, renowned",A-3
+3128,agujero,nm,"hole, opening",B-2
+3129,beneficiar,v,to benefit,A-2
+3130,arroz,nm,rice,B-2
+3131,valiente,adj,"brave, courageous, bold",A-3
+3132,delicioso,adj,"delicious, delightful, charming",A-2
+3133,potente,adj,"potent, powerful",A-2
+3134,cerveza,nf,"beer, ale",B-2
+3135,escasez,nf,"scarcity, shortage",B-2
+3136,ministerio,nm,ministry,A-3
+3137,vuestro,adj,your (pl/+fam),B-1
+3138,notorio,adj,"notorious, noticeable",A-2
+3139,transición,nf,transition,A-2
+3140,sexto,adj,sixth,B-2
+3141,despreciar,v,"despise, scorn",B-2
+3142,negativa,nf,"negative, denial",A-2
+3143,falda,nf,skirt,B-2
+3144,improvisar,v,to improvise,A-2
+3145,emerger,v,"emerge, surface",A-2
+3146,clavar,v,to nail,B-2
+3147,cantante,nc,singer,B-2
+3148,constancia,nf,perseverance,A-2
+3149,electrónico,adj,electronic,A-2
+3150,anillo,nm,(finger) ring,B-2
+3151,balance,nm,"outcome, balance",A-1-b
+3152,entendimiento,nm,understanding,B-2
+3153,volcar,v,"turn/knock over, empty",B-2
+3154,quieto,adj,"still, motionless, calm",A-3
+3155,transcurso,nm,"passing, course, lapse",B-2
+3156,barrer,v,"sweep, clean out",B-2
+3157,desayuno,nm,breakfast,B-2
+3158,alfombra,nf,"rug, carpet, mat",B-2
+3159,historiador,nm/f,historian,A-2
+3160,rogar,v,"implore, pray, ask",B-2
+3161,pálido,adj,"pale, ghastly, faded",A-1-b
+3162,programar,v,"plan, program",A-2
+3163,animado,adj,"excited, lively",A-2
+3164,chileno,adj,Chilean,B-2
+3165,ficción,nf,fiction,A-2
+3166,ensayar,v,to test,B-2
+3167,materno,adj,maternal,A-2
+3168,jugador,nm,"player, gambler",B-2
+3169,cartel,nm,poster,B-2
+3170,desconfianza,nf,distrust,B-2
+3171,respiración,nf,"respiration, breath",A-2
+3172,votar,v,to vote,A-3
+3173,caña,nf,"cane, reed",B-2
+3174,aislar,v,"isolate, insulate",A-3
+3175,soltero,adj,"single, not married",B-2
+3176,prisionero,nm,prisoner,A-2
+3177,turista,nc,tourist,A-2
+3178,abundancia,nf,abundance,A-2
+3179,rodar,v,"roll, run, scatter",B-2
+3180,asistente,nc,assistant,A-2
+3181,vinculado,adj,connected,B-2
+3182,queso,nm,cheese,B-2
+3183,arriesgar,v,"risk, venture",B-2
+3184,indicio,nm,"indication, sign",B-2
+3185,colgado,adj,hanging,B-2
+3186,bautizar,v,"baptize, christen",A-2
+3187,cerro,nm,hill,B-2
+3188,desatar,v,"untie, unleash, spark off",B-2
+3189,alentar,v,to encourage,B-2
+3190,descargar,v,"unleash, unload",B-2
+3191,galería,nf,"gallery, balcony",A-2
+3192,engaño,nm,"deceit, falsehood, hoax",B-2
+3193,enamorar,v,to fall in love,B-2
+3194,geográfico,adj,geographical,A-2
+3195,continuidad,nf,continuity,A-2
+3196,receta,nf,"recipe, prescription",A-3
+3197,conveniencia,nf,"convenience, usefulness",A-2
+3198,reemplazar,v,to replace,B-2
+3199,carencia,nf,"lack, shortage",B-2
+3200,cerdo,nm,"pig, sow, slob",B-2
+3201,soplar,v,blow (wind),B-2
+3202,frágil,adj,"fragile, weak",A-2
+3203,empeño,nm,"insistence, determination",B-2
+3204,agresión,nf,"aggression, attack",A-2
+3205,fortaleza,nf,"fortress, strength",B-2
+3206,seriamente,adv,seriously,A-3
+3207,balcón,nm,balcony,B-2
+3208,observador,nm,observer,A-2
+3209,ridículo,adj,"ridiculous, absurd",A-2
+3210,renta,nf,income,B-2
+3211,justificación,nf,justification,A-2
+3212,enfrentamiento,nm,confrontation,B-2
+3213,junta,nf,"meeting, conference, seam",B-2
+3214,irregular,adj,irregular,A-2
+3215,trayectoria,nf,"trajectory, path",A-2
+3216,genial,adj,"brilliant, inspired",A-2
+3217,indiferencia,nf,indifference,A-2
+3218,taza,nf,"cup, bowl",B-2
+3219,vínculo,nm,"tie, bond, link",B-2
+3220,cuaderno,nm,"notebook, workbook",B-2
+3221,gracioso,adj,"funny, charming, amusing",A-3
+3222,regir,v,"rule, govern, manage",B-2
+3223,intermedio,adj,"interim, intermediate",A-2
+3224,bañar,v,"bathe, take a bath",B-2
+3225,temporal,adj,temporary,A-2
+3226,rozar,v,touch (lightly),B-2
+3227,pánico,nm,panic,A-2
+3228,distinguido,adj,distinguished,A-2
+3229,cañón,nm,"canyon, cannon",A-2
+3230,dudoso,adj,"doubtful, dubious",B-2
+3231,pollo,nm,chicken,B-2
+3232,lamentable,adj,regrettable,A-3
+3233,trascendencia,nf,"transcendent nature, significance",A-2
+3234,remitir,v,to remit,A-3
+3235,interminable,adj,"endless, interminable",A-2
+3236,corrupción,nf,corruption,A-2
+3237,confesión,nf,"confession, admission",A-2
+3238,corbata,nf,"tie, sash",B-2
+3239,macho,nm,"male, manliness",A-3
+3240,disolver,v,to dissolve,A-2
+3241,secuencia,nf,sequence,A-2
+3242,cáncer,nm,cancer,A-1-a
+3243,velar,v,watch over,B-2
+3244,archivo,nm,"archive, file, filing cabinet",A-2
+3245,habitualmente,adv,habitually,A-2
+3246,trámite,nm,"procedure, step, requirement",B-2
+3247,tranquilamente,adv,"calmly, peacefully",B-2
+3248,innecesario,adj,unnecessary,B-2
+3249,raya,nf,"line, ray, stripe",B-2
+3250,televisor,nm,television set,A-2
+3251,estabilidad,nf,stability,A-2
+3252,grandeza,nf,"greatness, size",B-2
+3253,prisa,nf,hurry,B-2
+3254,persistir,v,to persist,A-2
+3255,temblar,v,"tremble, shake",B-2
+3256,verbal,adj,"verbal, oral",A-1-a
+3257,matemática,nf,mathematics,A-2
+3258,demonio,nm,"demon, devil",A-3
+3259,intacto,adj,intact,A-2
+3260,procedente,adj,coming (from),A-3
+3261,cenar,v,to dine,B-2
+3262,disponible,adj,available,B-2
+3263,tornar,v,"transform, turn",B-2
+3264,encantado,adj,"pleased, delighted",B-2
+3265,británico,adj,British,B-2
+3266,manga,nf,sleeve,B-2
+3267,perjudicar,v,to endanger,B-2
+3268,laboral,adj,"labor, industry",A-3
+3269,rubio,adj,"blonde, fair",B-2
+3270,prevenir,v,"avoid, prevent",A-2
+3271,seda,nf,silk,B-2
+3272,envidia,nf,envy,B-2
+3273,emergencia,nf,emergency,A-2
+3274,enamorado,adj,in love,B-2
+3275,grasa,nf,"grease, fat",B-2
+3276,culminar,v,"culminate, accomplish",A-2
+3277,alcalde,nm,mayor,B-2
+3278,insuficiente,adj,insufficient,A-2
+3279,sostenido,adj,"sustained, steady",B-2
+3280,congreso,nm,congress,A-2
+3281,espantoso,adj,"frightening, dreadful",B-2
+3282,aplauso,nm,"applause, praise, acclaim",A-3
+3283,prima,nf,"female cousin, down payment",B-2
+3284,ansiedad,nf,anxiety,A-2
+3285,dirigente,nc,"leader, director, manager",B-2
+3286,ascenso,nm,"promotion, climb",B-2
+3287,finalidad,nf,"purpose, aim",B-2
+3288,preceder,v,to precede,A-2
+3289,financiero,adj,financial,A-2
+3290,nostalgia,nf,"nostalgia, homesickness",A-2
+3291,mención,nf,mention,A-2
+3292,afición,nf,"fondness, interest",B-2
+3293,colonial,adj,colonial,A-2
+3294,lástima,nf,"shame, pity",B-2
+3295,teatral,adj,theatrical,A-2
+3296,lápiz,nm,pencil,B-2
+3297,vertical,adj,"vertical, upright",A-2
+3298,nido,nm,nest,B-2
+3299,gratuito,adj,"free, arbitrary, gratuitous",B-2
+3300,difícilmente,adv,with difficulty,B-2
+3301,orquesta,nf,"orchestra, dance band",A-2
+3302,conexión,nf,"connection, relationship",A-2
+3303,alternar,v,to alternate,A-2
+3304,vegetal,adj,"plant, vegetable",A-2
+3305,usado,adj,"worn out, old, used",B-2
+3306,vigor,nm,"force, strength, vigor",A-1-b
+3307,salario,nm,"salary, wages",A-2
+3308,acertar,v,get right,B-2
+3309,filo,nm,(cutting) edge,B-2
+3310,ambicioso,adj,"ambitious, greedy",A-2
+3311,policial,adj,police,A-2
+3312,poético,adj,poetic,A-2
+3313,batir,v,beat (object),B-2
+3314,maíz,nm,"corn, maize",B-2
+3315,desgraciadamente,adv,unfortunately,B-2
+3316,satisfactorio,adj,satisfactory,A-2
+3317,autonomía,nf,"autonomy, range",A-2
+3318,vago,adj,vague,A-1-b
+3319,estúpido,adj,"stupid, idiotic",A-2
+3320,demorar,v,"delay, take time",B-2
+3321,ama,nc,"housekeeper, housewife",B-2
+3322,beso,nm,kiss,B-2
+3323,cintura,nf,waist,B-2
+3324,automáticamente,adv,automatically,A-2
+3325,pauta,nf,"guideline, rule, standard",B-2
+3326,honesto,adj,honest,A-2
+3327,recepción,nf,"reception, waiting-room",A-2
+3328,bala,nf,"bullet, shot",B-2
+3329,suicidio,nm,suicide,A-2
+3330,placa,nf,"plaque, plate, badge",B-2
+3331,calmar,v,"calm, soothe, relieve",B-2
+3332,brusco,adj,"brusque, abrupt, sudden",B-2
+3333,asesinato,nm,"murder, assassination",B-2
+3334,mentalidad,nf,"mindset, mind",B-2
+3335,jerarquía,nf,"hierarchy, rank",A-3
+3336,duración,nf,"duration, length",A-2
+3337,hallazgo,nm,"finding, discovery",B-2
+3338,proximidad,nf,proximity,A-2
+3339,estadística,nf,statistic,A-2
+3340,presumir,v,"boast, show off, suppose",A-3
+3341,trescientos,num,three hundred,B-2
+3342,iluminado,adj,illuminated,A-2
+3343,castillo,nm,castle,A-3
+3344,traducción,nf,translation,A-2
+3345,diversión,nf,"fun, entertainment",A-3
+3346,introducción,nf,introduction,A-2
+3347,lámpara,nf,lamp,A-1-b
+3348,dicho,nm,"saying, proverb",B-2
+3349,simbólico,adj,symbolic,A-2
+3350,fluir,v,to flow,B-2
+3351,heroico,adj,heroic,A-2
+3352,asesinar,v,"murder, assassinate",A-2
+3353,audiencia,nf,"audience, hearing",A-2
+3354,pasajero,nm,passenger,B-2
+3355,décimo,adj,tenth,A-3
+3356,costado,nm,"side, flank",B-2
+3357,otoño,nm,autumn,B-2
+3358,feria,nf,"fair, festival",B-2
+3359,exilio,nm,exile,A-2
+3360,indudablemente,adv,"doubtless, undoubtedly",B-2
+3361,preservar,v,to preserve,A-2
+3362,portador,nm,"bearer, carrier",B-2
+3363,obispo,nm,bishop,B-2
+3364,disimular,v,"disguise, hide, pretend",B-2
+3365,quemado,adj,"burned, burnt",B-2
+3366,perfeccionar,v,to perfect,A-2
+3367,vano,adj,"vain, useless",B-2
+3368,apertura,nf,"opening, beginning",A-3
+3369,ideología,nf,ideology,A-2
+3370,casero,adj,homemade,B-2
+3371,molesto,adj,"annoyed, bothered, upset",B-2
+3372,cocinar,v,to cook,B-2
+3373,auxiliar,adj,"auxiliary, ancillary",A-2
+3374,silencioso,adj,"quiet, silent",A-2
+3375,navegar,v,"navigate, sail",A-2
+3376,cazador,nm/f,hunter,B-2
+3377,seguro,nm,insurance,B-2
+3378,ingenio,nm,"ingenuity, talent, wit",B-2
+3379,hembra,nf,"female, woman",B-2
+3380,bando,nm,"faction, side",B-2
+3381,nativo,adj,native,A-2
+3382,dormitorio,nm,"bedroom, dormitory",A-3
+3383,plenitud,nf,"fullness, abundance",B-2
+3384,aceptable,adj,"acceptable, suitable",A-2
+3385,coraje,nm,"courage, toughness",A-2
+3386,plomo,nm,"lead, bullet",B-2
+3387,descendiente,nc,descendant,A-2
+3388,rotundo,adj,categorical,B-2
+3389,república,nf,republic,A-2
+3390,sierra,nf,"mountain range, saw",B-2
+3391,aplastar,v,"flatten, crush, smash",B-2
+3392,guante,nm,glove,B-2
+3393,cartón,nm,"cardboard, carton, sketch",A-1-b
+3394,repentino,adj,sudden,B-2
+3395,ansioso,adj,"anxious, eager",B-2
+3396,subrayar,v,"underline, highlight, emphasize",B-2
+3397,adolescencia,nf,adolescence,A-2
+3398,despacio,adj,"slow, slowly",B-2
+3399,innumerable,adj,"innumerable, countless",A-2
+3400,complicación,nf,complication,A-2
+3401,insoportable,adj,"unbearable, intolerable",A-2
+3402,taxi,nm,"taxi, cab",A-1-a
+3403,porción,nf,"part, portion, share",A-2
+3404,timbre,nm,"doorbell, bell, seal, stamp",B-2
+3405,monstruo,nm,"monster, monstrosity",A-2
+3406,bebé,nm,baby,B-2
+3407,trayecto,nm,"trajectory, course, path",B-2
+3408,globo,nm,"balloon, globe",B-2
+3409,celebración,nf,celebration,A-2
+3410,quehacer,nm,"task, job, chore",B-2
+3411,electoral,adj,electoral,A-2
+3412,obsesión,nf,"mania, obsession",A-2
+3413,bronce,nm,bronze,B-2
+3414,formidable,adj,"formidable, tremendous",A-2
+3415,licencia,nf,"license, permission",B-2
+3416,motivación,nf,motivation,A-2
+3417,noventa,num,ninety,B-2
+3418,anoche,adv,last night,B-2
+3419,depresión,nf,"depression, slump",A-2
+3420,pulmón,nm,lung,B-2
+3421,apoderar,v,to take power,B-2
+3422,debatir,v,"debate, discuss",A-2
+3423,reponer,v,"replace, restore",B-2
+3424,fibra,nf,"fiber, grain",A-1-b
+3425,disputar,v,"dispute, contest",B-2
+3426,quinientos,num,five hundred,B-2
+3427,petróleo,nm,"oil, petroleum",B-2
+3428,sucesivamente,adv,"successively, step by step",A-2
+3429,permanencia,nf,"permanence, tenure",A-2
+3430,vos,pron,you (subj-sg/+fam),B-1
+3431,miércoles,nm,Wednesday,B-2
+3432,horno,nm,"oven, furnace",B-2
+3433,logro,nm,"success, achievement",B-2
+3434,vientre,nm,"womb, belly",B-2
+3435,petición,nf,"request, petition",A-2
+3436,civil,nc,civilian,A-1-a
+3437,reparto,nm,"distribution, delivery",B-2
+3438,advertencia,nf,"warning, notice",B-2
+3439,arrebatar,v,"snatch, grab",B-2
+3440,previsión,nf,"forecast, precaution",A-2
+3441,miserable,adj,"wretched, miserable",A-2
+3442,grato,adj,"agreeable, pleasant",B-2
+3443,mandato,nm,"mandate, order, command",A-3
+3444,odiar,v,to hate,B-2
+3445,clave,adj,key,B-2
+3446,diecisiete,num,seventeen,B-2
+3447,timidez,nf,"shyness, timidity",B-2
+3448,toque,nm,"touch, ringing, warning",B-2
+3449,máscara,nf,mask,B-2
+3450,venganza,nf,"revenge, vengeance",B-2
+3451,barba,nf,beard,A-3
+3452,alarma,nf,alarm,A-1-a
+3453,insinuar,v,"insinuate, hint",A-2
+3454,aliento,nm,"breath, courage, spirit",B-2
+3455,pureza,nf,"purity, chastity",A-2
+3456,fallecer,v,to pass away (to die),B-2
+3457,comedia,nf,"comedy, play, pretense",A-2
+3458,aldea,nf,small village,B-2
+3459,enérgico,adj,"energetic, vigorous",A-2
+3460,eludir,v,"evade, avoid, elude",A-3
+3461,párrafo,nm,paragraph,B-2
+3462,permanentemente,adv,permanently,A-2
+3463,brillo,nm,"shine, twinkling, sparkle",B-2
+3464,ocasionar,v,"occasion, bring about",A-2
+3465,rastro,nm,"track, sign, flea market",B-2
+3466,concretamente,adv,"specifically, exactly",A-2
+3467,ignorante,adj,ignorant,A-2
+3468,adorno,nm,"decoration, adornment",B-2
+3469,curiosamente,adv,"strangely, funnily enough",A-2
+3470,lógicamente,adv,logically,A-2
+3471,mono,nm,monkey,B-2
+3472,razonamiento,nm,reasoning,B-2
+3473,ilustrado,adj,"learned, illustrated",A-2
+3474,pastor,nm/f,"shepherd, pastor",A-1-a
+3475,tramo,nm,"section, stretch, plot",B-2
+3476,reto,nm,"challenge, defiance",B-2
+3477,altísimo,adj,"very high, tall",B-2
+3478,estupendo,adj,"marvelous, stupendous",B-2
+3479,pesadilla,nf,nightmare,B-2
+3480,centenar,nm,hundred,B-2
+3481,molestia,nf,"bother, nuisance, trouble",B-2
+3482,restante,adj,remaining,A-2
+3483,paja,nf,"straw, thatching",B-2
+3484,regional,adj,regional,A-2
+3485,cómico,adj,comic,A-2
+3486,concesión,nf,"awarding, concession",A-2
+3487,tardío,adj,"late, belated",B-2
+3488,nudo,nm,knot,B-2
+3489,retomar,v,"retake, restart",B-2
+3490,martes,nm,Tuesday,B-2
+3491,utilización,nf,"use, utilization",A-2
+3492,tapa,nf,"cover, lid",B-2
+3493,traición,nf,"treason, betrayal",B-2
+3494,asentar,v,"settle, establish, locate",B-2
+3495,pesca,nf,fishing,B-2
+3496,malestar,nm,"discomfort, unease, unrest",B-2
+3497,rata,nf,rat,A-1-b
+3498,puntual,adj,punctual,A-2
+3499,defensor,nm,defender,A-2
+3500,auxilio,nm,"help, aid, assistance",A-3
+3501,estrechar,v,"tighten, make closer",B-2
+3502,traspasar,v,"go beyond, cross over",B-2
+3503,cobre,nm,copper,A-3
+3504,imaginario,adj,imaginary,A-2
+3505,brutal,adj,"brutal, savage",A-1-a
+3506,disperso,adj,spread out,A-3
+3507,ingenuo,adj,"naive, ingenuous",B-2
+3508,anual,adj,"annual, yearly",A-2
+3509,intuición,nf,intuition,A-2
+3510,invención,nf,"invention, contrivance",A-2
+3511,asimismo,adv,"as well, also, moreover",B-2
+3512,vena,nf,vein,A-1-b
+3513,freno,nm,brake,B-2
+3514,costoso,adj,"costly, expensive",B-2
+3515,repleto,adj,"full, overcrowded",A-3
+3516,consumar,v,"complete, carry out",A-3
+3517,asaltar,v,assault,A-2
+3518,interrupción,nf,interruption,A-2
+3519,condena,nf,"sentence (in prison), penalty",B-2
+3520,inocencia,nf,innocence,A-2
+3521,relieve,nm,relief; poner de relieve: to emphasize,A-3
+3522,semejanza,nf,"similarity, likeness",B-2
+3523,cumbre,nf,"summit, top",B-2
+3524,diariamente,adv,daily,A-3
+3525,colmo,nm,climax; para colmo: to top it all,B-2
+3526,asombroso,adj,amazing,B-2
+3527,administrador,nm/f,"administrator, manager",A-2
+3528,arrepentir,v,"repent, regret",A-3
+3529,decreto,nm,"decree, order",A-3
+3530,exigente,adj,"demanding, urgent",B-2
+3531,ironía,nf,irony,A-2
+3532,felicitar,v,to congratulate,A-2
+3533,seña,nf,"sign, mark, seal",B-2
+3534,ritual,nm,"ritual, rite",A-2
+3535,apto,adj,"appropriate, fit, able",A-3
+3536,incierto,adj,uncertain,B-2
+3537,espeso,adj,"thick, dense, stiff",B-2
+3538,presenciar,v,"be present at, witness",B-2
+3539,escritorio,nm,"desk, bureau",B-2
+3540,solicitud,nf,"request, application",B-2
+3541,víspera,nf,eve,A-3
+3542,insecto,nm,insect,A-1-a
+3543,ridículo,nm,ridicule,A-2
+3544,derrumbar,v,"knock down, demolish",B-2
+3545,ira,nf,"rage, wrath",B-2
+3546,ceniza,nf,ash,B-2
+3547,apasionado,adj,passionate,A-2
+3548,monja,nf,nun,A-3
+3549,abstracto,adj,abstract,A-2
+3550,parto,nm,birth,B-2
+3551,creativo,adj,creative,A-2
+3552,autoritario,adj,authoritarian,A-2
+3553,excesivamente,adv,excessively,A-2
+3554,circuito,nm,"circuit, circumference, track",A-2
+3555,subterráneo,adj,underground,B-2
+3556,oveja,nf,"sheep, ewe",B-2
+3557,dueña,nf,"landlady, owner (f)",B-2
+3558,dañar,v,to damage,B-2
+3559,ubicación,nf,"position, location",B-2
+3560,feroz,adj,"ferocious, fierce",A-2
+3561,hacienda,nf,ranch,A-1-a
+3562,antigüedad,nf,"antiquity, seniority",A-2
+3563,puño,nm,"fist, handle, cuff",B-2
+3564,excusa,nf,excuse,A-2
+3565,asombrar,v,"amaze, astound",B-2
+3566,trama,nf,"plot, theme",B-2
+3567,sistemático,adj,systematic,A-2
+3568,inclusive,adv,"including, even",A-2
+3569,alteración,nf,"alteration, change",A-2
+3570,sumo,adj,"utmost, highest",B-2
+3571,eficiente,adj,efficient,A-2
+3572,invisible,adj,invisible,A-2
+3573,acusación,nf,"accusation, charge",A-2
+3574,sinceramente,adv,sincerely,A-2
+3575,salvación,nf,"salvation, rescue",A-2
+3576,rebelde,adj,rebel,A-1-a
+3577,fundador,nm,founder,A-3
+3578,oscilar,v,oscillate,A-2
+3579,privilegiado,adj,privileged,A-2
+3580,recobrar,v,"recover, regain",B-2
+3581,original,nm,original,A-1-a
+3582,maquinaria,nf,machinery,B-2
+3583,dominante,adj,"dominant, prevailing",A-2
+3584,vaciar,v,"empty, pour out",B-2
+3585,tortura,nf,torture,A-1-b
+3586,humano,nm,human,A-1-a
+3587,insistencia,nf,"insistence, persistence",A-2
+3588,morder,v,to bite,B-2
+3589,atrapar,v,"trap, catch",B-2
+3590,tibio,adj,lukewarm,B-2
+3591,amanecer,v,"dawn, get light",B-2
+3592,sospechoso,adj,suspicious,A-2
+3593,sobrino,nm,nephew,B-2
+3594,recitar,v,to recite,A-2
+3595,explorar,v,to explore,A-2
+3596,fabuloso,adj,"fabulous, fantastic",A-2
+3597,embarcar,v,"embark, load",B-2
+3598,aguardar,v,"wait for, await",B-2
+3599,apunte,nm,"note, annotation",B-2
+3600,antepasado,nm,ancestor,B-2
+3601,antemano,adv,"beforehand, in advance",B-2
+3602,parir,v,give birth,A-3
+3603,refugiar,v,"take shelter, give refuge",A-3
+3604,sillón,nm,"armchair, seat",B-2
+3605,denso,adj,"heavy, dense, thick",A-2
+3606,colectivo,nm,"collective, group",A-2
+3607,dieta,nf,diet,A-1-a
+3608,teniente,nm,"lieutenant, deputy mayor",A-3
+3609,polo,nm,"pole, polo, polo shirt",A-1-a
+3610,verificar,v,to verify,A-2
+3611,agrícola,adj,"agricultural, farming",A-2
+3612,abismo,nm,"abyss, large gap",B-2
+3613,algodón,nm,cotton,A-3
+3614,harina,nf,flour,B-2
+3615,exactitud,nf,accuracy,B-2
+3616,extinguir,v,"extinguish, put out",A-3
+3617,provecho,nm,"benefit, use",B-2
+3618,mensual,adj,monthly,B-2
+3619,agradar,v,to please,B-2
+3620,sobrepasar,v,"excel, out perform",B-2
+3621,prudencia,nf,"prudence, moderation",A-2
+3622,insulto,nm,insult,A-2
+3623,narrar,v,"narrate, tell",A-2
+3624,flujo,nm,"flow, tide, discharge",A-3
+3625,aguja,nf,"needle, spire, stylus",B-2
+3626,planteamiento,nm,"proposal, exposition",B-2
+3627,simultáneamente,adv,simultaneously,A-2
+3628,florecer,v,"flower, bloom, flourish",B-2
+3629,torpe,adj,"clumsy, awkward, slow",B-2
+3630,cortina,nf,"curtain, screen",A-3
+3631,acarrear,v,"bring up, entail",B-2
+3632,liso,adj,"smooth, flat, straight",B-2
+3633,asustado,adj,"scared, frightened",B-2
+3634,profundizar,v,"deepen, analyze in depth",B-2
+3635,apostar,v,"wager, bet",B-2
+3636,propicio,adj,"appropriate, suitable",B-2
+3637,reproducción,nf,reproduction,A-2
+3638,expansión,nf,"expansion, spreading",A-2
+3639,umbral,nm,"threshold, outset",B-2
+3640,alusión,nf,"allusion, hint",A-2
+3641,descenso,nm,"decline, descent, lowering",B-2
+3642,clasificar,v,"classify, sort, file",A-2
+3643,recortar,v,"trim, cut off, clip",B-2
+3644,dicho,adj,"aforementioned, said",B-2
+3645,ambiguo,adj,ambiguous,A-2
+3646,océano,nm,ocean,A-1-b
+3647,proposición,nf,proposition,A-2
+3648,absurdo,nm,"absurdity, nonsense",A-2
+3649,parada,nf,(transportation) stop,B-2
+3650,encantador,adj,charming,B-2
+3651,deslizar,v,"slide, glide, slip",B-2
+3652,estirar,v,"stretch, strain",B-2
+3653,respetuoso,adj,respectful,A-2
+3654,africano,adj,African,A-2
+3655,titular,nm,"headline, holder",B-2
+3656,calendario,nm,calendar,A-2
+3657,interlocutor,nm,participant in a dialog,A-2
+3658,abusar,v,to abuse,A-1-b
+3659,complementar,v,"complement, supplement",A-2
+3660,disgusto,nm,"disgust, annoyance",B-2
+3661,conservación,nf,conservation,A-2
+3662,revivir,v,to revive,A-2
+3663,elaboración,nf,production,A-2
+3664,conmover,v,"move, affect",B-2
+3665,correo,nm,"mail, post (office)",B-2
+3666,circo,nm,circus,A-2
+3667,adversario,nm,adversary,A-2
+3668,cubierta,nf,"covering, top, lid",B-2
+3669,aniversario,nm,anniversary,A-2
+3670,franja,nf,"strip, stripe, fringe",B-2
+3671,charlar,v,"chat, talk",B-2
+3672,pila,nf,"(baptismal) font, battery, heap",B-2
+3673,flaco,adj,"thin, frail",B-2
+3674,biológico,adj,biological,A-2
+3675,equivaler,v,"be equivalent, tantamount (to)",A-2
+3676,fomentar,v,"foster, promote, encourage",B-2
+3677,goma,nf,rubber,B-2
+3678,enormemente,adv,enormously,A-2
+3679,ancho,nm,width,B-2
+3680,emocional,adj,emotional,A-2
+3681,diplomático,adj,diplomatic,A-2
+3682,uva,nf,grape,B-2
+3683,ética,nf,ethics,A-2
+3684,inscripción,nf,"inscription, registration",A-2
+3685,progresivo,adj,progressive,A-2
+3686,reanudar,v,"renew, resume",B-2
+3687,adquisición,nf,acquisition,A-2
+3688,mudar,v,"move, change",B-2
+3689,glorioso,adj,glorious,A-2
+3690,sentir,nm,feeling,B-2
+3691,turco,adj,Turkish,B-2
+3692,prescindir,v,do without,B-2
+3693,renuncia,nf,"resignation, renunciation",A-3
+3694,préstamo,nm,"loan, borrowing",B-2
+3695,poblado,adj,populated,A-2
+3696,besar,v,to kiss,B-2
+3697,impreso,adj,printed,A-2
+3698,dedicación,nf,"dedication, devotion",A-2
+3699,instituto,nm,institute,A-2
+3700,paloma,nf,dove,B-2
+3701,resaltar,v,to emphasize,B-2
+3702,devoción,nf,devotion,A-2
+3703,inverso,adj,"inverse, opposite",A-2
+3704,intercambiar,v,to exchange,B-2
+3705,consolar,v,to console,A-2
+3706,descomponer,v,"decompose, break down",B-2
+3707,enfocar,v,to focus,B-2
+3708,espina,nf,"thorn, spine",B-2
+3709,aprobación,nf,"approval, consent",A-2
+3710,fachada,nf,front of a building,B-2
+3711,funcional,adj,functional,A-2
+3712,jugo,nm,juice,B-2
+3713,traicionar,v,to betray,B-2
+3714,discípulo,nm,disciple,A-2
+3715,coronel,nm,colonel,A-3
+3716,orgánico,adj,organic,A-2
+3717,modificación,nf,"modification, alteration",A-2
+3718,acumulación,nf,accumulation,A-2
+3719,comparable,adj,comparable,A-2
+3720,mantenimiento,nm,"maintenance, sustenance",B-2
+3721,marginal,adj,"marginal, minor",A-2
+3722,pardo,adj,"brown, dark, dim",B-2
+3723,cabecera,nf,"head, header",B-2
+3724,revelación,nf,revelation,A-2
+3725,peseta,nf,peseta (money),B-2
+3726,cuna,nf,"cradle, birth, lineage",B-2
+3727,tendido,adj,"spread, hung, laid (out)",B-2
+3728,horizontal,adj,horizontal,A-1-a
+3729,ácido,nm,acid,A-2
+3730,incapacidad,nf,"inability, incompetence",A-2
+3731,villa,nf,"village, town",B-2
+3732,lecho,nm,"(river) bed, couch",B-2
+3733,alquiler,nm,"rent, rental",B-2
+3734,contrastar,v,to contrast,A-2
+3735,redacción,nf,"editing, wording, essay",B-2
+3736,ficha,nf,"index card, chip, token",B-2
+3737,penoso,adj,"painful, laborious",B-2
+3738,inseguridad,nf,insecurity,A-2
+3739,coma,nmf,"comma (f), coma (m)",A-1-a
+3740,desenvolver,v,"clear up, unwrap",B-2
+3741,agricultura,nf,"agriculture, farming",A-2
+3742,naturalidad,nf,"ease, spontaneity",B-2
+3743,serenidad,nf,"serenity, calm",A-2
+3744,preferido,adj,"preferred, favorite",B-2
+3745,pistola,nf,"gun, pistol",A-1-a
+3746,interrogar,v,"question, interrogate",A-2
+3747,insignificante,adj,insignificant,A-2
+3748,subsistir,v,"subsist, survive",A-2
+3749,diputado,nm,"deputy, member",B-2
+3750,literalmente,adv,literally,A-2
+3751,duelo,nm,"grief, affliction",B-2
+3752,revolver,v,"stir, mix, scramble",A-3
+3753,frecuentemente,adv,"frequently, often",A-2
+3754,retornar,v,"return, give back",A-2
+3755,comandante,nm,"commander, commanding officer",A-2
+3756,preso,adj,"imprisoned, confined",B-2
+3757,ópera,nf,opera,A-1-a
+3758,réplica,nf,"answer, retort, copy",A-3
+3759,fuertemente,adv,strongly,B-2
+3760,global,adj,"global, overall",A-1-a
+3761,alquilar,v,"rent, hire",B-2
+3762,pulso,nm,"pulse, pulsation",A-3
+3763,radicar,v,"lie, be situated",B-2
+3764,explotación,nf,"exploitation, cultivation",A-2
+3765,bestia,nf,"beast, brute",A-3
+3766,mojar,v,"make wet, dampen",B-2
+3767,abrazo,nm,"hug, embrace",B-2
+3768,asalto,nm,"assault, robbery",B-2
+3769,reposo,nm,"rest, peace",B-2
+3770,lámina,nf,sheet (of metal),A-3
+3771,pasta,nf,"pasta, dough",A-1-b
+3772,derribar,v,"knock down, overthrow",B-2
+3773,oral,adj,oral,A-1-a
+3774,polémica,nf,"polemics, argument",B-2
+3775,parcial,adj,"partial, biased",A-2
+3776,chocolate,nm,chocolate,A-1-a
+3777,generosidad,nf,generosity,A-2
+3778,masivo,adj,"mass, massive",A-2
+3779,sobresalir,v,"stand out, excel",B-2
+3780,realismo,nm,realism,A-2
+3781,filtrar,v,"seep, filter",A-1-b
+3782,desierto,adj,"deserted, desolate",A-1-b
+3783,acorde,nm,"agreement, accord",B-2
+3784,sugerencia,nf,suggestion,A-2
+3785,cumpleaños,nm,birthday,B-2
+3786,ronda,nf,round,B-2
+3787,movilizar,v,to mobilize,A-2
+3788,capilla,nf,chapel,B-2
+3789,enteramente,adv,"completely, entirely",B-2
+3790,apelar,v,"call upon, appeal to",A-2
+3791,expediente,nm,"dossier, proceedings",B-2
+3792,tolerancia,nf,tolerance,A-2
+3793,entusiasmar,v,"fill with enthusiasm, excite",B-2
+3794,educativo,adj,educational,A-2
+3795,sopa,nf,soup,B-3
+3796,rival,nc,rival,A-1-a
+3797,ternura,nf,tenderness,B-2
+3798,variante,nf,"variant, difference",A-2
+3799,coser,v,sew,B-2
+3800,molde,nm,"mold, cast, pattern",B-2
+3801,vigente,adj,"in force, valid",B-2
+3802,espectro,nm,"ghost, specter",A-2
+3803,saludable,adj,"healthy, wholesome",B-2
+3804,recorte,nm,"clipping, cutting, trimming",B-2
+3805,reglamento,nm,"regulations, rules",B-2
+3806,apretado,adj,"tight, jammed",B-2
+3807,vitalidad,nf,"vitality, health",A-2
+3808,cuidadosamente,adv,carefully,B-2
+3809,adaptación,nf,adaptation,A-2
+3810,etiqueta,nf,"label, etiquette",B-2
+3811,obviamente,adv,obviously,A-2
+3812,muralla,nf,city wall,B-2
+3813,desaparecido,adj,missing,B-2
+3814,represión,nf,repression,A-2
+3815,reducción,nf,reduction,A-2
+3816,difusión,nf,"spread, diffusion",A-2
+3817,pésimo,adj,"dreadful, awful",B-2
+3818,encargo,nm,"job, order, errand",B-2
+3819,madurar,v,"mature, ripen",A-2
+3820,almorzar,v,to have lunch,B-2
+3821,oeste,nm,West,B-2
+3822,albergar,v,"lodge, harbor",B-2
+3823,complacer,v,"please, satisfy",B-2
+3824,pescador,nm/f,fisherman,B-2
+3825,diagnóstico,nm,diagnosis,A-2
+3826,cuadra,nf,(city) block,B-2
+3827,remover,v,to remove,A-2
+3828,pecar,v,to sin,B-2
+3829,rienda,nf,"rein, restraint",B-2
+3830,crueldad,nf,"cruelty, harshness",A-2
+3831,acontecer,v,"happen, come about",B-2
+3832,ansia,nf (el),"anxiety, anguish",B-2
+3833,cúpula,nf,"cupola, dome",B-2
+3834,desbordar,v,"overflow, spill over",B-2
+3835,llama,nf,"flame, llama",A-4
+3836,alegar,v,"plead, argue",B-2
+3837,vegetación,nf,vegetation,A-2
+3838,lema,nm,"motto, slogan",B-2
+3839,encarar,v,"front, confront",B-2
+3840,bote,nm,"boat, container",B-2
+3841,solar,adj,solar,A-1-a
+3842,inevitablemente,adv,inevitably,A-2
+3843,perfume,nm,perfume,A-1-a
+3844,central,nf,headquarters,A-1-a
+3845,egoísta,adj,selfish,B-2
+3846,pertenencia,nf,"membership, property",B-2
+3847,exótico,adj,exotic,A-2
+3848,tranquilizar,v,to calm down,B-2
+3849,casita,nf,cottage,B-2
+3850,emigrar,v,to emigrate,A-2
+3851,alianza,nf,alliance,A-2
+3852,físicamente,adv,physically,A-2
+3853,fascinante,adj,fascinating,A-2
+3854,áspero,adj,"rough, coarse, harsh",B-2
+3855,desechar,v,to discard,B-2
+3856,ratón,nm,"mouse, rat",B-2
+3857,hazaña,nf,"deed, heroic feat",B-2
+3858,dureza,nf,"hardness, toughness",B-2
+3859,sábana,nf,(bed) sheet,B-2
+3860,revisión,nf,checking revision,A-2
+3861,retirada,nf,"retreat, withdrawal",B-2
+3862,básicamente,adv,basically,A-2
+3863,aroma,nm,aroma,A-1-a
+3864,optimismo,nm,optimism,A-2
+3865,mate,nm,mate (beverage),B-2
+3866,lujoso,adj,luxurious,A-3
+3867,evento,nm,event,A-1-a
+3868,físico,nm/f,physicist,A-2
+3869,estrenar,v,"use for the first time, debut",B-2
+3870,pasto,nm,"grass, pasture",B-2
+3871,hostil,adj,"hostile, unfriendly",A-2
+3872,gallo,nm,rooster,A-3
+3873,tropical,adj,tropical,A-2
+3874,rendimiento,nm,"yield, output, efficiency",B-2
+3875,lentitud,nf,slowness,B-2
+3876,aula,nf (el),classroom,B-2
+3877,incitar,v,to incite,A-2
+3878,franco,adj,"open, frank, outspoken",B-2
+3879,inédito,adj,unpublished,B-2
+3880,uniforme,adj,uniform,A-1-a
+3881,himno,nm,"hymn, anthem",A-1-b
+3882,sindicato,nm,trade union,B-2
+3883,mariposa,nf,"butterfly, wing nut",B-2
+3884,propiciar,v,"favor, foster, aid",B-2
+3885,fidelidad,nf,"faithfulness, accuracy",A-2
+3886,retraso,nm,delay,B-2
+3887,desplazamiento,nm,"movement, removal",B-2
+3888,cuestionar,v,to question,A-2
+3889,integrante,adj,"integral, part of a group",A-2
+3890,lingüístico,adj,linguistic,A-2
+3891,compatriota,nc,fellow countryman,A-3
+3892,mexicano,adj,Mexican,B-2
+3893,fundir,v,"melt, cast, smelt",B-2
+3894,localidad,nf,"town, locality",A-2
+3895,reprimir,v,to repress,A-2
+3896,autorizado,adj,authorized,A-2
+3897,leal,adj,"loyal, faithful",B-2
+3898,lobo,nm,wolf,B-2
+3899,asamblea,nf,assembly,B-2
+3900,pañuelo,nm,"handkerchief, shawl",B-2
+3901,meditar,v,"meditate, ponder",A-2
+3902,temblor,nm,"tremor, shudder, shiver",B-2
+3903,gira,nf,tour,B-2
+3904,manto,nm,cloak,A-3
+3905,cubano,adj,Cuban,B-2
+3906,asombro,nm,"amazement, astonishment",B-2
+3907,gobernador,nm,governor,B-2
+3908,amplitud,nf,"breadth, extent, range",A-2
+3909,carbón,nm,"coal, charcoal",A-2
+3910,campamento,nm,"camp, camping",B-2
+3911,sangriento,adj,bloody,B-2
+3912,matemático,adj,mathematical,A-2
+3913,portugués,adj,Portuguese,A-2
+3914,intensamente,adv,intensely,A-2
+3915,suavemente,adv,softly,B-2
+3916,excursión,nf,excursion,A-2
+3917,predicar,v,to preach,A-3
+3918,encarnar,v,to embody,A-3
+3919,lamentablemente,adv,regrettably,A-3
+3920,tomate,nm,tomato,B-2
+3921,negociar,v,"negotiate, deal (with/in)",A-2
+3922,cinturón,nm,belt,B-2
+3923,estático,adj,"static, motionless",A-2
+3924,antaño,adv,"in days gone by, last year",B-2
+3925,bulto,nm,"bulk, shape",B-2
+3926,adónde,adv,to where?,B-2
+3927,vocabulario,nm,vocabulary,A-2
+3928,especulación,nf,"speculation, conjecture",A-2
+3929,manual,nm,"manual, handbook",A-1-a
+3930,representativo,adj,representative,A-2
+3931,honrar,v,to honor,A-2
+3932,disparo,nm,"shot, discharge",B-2
+3933,desencadenar,v,"unleash, unchain",B-2
+3934,residuo,nm,"residue, waste",A-2
+3935,vanidad,nf,"vanity, conceit",A-2
+3936,ofender,v,to offend,A-2
+3937,renovación,nf,"renewal, renovation",A-2
+3938,enfriar,v,to cool,B-2
+3939,furioso,adj,furious,A-2
+3940,estudioso,adj,studious,B-2
+3941,ilustrar,v,to illustrate,A-2
+3942,ratificar,v,to ratify,A-3
+3943,peste,nf,"plague, pestilence, pest",A-1-b
+3944,expedición,nf,expedition,A-2
+3945,destrozar,v,rip/break into pieces,B-2
+3946,vasco,adj,Basque,B-2
+3947,simular,v,"pretend, simulate",A-2
+3948,complementario,adj,"additional, complementary",A-2
+3949,mecánica,nf,"mechanics, mechanism",A-2
+3950,electricidad,nf,electricity,A-2
+3951,insólito,adj,"unusual, uncommon",B-2
+3952,temeroso,adj,fearful,B-2
+3953,extraordinariamente,adv,extraordinarily,A-2
+3954,ascensor,nm,elevator,B-2
+3955,bicicleta,nf,bicycle,B-2
+3956,consagrado,adj,"dedicated, consecrated",B-2
+3957,aporte,nm,contribution,B-2
+3958,despierto,adj,awake,B-2
+3959,beca,nf,"scholarship, grant",B-2
+3960,consentir,v,"consent to, pamper",A-2
+3961,trigo,nm,wheat,B-2
+3962,paralizar,v,to paralyze,A-2
+3963,disipar,v,"dissipate, disperse",A-2
+3964,incrementar,v,to increase,A-2
+3965,plataforma,nf,"platform, springboard",A-2
+3966,maestra,nf,teacher (f),A-3
+3967,clínica,nf,clinic,A-2
+3968,heredero,nm,"heir, heiress",A-3
+3969,embarazada,adj,pregnant,B-2
+3970,estadio,nm,stadium,A-2
+3971,latinoamericano,adj,Latin American,B-2
+3972,tecnológico,adj,technological,A-2
+3973,desfile,nm,"parade, line, formation",B-2
+3974,buque,nm,"ship, vessel, hull",B-2
+3975,parentesco,nm,kinship,B-2
+3976,fallo,nm,"mistake, blunder, fault",B-2
+3977,rebeldía,nf,"rebelliousness, defiance",B-2
+3978,desigual,adj,"unequal, uneven, irregular",B-2
+3979,corrección,nf,"correction, amendment",A-2
+3980,chispa,nf,spark,B-2
+3981,virgen,nf,virgin,A-1-b
+3982,reprochar,v,to reproach,B-2
+3983,supervivencia,nf,survival,B-2
+3984,caridad,nf,charity,A-2
+3985,alumbrar,v,"light, illuminate",B-2
+3986,comunión,nf,communion,A-2
+3987,embajador,nm/f,ambassador,B-2
+3988,tercio,nm,third,B-2
+3989,iluminación,nf,"illumination, lighting",A-2
+3990,censura,nf,"censorship, criticism",A-2
+3991,disputa,nf,"dispute, argument, quarrel",B-2
+3992,esplendor,nm,splendor,A-2
+3993,inscribir,v,"register, record",A-3
+3994,perjuicio,nm,"damage, loss",B-2
+3995,medalla,nf,"medal, medallion",A-1-b
+3996,lealtad,nf,"loyalty, faithfulness",B-2
+3997,divorcio,nm,divorce,A-2
+3998,dotar,v,"endow, bestow",B-2
+3999,enfoque,nm,"focus, approach",B-2
+4000,civilizado,adj,civilized,A-2
+4001,firmeza,nf,firmness,B-2
+4002,indudable,adj,unquestionable,B-2
+4003,colina,nf,"hill, slope",B-2
+4004,parcela,nf,piece of property,B-2
+4005,jaula,nf,"cage, crate, playpen",B-2
+4006,ajuste,nm,"adjustment, settlement",B-2
+4007,lateral,adj,"side, lateral",A-2
+4008,entierro,nm,burial,B-2
+4009,reventar,v,"burst, puncture",B-2
+4010,servidor,nm/f,servant,A-3
+4011,superioridad,nf,superiority,A-2
+4012,turismo,nm,tourism,A-2
+4013,barbaridad,nf,atrocity,B-2
+4014,rollo,nm,"roll, coil",B-2
+4015,arbitrario,adj,arbitrary,A-2
+4016,triángulo,nm,triangle,A-2
+4017,aislamiento,nm,isolation,B-2
+4018,alivio,nm,"relief, unburdening",B-2
+4019,entrenamiento,nm,training,B-2
+4020,truco,nm,"trick, ruse",B-2
+4021,respetable,adj,respectable,A-2
+4022,disparate,nm,"nonsense, blunder",B-2
+4023,cocinero,nm/f,cook,B-2
+4024,aburrir,v,"bore, tire",B-2
+4025,diminuto,adj,"diminutive, tiny, minute",A-3
+4026,celeste,adj,"heavenly, sky-blue",A-3
+4027,fotógrafo,nm/f,photographer,A-2
+4028,imposición,nf,imposition,A-2
+4029,diluir,v,"dilute, weaken",A-3
+4030,convincente,adj,convincing,B-2
+4031,consuelo,nm,"comfort, consolation",B-2
+4032,periodístico,adj,journalistic,A-2
+4033,cariñoso,adj,affectionate,A-3
+4034,transmisión,nf,"broadcast, transmission",A-2
+4035,titular,v,"title, call",B-2
+4036,sendero,nm,(foot) path,B-2
+4037,frecuentar,v,"frequent, visit",A-2
+4038,desacuerdo,nm,disagreement,B-2
+4039,academia,nf,academy,A-2
+4040,acertado,adj,"correct, accurate",B-2
+4041,catedral,nf,cathedral,A-1-b
+4042,mediocre,adj,mediocre,A-2
+4043,vanguardia,nf,"vanguard, forefront",B-2
+4044,desafiar,v,"defy, stand up to",B-2
+4045,agitado,adj,"agitated, irritated",A-2
+4046,precario,adj,precarious,A-2
+4047,sanitario,adj,"health, sanitary, clean",A-2
+4048,comprensible,adj,understandable,A-2
+4049,cuidadoso,adj,"careful, cautious",B-2
+4050,despojar,v,"deprive, rob",B-2
+4051,embarazo,nm,pregnancy,B-2
+4052,imposibilidad,nf,impossibility,A-2
+4053,irracional,adj,irrational,A-2
+4054,reinar,v,"reign, prevail",A-1-b
+4055,hundido,adj,"buried, sunken",B-2
+4056,reportaje,nm,news report,B-2
+4057,tambor,nm,drum,B-2
+4058,fundación,nf,foundation,A-2
+4059,transparencia,nf,"transparency, slide",A-2
+4060,elegancia,nf,"elegance, style",A-2
+4061,criminal,nc,criminal,A-1-b
+4062,elogio,nm,"praise, eulogy, compliment",B-2
+4063,manta,nf,blanket,B-2
+4064,dinámico,adj,dynamic,A-2
+4065,hervir,v,to boil,B-2
+4066,sereno,adj,"serene, calm",A-2
+4067,retirado,adj,"retired, remote, secluded",B-2
+4068,alerta,nf,alert,A-1-b
+4069,sinceridad,nf,sincerity,A-2
+4070,cátedra,nf,academic chair,B-2
+4071,refinado,adj,refined,A-2
+4072,repertorio,nm,"repertoire, list, index",A-2
+4073,plancha,nf,"(electric) iron, plate, sheet",B-2
+4074,terraza,nf,"terrace, balcony",A-2
+4075,gala,nf,gala (performance/dinner),A-1-b
+4076,era,nf,"era, age",A-1-a
+4077,arranque,nm,"start, outburst, kick-start",B-2
+4078,patada,nf,"kick, punt",B-2
+4079,disculpar,v,to excuse,B-2
+4080,lapso,nm,lapse,A-3
+4081,sudor,nm,"sweat, perspiration",B-2
+4082,apetito,nm,appetite,A-2
+4083,íntimamente,adv,intimately,A-2
+4084,indicación,nf,indication,A-2
+4085,perdurar,v,"last, live on, endure",A-3
+4086,aliado,nm,ally,B-2
+4087,presidencia,nf,presidency,A-2
+4088,maldito,adj,"damned, wretched",B-2
+4089,consejero,nm/f,"advisor, counselor",B-2
+4090,inundar,v,"flood, inundate",B-2
+4091,consigna,nf,"watchword, motto, slogan",B-2
+4092,cortesía,nf,courtesy,A-3
+4093,inmóvil,adj,"immovable, motionless",A-2
+4094,atributo,nm,"attribute, quality",A-2
+4095,furia,nf,"fury, rage",A-1-b
+4096,grosero,adj,"crude, rude, crass",B-2
+4097,catalán,adj,Catalan,B-2
+4098,estatura,nf,"stature, height",B-2
+4099,vejez,nf,old age,B-2
+4100,terremoto,nm,earthquake,A-3
+4101,articular,v,to articulate,A-2
+4102,tira,nf,"strip, strap",B-2
+4103,emisor,nm,"transmitter, emitter",A-2
+4104,relevante,adj,"relevant, significant",A-2
+4105,integridad,nf,integrity,A-2
+4106,autorización,nf,authorization,A-2
+4107,audaz,adj,"audacious, bold",A-3
+4108,seminario,nm,"seminar, seminary",A-2
+4109,marea,nf,"wave, tide, ebb",B-2
+4110,resentimiento,nm,resentment,B-2
+4111,delincuente,nc,delinquent,A-3
+4112,debilitar,v,"weaken, debilitate",B-2
+4113,fingir,v,"feign, pretend",B-2
+4114,igualar,v,"equate, equalize",A-2
+4115,disfrazado,adj,disguised,B-2
+4116,trepar,v,to climb,B-2
+4117,mutuamente,adv,"mutually, each other",A-2
+4118,correctamente,adv,correctly,A-2
+4119,ágil,adj,agile,A-2
+4120,atrasado,adj,"behind, slow",B-2
+4121,esqueleto,nm,"skeleton, framework",A-1-b
+4122,indignación,nf,indignation,A-2
+4123,agradecido,adj,"grateful, thankful",B-2
+4124,adicional,adj,additional,A-2
+4125,escultura,nf,"sculpture, carving",A-2
+4126,condicionado,adj,conditioned,A-2
+4127,infinidad,nf,"infinity, countless",A-2
+4128,pilar,nm,"pillar, column",A-1-a
+4129,óptimo,adj,optimum,A-2
+4130,súbito,adj,sudden,B-2
+4131,regular,v,"regulate, adjust",A-2
+4132,vosotros,pron,you (subj-pl/+fam),B-1
+4133,rematar,v,"finish off, finish up",B-2
+4134,incomprensible,adj,incomprehensible,A-2
+4135,independientemente,adv,independently,A-2
+4136,percepción,nf,perception,A-2
+4137,minoría,nf,minority,A-2
+4138,deterioro,nm,"deterioration, damage",B-2
+4139,argumentar,v,"argue, deduce",A-2
+4140,guapo,adj,"handsome, beautiful",B-2
+4141,sanción,nf,"sanction, approval, penalty",A-2
+4142,poblar,v,"populate, inhabit",A-2
+4143,contradecir,v,"contradict, be inconsistent",A-2
+4144,inmerso,adj,"engrossed, immersed",A-2
+4145,manipular,v,"manipulate, handle",A-2
+4146,maleta,nf,"suitcase, case",B-2
+4147,faena,nf,"task, job, performance",B-2
+4148,regar,v,"water, irrigate",B-2
+4149,evocar,v,"evoke, recall",A-3
+4150,serpiente,nf,snake,A-3
+4151,proveniente,adj,coming from,B-2
+4152,primordial,adj,"fundamental, primary",A-2
+4153,agitación,nf,"agitation, excitement",A-2
+4154,prosperar,v,"prosper, thrive",A-2
+4155,ganancia,nf,"gain, profit",B-2
+4156,genético,adj,genetic,A-2
+4157,pino,nm,pine (tree),A-1-b
+4158,arrasar,v,"raze, ravage",B-2
+4159,rebajar,v,to discount,B-2
+4160,entrevistar,v,to interview,B-2
+4161,infeliz,adj,"unhappy, unfortunate",B-2
+4162,compacto,adj,"compact, dense",A-2
+4163,llanto,nm,"crying, weeping",B-2
+4164,ida,nf,"departure, first half of a trip",B-2
+4165,criminal,adj,criminal,A-1-b
+4166,coherente,adj,"coherent, connected",A-2
+4167,falla,nf,"flaw, failure",B-2
+4168,contribución,nf,contribution,A-2
+4169,burla,nf,"mockery, joke, trick",B-2
+4170,seguidor,nm,"follower, supporter, fan",B-2
+4171,estratégico,adj,strategic,A-2
+4172,perla,nf,pearl,A-1-a
+4173,ético,adj,ethical,A-2
+4174,integración,nf,integration,A-2
+4175,enterado,adj,aware of,B-2
+4176,siesta,nf,"siesta, afternoon nap",A-4
+4177,replicar,v,to reply,A-3
+4178,incipiente,adj,"incipient, beginning",A-2
+4179,adornar,v,"adorn, to decorate",A-3
+4180,alternativo,adj,"alternating, alternative",A-2
+4181,expresivo,adj,expressive,A-2
+4182,bigote,nm,mustache,B-2
+4183,concurrir,v,"coincide, concur, meet",A-2
+4184,niñez,nf,"childhood, infancy",B-2
+4185,leña,nf,firewood,B-2
+4186,atardecer,nm,"evening, dusk",B-2
+4187,restaurar,v,"restore, reinstate",A-2
+4188,retrasar,v,"delay, fall behind",B-2
+4189,estatal,adj,"state, government-owned",B-2
+4190,interrogante,nc,"question, interrogator",A-2
+4191,palpar,v,"feel, touch, fondle",B-2
+4192,perpetuo,adj,"continual, perpetual",A-2
+4193,lente,nmf,"lens, [pl] glasses",A-3
+4194,compás,nm,"rhythm, time, compass",A-2
+4195,estéril,adj,"sterile, barren",A-2
+4196,llanura,nf,"plain, prairie, plainness",B-2
+4197,collar,nm,"collar, necklace",A-1-b
+4198,veneno,nm,"poison, venom",A-3
+4199,mármol,nm,marble,A-2
+4200,biografía,nf,biography,A-2
+4201,latente,adj,latent,A-1-b
+4202,rebelión,nf,rebellion,A-2
+4203,hígado,nm,liver,B-2
+4204,ladrón,nm,thief,B-2
+4205,aparentar,v,give the appearance,B-2
+4206,holandés,adj,Dutch,B-2
+4207,tablero,nm,"board, panel",B-2
+4208,enterrado,adj,buried,B-2
+4209,imitación,nf,imitation,A-2
+4210,adelanto,nm,"advance, progress",B-2
+4211,celoso,adj,jealous,B-2
+4212,oscurecer,v,get dark,B-2
+4213,constitucional,adj,constitutional,A-2
+4214,intervalo,nm,"interval, gap",A-1-b
+4215,trago,nm,"swig, drink",B-2
+4216,fracción,nf,fraction,A-2
+4217,convento,nm,"convent, monastery",A-2
+4218,arroyo,nm,"brook, stream, gutter",B-2
+4219,circular,adj,circular,A-2
+4220,enlace,nm,"link, connection, bond",B-2
+4221,torcer,v,"twist, bend, distort",B-2
+4222,derramar,v,"shed, pour out",B-2
+4223,diccionario,nm,dictionary,A-2
+4224,reflejado,adj,reflected,B-2
+4225,afueras,nf,"outskirts, suburbs",B-2
+4226,agravar,v,to aggravate,A-2
+4227,ceja,nf,"eyebrow, brow",B-2
+4228,detallado,adj,"detailed, thorough",B-2
+4229,interponer,v,"interpose, intervene",B-2
+4230,topar,v,"run into, bump into",B-2
+4231,constitución,nf,constitution,A-2
+4232,enlazar,v,"link, connect",B-2
+4233,clasificación,nf,classification,A-2
+4234,atrapado,adj,trapped,B-2
+4235,lío,nm,"mess, problem, bad situation",B-2
+4236,sede,nf,"headquarters, seat",B-2
+4237,colar,v,slip in [se],B-2
+4238,altamente,adv,highly,B-2
+4239,litro,nm,liter,A-2
+4240,bandeja,nf,tray,B-2
+4241,aproximación,nf,approximation,A-2
+4242,liviano,adj,"light, frivolous",B-2
+4243,entusiasmado,adj,"enthused, excited",B-2
+4244,trapo,nm,"rag, cloth",B-2
+4245,conocedor,nm,"expert, judge, connoisseur",B-2
+4246,encaminar,v,"head for, guide",B-2
+4247,altar,nm,altar,A-1-a
+4248,acierto,nm,"good aim, guess, hit",B-2
+4249,piloto,nm/f,"pilot, driver",A-1-a
+4250,susceptible,adj,susceptible,A-2
+4251,inolvidable,adj,unforgettable,B-2
+4252,invocar,v,to invoke,A-2
+4253,computadora,nf,computer,A-2
+4254,ostentar,v,"flaunt, show off",B-2
+4255,alambre,nm,wire,B-2
+4256,mango,nm,"handle, mango",B-2
+4257,configurar,v,"make up, comprise",A-2
+4258,rosario,nm,"rosary, beads, string",B-2
+4259,reconstrucción,nf,reconstruction,A-2
+4260,parroquia,nf,parish,B-2
+4261,ruidoso,adj,noisy,B-2
+4262,supuestamente,adv,"supposedly, allegedly",A-2
+4263,ampliamente,adv,widely,B-2
+4264,gigante,adj,gigantic,A-2
+4265,prevalecer,v,to prevail,A-3
+4266,comprador,nm,buyer,B-2
+4267,piedad,nf,"pity, mercy",A-3
+4268,semanal,adj,weekly,B-2
+4269,clandestino,adj,"undercover, clandestine",A-2
+4270,defensivo,adj,defensive,A-2
+4271,manual,adj,manual,A-1-a
+4272,engendrar,v,"engender, beget",B-2
+4273,contagiar,v,"infect, infest",B-2
+4274,niebla,nf,fog,B-2
+4275,adonde,adv,to where,B-2
+4276,consagrar,v,"consecrate, establish",A-3
+4277,mixto,adj,"mixed, co-ed",B-2
+4278,verbo,nm,verb,A-1-a
+4279,cadera,nf,hip,B-2
+4280,procesión,nf,procession,A-2
+4281,encuesta,nf,"poll, survey, inquiry",B-2
+4282,cría,nf,"breeding, raising",B-2
+4283,narración,nf,"narration, account",A-2
+4284,ramo,nm,"bunch (of flowers), branch",B-2
+4285,penal,adj,penal,A-2
+4286,traidor,nm,traitor,B-2
+4287,catálogo,nm,catalog,A-2
+4288,protector,nm,"protector, defender",A-2
+4289,amparo,nm,"protection, shelter",B-2
+4290,farmacia,nf,"pharmacy, drugstore",A-3
+4291,cima,nf,"summit, peak, top",B-2
+4292,riñón,nm,kidney,B-2
+4293,pintoresco,adj,picturesque,A-2
+4294,finca,nf,"property, estate",B-2
+4295,calificación,nf,"evaluation, qualification",A-2
+4296,caudal,nm,"volume, abundance",B-2
+4297,publicitario,adj,advertising,B-2
+4298,trastorno,nm,"confusion, trouble, upheaval",B-2
+4299,ceñir,v,"adhere to, fit tightly",B-2
+4300,jovencito,nm,young person,B-2
+4301,incorporación,nf,"inclusion, incorporation",A-2
+4302,corral,nm,"corral, yard",B-2
+4303,fatiga,nf,fatigue,A-2
+4304,virgen,adj,virgin,A-1-b
+4305,bruja,nf,"witch, hag",B-2
+4306,exploración,nf,exploration,A-2
+4307,matrimonial,adj,matrimonial,A-2
+4308,equivalente,adj,equivalent,A-2
+4309,ilustración,nf,illustration,A-2
+4310,cómplice,nc,accomplice,B-2
+4311,melodía,nf,melody,A-2
+4312,productor,nm,producer,A-2
+4313,deseable,adj,desirable,A-3
+4314,constatar,v,"prove, verify",B-2
+4315,portero,nm/f,"porter, doorkeeper, goalkeeper",A-3
+4316,conejo,nm,rabbit,B-2
+4317,pasivo,adj,passive,A-2
+4318,densidad,nf,"density, thickness",A-2
+4319,dispersar,v,"disperse, scatter, spread",A-3
+4320,apuesta,nf,"wager, bet",B-2
+4321,nacionalidad,nf,nationality,A-2
+4322,llamativo,adj,striking,B-2
+4323,vacilar,v,"vacillate, hesitate",B-2
+4324,mozo,nm,"waiter, youth, bellboy",B-2
+4325,capturar,v,to capture,A-2
+4326,cuerno,nm,"horn, antler",A-3
+4327,remediar,v,"heal, cure",A-3
+4328,fiar,v,"vouch for, confide, trust",B-2
+4329,desfilar,v,"march, parade",B-2
+4330,talla,nf,"size (of clothing), stature",B-2
+4331,justificado,adj,"justifiable, justified",A-2
+4332,comisario,nm,"commissioner, delegate",B-2
+4333,fotográfico,adj,photographic,A-2
+4334,acercamiento,nm,"approach, approximation",B-2
+4335,desordenado,adj,"messy, confused",B-2
+4336,gráfico,adj,"graphic, explicit",A-2
+4337,reaparecer,v,to reappear,B-2
+4338,revuelto,adj,"confused, messed up",B-2
+4339,contorno,nm,"outline, perimeter, edge",A-2
+4340,egoísmo,nm,selfishness,B-2
+4341,bordo,nm,a bordo: on board,B-2
+4342,compensación,nf,compensation,A-2
+4343,prohibición,nf,prohibition,A-2
+4344,obrar,v,"work, act",B-2
+4345,expreso,adj,"express, explicit",A-2
+4346,coronar,v,"crown, top",B-2
+4347,liquidar,v,"liquidate, sell (off)",A-2
+4348,laberinto,nm,"maze, labyrinth",B-2
+4349,erótico,adj,erotic,A-2
+4350,amenazado,adj,threatened,B-2
+4351,inminente,adj,imminent,A-2
+4352,eternidad,nf,eternity,A-2
+4353,repasar,v,"review, revise",B-2
+4354,pastilla,nf,"pill, capsule",B-2
+4355,mierda,nf,"shit, crap, excrement",B-2
+4356,contienda,nf,"contest, dispute",B-2
+4357,imperial,adj,"imperial, imperialist",A-2
+4358,inexplicable,adj,unexplainable,A-2
+4359,peruano,adj,Peruvian,B-2
+4360,experimental,adj,experimental,A-2
+4361,chorro,nm,"stream, jet, spurt",B-2
+4362,opaco,adj,"dull, opaque, heavy",B-2
+4363,clavo,nm,"nail, tack, peg",B-2
+4364,sequía,nf,drought,B-2
+4365,dinámica,nf,dynamics,A-2
+4366,ocio,nm,leisure (time),B-2
+4367,normalidad,nf,normality,A-2
+4368,intuir,v,to sense,A-3
+4369,resonancia,nf,"resonance, repercussion",A-2
+4370,devorar,v,"devour, consume",B-2
+4371,efímero,adj,"ephemeral, short-lived",B-2
+4372,chaqueta,nf,jacket,B-2
+4373,aferrar,v,"grasp, clutch",B-2
+4374,invertido,adj,"reversed, inverted",A-2
+4375,asco,nm,disgust,B-2
+4376,consolidar,v,to consolidate,A-2
+4377,apresurar,v,"hurry up, speed up",B-2
+4378,pleito,nm,"litigation, suit, dispute",B-2
+4379,latir,v,beat (heart),B-2
+4380,sencillez,nf,simplicity,B-2
+4381,transitorio,adj,transitory,A-2
+4382,estupidez,nf,"stupidity, stupid thing",B-2
+4383,mojado,adj,wet,B-2
+4384,descalzo,adj,barefoot,B-2
+4385,orientado,adj,"positioned, guided",A-2
+4386,senador,nm/f,senator,A-2
+4387,rencor,nm,"grudge, spite",B-2
+4388,presidencial,adj,presidential,A-2
+4389,apurar,v,"speed up, hurry up",B-2
+4390,insultar,v,"insult, berate",A-2
+4391,brasileño,adj,Brazilian,B-2
+4392,sustentar,v,"maintain, support",B-2
+4393,probabilidad,nf,probability,A-2
+4394,minucioso,adj,"meticulous, thorough",B-2
+4395,rústico,adj,"rustic, rural",A-2
+4396,gobernante,nc,"ruler, leader",B-2
+4397,merced,nf,"favor, mercy",B-2
+4398,acariciar,v,"stroke, fondle, caress",B-2
+4399,tonelada,nf,ton,B-2
+4400,rebelde,nc,"rebel, insurgent",A-1-a
+4401,anhelo,nm,"longing, yearning",B-2
+4402,princesa,nf,princess,A-2
+4403,decididamente,adv,"decidedly, decisively",A-2
+4404,embajada,nf,embassy,B-2
+4405,apagado,adj,turned off,B-2
+4406,bruscamente,adv,"quickly, sharply",B-2
+4407,vincular,v,"connect, link, bind",B-2
+4408,amargura,nf,"bitterness, sorrow",B-2
+4409,fortalecer,v,to fortify,B-2
+4410,validez,nf,validity,A-2
+4411,tacto,nm,"sense of touch, feel",A-1-b
+4412,codo,nm,elbow,B-2
+4413,vibrar,v,"vibrate, tremble",A-2
+4414,calzar,v,wear (shoes),B-2
+4415,chimenea,nf,"chimney, fireplace",B-2
+4416,comunitario,adj,of the community,A-2
+4417,explícito,adj,explicit,A-2
+4418,silvestre,adj,wild,A-3
+4419,evaluar,v,"evaluate, assess",A-2
+4420,emocionar,v,"move, make, get excited",A-2
+4421,editar,v,"edit, publish, release",A-1-a
+4422,abanico,nm,"range, (handheld) fan",B-2
+4423,fiscal,adj,"fiscal, treasury",A-1-a
+4424,espacial,adj,"spatial, space",A-2
+4425,violentamente,adv,violently,A-2
+4426,medieval,adj,medieval,A-2
+4427,camiseta,nf,T-shirt,B-2
+4428,honrado,adj,"honest, respectable",B-2
+4429,veloz,adj,"fast, quick",B-2
+4430,corteza,nf,"bark, crust, rind, peel",B-2
+4431,sumergir,v,"submerge, plunge",B-2
+4432,cordillera,nf,mountain range,B-2
+4433,monótono,adj,monotonous,A-2
+4434,longitud,nf,"length, longitude",A-3
+4435,espantar,v,"scare, frighten",B-2
+4436,imprevisto,adj,"unforeseen, unexpected",B-2
+4437,psicología,nf,psychology,A-2
+4438,soviético,adj,Soviet,B-2
+4439,potencial,adj,potential,A-2
+4440,ambulante,adj,traveling,A-3
+4441,agrupar,v,(put in) group,B-2
+4442,exageración,nf,exaggeration,A-2
+4443,apreciación,nf,"appreciation, assessment",A-2
+4444,perverso,adj,"perverse, wicked",A-2
+4445,estallido,nm,"crash, outbreak, explosion",B-2
+4446,ardiente,adj,"passionate, ardent",A-3
+4447,talón,nm,"heel, check, coupon, stub",B-2
+4448,atener,v,"abide by, comply with",B-2
+4449,colchón,nm,mattress,B-2
+4450,tenue,adj,"tenuous, flimsy",B-2
+4451,tinte,nm,"tint, dye",B-2
+4452,indiscutible,adj,"indisputable, unquestionable",B-2
+4453,imprenta,nf,printing house,B-2
+4454,bastón,nm,(walking) cane,B-2
+4455,sombrío,adj,"shady, dark, dismal",B-2
+4456,humillación,nf,humiliation,A-2
+4457,trance,nm,"trance, fix, enrapture",A-1-b
+4458,volante,nm,steering wheel,B-2
+4459,adolescente,adj,adolescent,A-2
+4460,encabezar,v,"head, lead (off)",B-2
+4461,rosado,adj,"pink, rosy",B-2
+4462,amistoso,adj,friendly,B-2
+4463,noble,nc,"nobleman, noble",A-1-a
+4464,radicalmente,adv,radically,A-2
+4465,reclamo,nm,"claim, complaint, protest",A-3
+4466,asesor,nm/f,"adviser, consultant",B-2
+4467,perteneciente,adj,"pertaining, belonging",B-2
+4468,novelista,nc,novelist,A-2
+4469,herido,nm,wounded (person),B-2
+4470,necesitado,adj,"poor, needy",B-2
+4471,indefinido,adj,"vague, indefinite",A-2
+4472,solidario,adj,"united, jointly shared",A-2
+4473,paralizado,adj,paralyzed,A-2
+4474,grueso,nm,"bulk, mass",B-2
+4475,chupar,v,to suck,B-2
+4476,grabación,nf,recording,B-2
+4477,frasco,nm,"bottle, jar, flask",B-2
+4478,inquietante,adj,disquieting,B-2
+4479,visual,adj,visual,A-1-a
+4480,verdura,nf,"vegetables, greenery",B-2
+4481,violación,nf,"violation, rape",A-2
+4482,innovación,nf,innovation,A-2
+4483,tertulia,nf,"get-together, meeting of friends",B-2
+4484,carcajada,nf,"hearty laughter, guffaw",B-2
+4485,cancha,nf,"playing field, court",B-2
+4486,republicano,adj,republican,A-2
+4487,destruido,adj,destroyed,B-2
+4488,aburrimiento,nm,boredom,B-2
+4489,trabajador,adj,hardworking,B-2
+4490,inquietar,v,"make uneasy, disturb",B-2
+4491,grandioso,adj,"magnificent, grandiose",B-2
+4492,específicamente,adv,specifically,A-2
+4493,exportación,nf,"export, exportation",A-2
+4494,extremadamente,adv,extremely,A-2
+4495,expandir,v,to expand,A-2
+4496,predecir,v,to predict,A-2
+4497,dichoso,adj,"fortunate, happy",B-2
+4498,condicionar,v,"condition, determine",A-2
+4499,agrario,adj,"agrarian, agricultural",A-2
+4500,suizo,adj,Swiss,B-2
+4501,presunto,adj,"alleged, presumed",A-3
+4502,tranvía,nm,"trolley, tram, streetcar",B-2
+4503,alertar,v,"alert, warn",A-2
+4504,cordón,nm,"cord, yarn, braid",B-2
+4505,prioridad,nf,priority,A-2
+4506,modalidad,nf,"mode, manner",A-2
+4507,desenlace,nm,"outcome, result",B-2
+4508,bailarín,nm/f,dancer,B-2
+4509,artefacto,nm,"artifact, device",A-2
+4510,trono,nm,throne,B-2
+4511,adjetivo,nm,adjective,A-2
+4512,gama,nf,"range, musical scale",B-2
+4513,enfermar,v,to become ill,B-2
+4514,gabinete,nm,"cabinet, den, office",A-2
+4515,indagar,v,to investigate,B-2
+4516,vertiginoso,adj,dizzying,B-2
+4517,decente,adj,"respectable, decent",A-2
+4518,congelado,adj,frozen,B-2
+4519,peón,nm,"unskilled laborer, field hand",B-2
+4520,triple,adj,triple,A-1-b
+4521,inspector,nm/f,inspector,A-2
+4522,órbita,nf,"orbit, socket, field",A-2
+4523,autopista,nf,"freeway, motorway",B-2
+4524,prosa,nf,prose,A-1-b
+4525,paréntesis,nm,"parenthesis, digression",A-2
+4526,fabricación,nf,"manufacture, production",A-2
+4527,lesión,nf,"injury, wound, harm",A-2
+4528,mejilla,nf,cheek,B-2
+4529,inseguro,adj,"unsure, unsafe",A-2
+4530,muelle,nm,"wharf, dock",B-2
+4531,velo,nm,veil,B-2
+4532,decoración,nf,decoration,A-2
+4533,rancho,nm,"ranch, farm",B-2
+4534,exceder,v,"excel, exceed",A-2
+4535,joder,v,"f**k, screw (around/up)",B-2
+4536,irónico,adj,"ironic, mocking",A-2
+4537,alarmar,v,to alarm,A-2
+4538,negociación,nf,negotiation,A-2
+4539,euforia,nf,"euphoria, elation",A-2
+4540,convencimiento,nm,convincing,B-2
+4541,asombrado,adj,"amazed, bewildered",B-2
+4542,rascar,v,"scratch, scrape",B-2
+4543,desconcierto,nm,"disorder, chaos",B-2
+4544,economista,nm/f,economist,A-2
+4545,oficialmente,adv,officially,A-2
+4546,sofisticado,adj,sophisticated,A-2
+4547,sobra,nf,"excess, surplus, leftover",B-2
+4548,enredar,v,"entangle, ensnare",B-2
+4549,ingenioso,adj,"ingenious, clever",B-2
+4550,tasa,nf,"rate, fee, levy",B-2
+4551,balanza,nf,"balance, (measuring) scale",B-2
+4552,factura,nf,"invoice, bill",B-2
+4553,hormiga,nf,ant,B-2
+4554,vulnerable,adj,vulnerable,A-2
+4555,oso,nm,bear,B-2
+4556,trazo,nm,"line, stroke",B-2
+4557,geométrico,adj,geometric,A-2
+4558,suspirar,v,to sigh,B-2
+4559,gusano,nm,"worm, caterpillar",B-2
+4560,bendito,adj,blessed,B-2
+4561,conferir,v,to confer,A-2
+4562,manía,nf,"obsession, mania",B-2
+4563,disculpa,nf,"apology, excuse",B-2
+4564,trascendente,adj,transcendent,A-2
+4565,alarmante,adj,alarming,A-2
+4566,pequeñito,adj,"very small, tiny",B-2
+4567,predominar,v,to predominate,A-2
+4568,metáfora,nf,metaphor,A-2
+4569,penetración,nf,"penetration, insight",A-2
+4570,pasajero,adj,"fleeting, transitory",B-2
+4571,whisky,nm,whisky,A-1-b
+4572,turístico,adj,tourist,A-2
+4573,despejar,v,clear (up),B-2
+4574,delirio,nm,"delirium, nonsense",A-2
+4575,impecable,adj,"impeccable, faultless",A-2
+4576,soberbio,adj,"proud, arrogant",B-2
+4577,librería,nf,bookstore,B-2
+4578,documentación,nf,documentation,A-2
+4579,sonriente,adj,smiling,B-2
+4580,decena,nf,ten (of something),B-2
+4581,nulo,adj,"void, null",B-2
+4582,tigre,nm,tiger,A-1-b
+4583,premiar,v,to award,B-2
+4584,implacable,adj,"relentless, implacable",A-2
+4585,senda,nf,"path, lane",B-2
+4586,temperamento,nm,"temperament, personality",A-2
+4587,brevemente,adv,briefly,A-3
+4588,desayunar,v,to have breakfast,B-2
+4589,productivo,adj,"productive, profitable",A-2
+4590,dicha,nf,"fortune, happiness, luck",B-2
+4591,andaluz,adj,Andalusian,B-2
+4592,acta,nf (el),"(meeting) proceedings, minutes",B-2
+4593,cera,nf,wax,B-2
+4594,tanque,nm,"tank, large container",A-1-a
+4595,institucional,adj,institutional,A-2
+4596,vigoroso,adj,"vigorous, strong",A-2
+4597,batería,nf,"battery, gun deck",A-2
+4598,crema,nf,cream,A-1-b
+4599,atroz,adj,atrocious,B-2
+4600,entretenimiento,nm,entertainment,B-2
+4601,pala,nf,shovel,B-2
+4602,servidumbre,nf,"staff of servants, servitude",A-2
+4603,resucitar,v,to resuscitate,A-2
+4604,psicólogo,nm/f,psychologist,A-2
+4605,sabroso,adj,"delicious, tasty",B-2
+4606,actriz,nf,actress,A-1-b
+4607,esencialmente,adv,essentially,A-2
+4608,larguísimo,adj,very long,B-2
+4609,simultáneo,adj,simultaneous,A-2
+4610,burro,nm,donkey,B-2
+4611,procedencia,nf,"origin, source",B-2
+4612,fiscal,nc,"district attorney, prosecutor",A-2
+4613,trascendental,adj,"far-reaching, transcendental",A-2
+4614,colorado,adj,"red, colored",B-2
+4615,financiar,v,to finance,A-2
+4616,participante,nm,participant,A-2
+4617,rescate,nm,"rescue, ransom",B-2
+4618,apuro,nm,"trouble, predicament",B-2
+4619,sudar,v,to sweat,B-2
+4620,prestigioso,adj,prestigious,A-2
+4621,cautela,nf,caution,B-2
+4622,crónico,adj,chronic,A-2
+4623,táctica,nf,"tactics, strategy",A-2
+4624,descuido,nm,"neglect, oversight",B-2
+4625,bíblico,adj,biblical,A-2
+4626,matanza,nf,"slaughter, carnage",B-2
+4627,perturbar,v,"perturb, upset",A-2
+4628,paterno,adj,paternal,A-2
+4629,escrito,nm,"manuscript, writing",B-2
+4630,pinta,nf,"appearance, look, aspect",B-2
+4631,envidiar,v,to envy,B-2
+4632,reposar,v,"rest, lie down",B-2
+4633,acelerado,adj,"accelerated, quick",A-2
+4634,árido,adj,"arid, dry",A-1-a
+4635,caprichoso,adj,"capricious, whimsical",B-2
+4636,minúsculo,adj,"minute, insignificant",A-2
+4637,caldo,nm,"broth, soup",B-2
+4638,agonía,nf,"agony, grief",A-2
+4639,deteriorar,v,to deteriorate,A-2
+4640,tregua,nf,"truce, rest",B-2
+4641,vestuario,nm,"wardrobe, changing room",B-2
+4642,desesperar,v,"despair, lose hope",B-2
+4643,bodega,nf,"cellar, pantry, warehouse",B-2
+4644,antena,nf,antenna,A-1-a
+4645,ligar,v,"tie, link, bind",B-2
+4646,maldad,nf,"evil, wickedness",B-2
+4647,obediencia,nf,obedience,A-2
+4648,ocurrencia,nf,"idea, witty remark",A-2
+4649,abiertamente,adv,openly,B-2
+4650,complemento,nm,"complement, supplement",A-2
+4651,editor,nm/f,"editor, publisher",A-1-a
+4652,periodismo,nm,journalism,A-2
+4653,piscina,nf,swimming pool,B-2
+4654,provincial,adj,provincial,A-2
+4655,mediar,v,to mediate,A-3
+4656,endurecer,v,"harden, make hard",B-2
+4657,tradicionalmente,adv,traditionally,A-2
+4658,inyección,nf,"shot, injection",A-2
+4659,ilegal,adj,illegal,A-2
+4660,reproche,nm,"reproach, criticism",B-2
+4661,consistencia,nf,consistency,A-2
+4662,nobleza,nf,"nobility, uprightness",B-2
+4663,terrestre,adj,"earthly, of the earth",A-3
+4664,impotencia,nf,impotence,A-2
+4665,vislumbrar,v,to glimpse,B-2
+4666,cordial,adj,"cordial, friendly",A-2
+4667,hostilidad,nf,"hostility, enmity",A-2
+4668,angustiado,adj,"anguished, distressed",B-2
+4669,medicamento,nm,"medicine, drug",A-2
+4670,entrenar,v,to train,B-2
+4671,piadoso,adj,"devout, pious, merciful",B-2
+4672,corporal,adj,"of the body, corporal",A-2
+4673,conspiración,nf,conspiracy,A-2
+4674,ilimitado,adj,unlimited,B-2
+4675,detención,nf,"detention, arrest",A-2
+4676,autobús,nm,bus,B-2
+4677,firmemente,adv,firmly,B-2
+4678,esporádico,adj,sporadic,A-2
+4679,destreza,nf,skill,B-2
+4680,razonar,v,"reason (out), think",A-2
+4681,entrañas,nf,"insides, bowels",B-2
+4682,gratitud,nf,gratitude,A-2
+4683,rectificar,v,"rectify, straighten (out)",A-2
+4684,melancólico,adj,melancholy,A-2
+4685,editorial,nmf,"publisher (f), editorial article (m)",A-2
+4686,móvil,adj,mobile,A-2
+4687,bicho,nm,"bug, creature",B-2
+4688,martillo,nm,hammer,A-3
+4689,robusto,adj,"strong, robust, sturdy",A-2
+4690,cooperación,nf,cooperation,A-2
+4691,elevación,nf,"rise, elevation, increase",A-2
+4692,atentado,nm,"(terrorist) attack, offense",B-2
+4693,puñado,nm,"fistful, small group",B-2
+4694,llano,adj,"flat, level, plain",B-2
+4695,colombiano,adj,Colombian,B-2
+4696,sirena,nf,"siren, mermaid",A-1-b
+4697,espuma,nf,"foam, lather",B-2
+4698,cirujano,nm/f,surgeon,A-3
+4699,angustioso,adj,distressing,B-2
+4700,vereda,nf,"path, sidewalk",B-2
+4701,excitar,v,to excite,A-2
+4702,reivindicación,nf,"claim, demand, redemption",B-2
+4703,infección,nf,infection,A-2
+4704,chiquillo,nm,"kid, youngster",B-2
+4705,distracción,nf,"distraction, amusement",A-2
+4706,enumerar,v,"enumerate, count",A-2
+4707,estadístico,adj,statistical,A-2
+4708,ingrediente,nm,ingredient,A-1-a
+4709,posar,v,"rest, pose, land",B-2
+4710,maligno,adj,"evil, malignant",A-2
+4711,irritar,v,to irritate,A-2
+4712,pugna,nf,"battle, struggle",B-2
+4713,comprensivo,adj,understanding,A-2
+4714,hueco,adj,hollow,B-2
+4715,torta,nf,cake,B-2
+4716,intérprete,nc,"performer, interpreter",A-2
+4717,araña,nf,spider,B-2
+4718,facción,nf,"(face) feature, faction",B-2
+4719,elocuente,adj,eloquent,A-2
+4720,tumbar,v,"knock over, cast down",B-2
+4721,adentrar,v,"penetrate, go inside",B-2
+4722,diplomático,nm/f,diplomat,A-2
+4723,exhibición,nf,"exhibition, showing",A-2
+4724,relajar,v,to relax,A-2
+4725,escaparate,nm,"showcase, display window",B-2
+4726,afín,adj,"related, similar",B-2
+4727,sargento,nm,sergeant,A-3
+4728,recrear,v,"recreate, amuse",A-2
+4729,usual,adj,"normal, usual",A-2
+4730,estética,nf,aesthetics,A-2
+4731,caballería,nf,"cavalry, knighthood",A-3
+4732,padrino,nm,"godparent, sponsor",B-2
+4733,diversidad,nf,"diversity, variety",A-2
+4734,banquete,nm,"banquet, feast",B-2
+4735,bancario,adj,"bank, banking",B-2
+4736,impartir,v,"impart, administer",A-2
+4737,andar,nm,"walk, gait, pace",B-2
+4738,gigante,nc,giant,A-2
+4739,afortunado,adj,fortunate,A-2
+4740,pabellón,nm,"pavilion, sports hall",B-2
+4741,abeja,nf,bee,B-2
+4742,asentir,v,"assent, agree",B-2
+4743,espontáneamente,adv,spontaneously,A-2
+4744,informativo,adj,informative,A-2
+4745,violín,nm,violin,A-1-b
+4746,astro,nm,star,B-2
+4747,dictador,nm,dictator,A-2
+4748,roce,nm,"brush, graze",B-2
+4749,prolongación,nf,extension,A-2
+4750,cráneo,nm,"skull, cranium",A-3
+4751,aflojar,v,to loosen,B-2
+4752,hola,interj,"hello, hi",B-1
+4753,importado,adj,imported,A-2
+4754,íntegro,adj,"whole, entire, honest",A-3
+4755,agradecimiento,nm,"gratitude, gratefulness",B-2
+4756,extra,adj,extra,A-1-a
+4757,audacia,nf,"boldness, audacity",A-2
+4758,cólera,nmf,"rage (f), cholera (m)",A-2
+4759,resignación,nf,"resignation, acceptance",A-2
+4760,legislación,nf,legislation,A-2
+4761,recíproco,adj,reciprocal,A-2
+4762,caramelo,nm,"piece of candy, caramel",A-2
+4763,pólvora,nf,"gunpowder, powder",B-2
+4764,rol,nm,role,A-1-a
+4765,fértil,adj,"fertile, rich",A-2
+4766,ensuciar,v,to get dirty,B-2
+4767,largar,v,"let go, start out",B-2
+4768,acomodado,adj,"well-to-do, suitable",B-2
+4769,idiota,nc,"idiot, dunce",A-2
+4770,bahía,nf,bay,B-2
+4771,latitud,nf,latitude,A-2
+4772,buey,nm,ox,B-2
+4773,vaivén,nm,"swinging, rocking",B-2
+4774,equivocación,nf,"mistake, misconception",B-2
+4775,comunismo,nm,communism,A-2
+4776,partícula,nf,particle,A-2
+4777,intermedio,nm,"means, interval",A-2
+4778,económicamente,adv,economically,A-2
+4779,limosna,nf,"alms, charity",B-2
+4780,equivalente,nm,equivalent,A-2
+4781,flecha,nf,"arrow, dart",B-2
+4782,soberano,adj,"sovereign, self-assured",B-2
+4783,presentir,v,sense in advance,B-2
+4784,desilusión,nf,"disappointment, letdown",B-2
+4785,insertar,v,"insert, put in",A-2
+4786,pato,nm,duck,B-2
+4787,guerrero,adj,"warrior, warlike",B-2
+4788,grieta,nf,"crack, opening, slit",B-2
+4789,jinete,nm,"rider, horseman",B-2
+4790,involuntario,adj,involuntary,A-2
+4791,discurrir,v,"flow, pass, roam",B-2
+4792,inexistente,adj,non-existent,A-2
+4793,subjetivo,adj,subjective,A-2
+4794,agricultor,nm/f,farmer,A-2
+4795,garra,nf,"claw, fang",B-2
+4796,engordar,v,"fatten, get fat",B-2
+4797,soporte,nm,"support, endorsement",A-3
+4798,concurrencia,nf,"coming together, participation",B-2
+4799,pirámide,nf,pyramid,A-2
+4800,aventurar,v,"venture, risk",A-2
+4801,neutro,adj,neutral,A-2
+4802,demandar,v,"claim, sue",A-2
+4803,fósforo,nm,"match, match stick",B-2
+4804,profeta,nm,prophet,A-2
+4805,renacer,v,"be reborn, reappear",B-2
+4806,restablecer,v,"reestablish, restore",B-2
+4807,muslo,nm,thigh,B-2
+4808,desconcertado,adj,"disoriented, disconcerted",B-2
+4809,retiro,nm,"withdrawal, retreat",B-2
+4810,comando,nm,"command, order",A-2
+4811,sobrevenir,v,"occur, befall, strike",B-2
+4812,emisión,nf,"broadcast, emission",A-2
+4813,rebasar,v,"exceed, pass over",B-2
+4814,tenor,nm,a tenor de: in accordance with,B-2
+4815,recompensa,nf,"reward, recompense",B-2
+4816,complicidad,nf,"involvement, complicity",B-2
+4817,recelo,nm,"mistrust, suspicion",B-2
+4818,vibración,nf,vibration,A-2
+4819,restricción,nf,restriction,A-2
+4820,acatar,v,"comply with, abide by",B-2
+4821,transitar,v,"roam, go by",A-2
+4822,vara,nf,"rod, stick",B-2
+4823,clientela,nf,"customers, clients",A-3
+4824,soberanía,nf,sovereignty,B-2
+4825,impreciso,adj,"imprecise, vague",A-2
+4826,percatar,v,"inform, become aware",B-2
+4827,frialdad,nf,"coldness, indifference",B-2
+4828,encomendar,v,"commend, entrust",B-2
+4829,inspección,nf,inspection,A-2
+4830,inicial,nf,initial (letters),A-2
+4831,seducir,v,"seduce, tempt",A-2
+4832,incidencia,nf,"ocurrence, impact",A-2
+4833,retroceso,nm,movement backwards,B-2
+4834,micrófono,nm,microphone,A-2
+4835,previsible,adj,foreseeable,B-2
+4836,ventanilla,nf,(vehicle) window,B-2
+4837,frontal,adj,frontal,A-1-a
+4838,extinción,nf,extinction,A-2
+4839,infinito,nm,"infinite, infinity",A-2
+4840,campeón,nm,champion,A-2
+4841,incidir,v,"influence, affect",B-2
+4842,monstruoso,adj,monstrous,A-2
+4843,persistente,adj,persistent,A-2
+4844,oxígeno,nm,oxygen,A-2
+4845,rigidez,nf,rigidity,A-2
+4846,educado,adj,educated,A-2
+4847,irreversible,adj,irreversible,A-2
+4848,despedida,nf,"goodbye, farewell",B-2
+4849,vengar,v,"take revenge, avenge",B-2
+4850,encaje,nm,lace,B-2
+4851,estropear,v,"ruin, mess up",B-2
+4852,repercusión,nf,"repercussion, impact",A-2
+4853,prematuro,adj,premature,A-2
+4854,fascinar,v,to fascinate,A-2
+4855,ganador,nm,winner,B-2
+4856,emperador,nm,emperor,A-2
+4857,cometa,nmf,"comet (m), kite (f)",A-1-a
+4858,precedente,nm,precedent,A-2
+4859,rudo,adj,"rude, crude, coarse",B-2
+4860,cerebral,adj,cerebral,A-2
+4861,mosaico,nm,mosaic,A-2
+4862,significación,nf,"meaning, significance",A-2
+4863,contestación,nf,answer,B-2
+4864,pedagógico,adj,"pedagogical, teaching",A-2
+4865,asilo,nm,"asylum, shelter",B-2
+4866,incremento,nm,"increase, raise",A-2
+4867,incurrir,v,"incur, fall into",A-2
+4868,lomo,nm,"back, loin, spine",B-2
+4869,tentar,v,"tempt, entice",B-2
+4870,navegación,nf,"navigation, shipping",A-2
+4871,edificación,nf,"construction, building",A-2
+4872,abstracción,nf,abstraction,A-2
+4873,veintidós,num,twenty-two,B-2
+4874,grotesco,adj,"grotesque, ridiculous",A-2
+4875,duramente,adv,"harshly, severely",B-2
+4876,sumido,adj,"sunken, drowned",B-2
+4877,públicamente,adv,"publicly, in public",A-2
+4878,resignar,v,"resign, relinquish",A-2
+4879,mortal,nc,mortal,A-1-a
+4880,siniestro,adj,sinister,A-2
+4881,místico,adj,mystical,A-2
+4882,cabina,nf,"cabin, cockpit",A-1-b
+4883,dialogar,v,"confer, talk",B-2
+4884,exento,adj,"exempt, free",B-2
+4885,guerrero,nm/f,"warrior, soldier",B-2
+4886,acera,nf,sidewalk,B-2
+4887,clínico,adj,clinical,A-2
+4888,largamente,adv,"for a long time, at length",B-2
+4889,callejero,adj,of the street,B-2
+4890,adherir,v,"adhere, attach",A-2
+4891,voluntariamente,adv,voluntarily,A-2
+4892,centavo,nm,cent,B-2
+4893,molino,nm,"mill, windmill",B-2
+4894,parcialmente,adv,partially,A-2
+4895,decepción,nf,"disappointment, disenchantment",A-2
+4896,alojar,v,"host, accommodate",B-2
+4897,debidamente,adv,"properly, duly",B-2
+4898,ente,nm,"entity, being, firm",B-2
+4899,internar,v,to confine,A-2
+4900,mismísimo,adj,very same,B-2
+4901,contundente,adj,"decisive, blunt, forceful",B-2
+4902,inundación,nf,"flood, deluge",B-2
+4903,diligencia,nf,diligence,A-2
+4904,viceversa,adv,vice versa,A-1-a
+4905,séptimo,adj,seventh,B-2
+4906,complejidad,nf,complexity,A-2
+4907,carente,adj,"lacking, devoid",B-2
+4908,nítido,adj,"clear, clean, neat",B-2
+4909,imponente,adj,"impressive, magnificent",B-2
+4910,vecindad,nf,"nearness, vicinity",B-2
+4911,secular,adj,"secular, lay",A-2
+4912,cabra,nf,goat,B-2
+4913,olfato,nm,sense of smell,B-2
+4914,denominación,nf,"name, denomination",A-2
+4915,bordear,v,to border,B-2
+4916,envergadura,nf,"breadth, expanse",B-2
+4917,admirador,nm,admirer,A-2
+4918,instruir,v,to instruct,A-2
+4919,rebaño,nm,"herd, flock",B-2
+4920,inicialmente,adv,initially,A-2
+4921,vegetal,nm,"plant, vegetable",A-2
+4922,inseparable,adj,inseparable,A-2
+4923,fiera,nf,(wild) beast,B-2
+4924,verter,v,"pour, spill, shed",B-2
+4925,desmentir,v,to contradict,B-2
+4926,inestable,adj,"unstable, unsteady",A-2
+4927,olla,nf,"pot, kettle",B-2
+4928,terriblemente,adv,terribly,A-2
+4929,coco,nm,coconut,B-2
+4930,sótano,nm,basement,B-2
+4931,agresividad,nf,aggressiveness,A-2
+4932,mentalmente,adv,mentally,A-2
+4933,adhesión,nf,adherence,A-2
+4934,convención,nf,"convention, assembly",A-2
+4935,paraje,nm,"place, spot",B-2
+4936,frívolo,adj,"trivial, frivolous",B-2
+4937,cohete,nm,rocket,B-2
+4938,prodigioso,adj,"prodigious, famous",A-2
+4939,almohada,nf,pillow,B-2
+4940,eficiencia,nf,efficiency,A-2
+4941,laborioso,adj,"laborious, industrious",A-2
+4942,eclesiástico,adj,ecclesiastical,A-2
+4943,confundido,adj,confused,B-2
+4944,tejado,nm,"roof, housetop",B-2
+4945,elefante,nm,elephant,A-2
+4946,descifrar,v,to decipher,B-2
+4947,navaja,nf,"razor, blade, navaja",B-2
+4948,maldición,nf,"damnation, curse",B-2
+4949,marinero,nm/f,sailor,A-3
+4950,bachillerato,nm,high school diploma,B-2
+4951,marrón,adj,brown,B-2
+4952,entablar,v,"start, establish",B-2
+4953,desequilibrio,nm,"imbalance, unsteadiness",B-2
+4954,sintético,adj,synthetic,A-2
+4955,bélico,adj,warlike,B-2
+4956,combinado,adj,combined,A-2
+4957,desperdicio,nm,"waste, refuse, garbage",B-2
+4958,propagar,v,"propagate, spread",A-2
+4959,ampliación,nf,"enlargement, extension",B-2
+4960,recipiente,nm,"container, recipient, tank",A-3
+4961,parlamentario,adj,parliamentary,A-2
+4962,trasero,adj,"behind, back",B-2
+4963,despliegue,nm,"deployment, display",B-2
+4964,libra,nf,pound (money/weight),B-2
+4965,incursión,nf,"invasion, incursion",A-2
+4966,irreal,adj,unreal,A-2
+4967,toalla,nf,towel,B-2
+4968,tenis,nm,tennis,A-1-b
+4969,perfilar,v,"outline, shape",B-2
+4970,entusiasta,adj,enthusiastic,A-2
+4971,descarga,nf,"unloading, discharge",B-2
+4972,patriótico,adj,patriotic,A-2
+4973,higiene,nf,hygiene,A-2
+4974,decaer,v,"decay, wane",B-2
+4975,cuenca,nf,"socket, basin, bowl",B-2
+4976,aplastado,adj,"crushed, flattened",B-2
+4977,cal,nf,"lime, whitewash",B-2
+4978,rítmico,adj,rhythmic,A-2
+4979,disfrazar,v,"disguise, hide, conceal",B-2
+4980,pionero,nm,pioneer,A-2
+4981,volcán,nm,volcano,A-2
+4982,puta,nf,"whore, prostitute",B-2
+4983,hispano,adj,Hispanic,A-2
+4984,diamante,nm,diamond,A-2
+4985,constructivo,adj,constructive,A-2
+4986,delicadeza,nf,"gentleness, tenderness",B-2
+4987,ocasional,adj,"occasional, random",A-2
+4988,expulsión,nf,"expulsion, ejection",A-2
+4989,enigma,nm,"enigma, mystery",A-2
+4990,monumental,adj,monumental,A-2
+4991,hectárea,nf,hectare,B-2
+4992,accesible,adj,accessible,A-2
+4993,inmigrante,nc,immigrant,A-2
+4994,irrumpir,v,"burst in, raid",B-2
+4995,prevención,nf,"prevention, warning",A-2
+4996,cerco,nm,"fence, circle, ring",B-2
+4997,penumbra,nf,"semidarkness, twilight",B-2
+4998,jugada,nf,"move, play",B-2
+4999,estampa,nf,"print, engraving, illustration",B-2
+5000,cueva,nf,cave,B-2

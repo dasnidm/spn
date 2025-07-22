@@ -147,6 +147,34 @@ export async function updateProgress(wordId, progressObj) {
   const progress = await getProgress();
   progress[wordId] = { ...progressObj };
   await set(PROGRESS_KEY, progress);
+
+  // Supabase에도 즉시 업데이트 추가
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user && user.id) {
+      const { error } = await supabase
+        .from('user_word_progress')
+        .upsert({
+          user_id: user.id,
+          word_id: wordId,
+          // FSRS 관련 필드를 progressObj에서 직접 가져와 upsert
+          status: progressObj.status,
+          last_reviewed_at: progressObj.last_reviewed_at,
+          next_review_at: progressObj.next_review_at,
+          stability: progressObj.stability,
+          difficulty: progressObj.difficulty,
+          state: progressObj.state,
+          lapses: progressObj.lapses,
+          // 필요한 다른 FSRS 필드들도 여기에 추가
+        }, { onConflict: 'user_id, word_id' });
+
+      if (error) {
+        console.error('Supabase 진도 업데이트 실패:', error);
+      }
+    }
+  } catch (error) {
+    console.error('사용자 정보 가져오기 또는 Supabase 업데이트 중 오류:', error);
+  }
 }
 
 /**

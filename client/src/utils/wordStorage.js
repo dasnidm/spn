@@ -175,15 +175,7 @@ export async function updateProgress(wordId, progressObj) {
         .upsert({
           user_id: user.id,
           word_id: wordId,
-          // FSRS 관련 필드를 progressObj에서 직접 가져와 upsert
-          status: progressObj.status,
-          last_reviewed_at: progressObj.last_reviewed_at,
-          next_review_at: progressObj.next_review_at,
-          stability: progressObj.stability,
-          difficulty: progressObj.difficulty,
-          state: progressObj.state,
-          lapses: progressObj.lapses,
-          // 필요한 다른 FSRS 필드들도 여기에 추가
+          ...progressObj // progressObj의 모든 필드를 여기에 포함
         }, { onConflict: 'user_id, word_id' });
 
       if (error) {
@@ -247,50 +239,92 @@ export async function mergeWordsWithProgress(words) {
  * @param {string} userId
  */
 export async function syncProgressWithSupabase(userId) {
+  console.log('--- 동기화 시작 ---');
+  console.log('사용자 ID:', userId);
+
   // 1. Supabase에서 전체 진도 fetch
-  const { data: supaRows, error } = await supabase
+  const { data: supaRows, error: supaError } = await supabase
     .from('user_word_progress')
     .select('*')
     .eq('user_id', userId);
 
-  if (error) {
-    console.error('Supabase 진도 fetch 실패:', error);
+  if (supaError) {
+    console.error('Supabase 진도 fetch 실패:', supaError);
     return;
   }
   const supaProgress = {};
   for (const row of supaRows) {
     supaProgress[row.word_id] = row;
   }
+  console.log('Supabase에서 가져온 진도 데이터 수:', supaRows.length);
 
   // 2. IndexedDB에서 전체 진도 fetch
   const localProgress = await getProgress();
+  console.log('IndexedDB에서 가져온 진도 데이터 수:', Object.keys(localProgress).length);
 
   // 3. word_id별로 최신 데이터 선택
   const merged = {};
   const allWordIds = new Set([...Object.keys(supaProgress), ...Object.keys(localProgress)]);
+  let localToSupaCount = 0;
+  let supaToLocalCount = 0;
+
   for (const wordId of allWordIds) {
     const supa = supaProgress[wordId];
     const local = localProgress[wordId];
+
     if (!supa) {
+      // Supabase에 없고 로컬에만 있는 경우: 로컬 데이터를 최신으로 간주
       merged[wordId] = local;
+      localToSupaCount++;
+      console.log(`[병합] 로컬 -> Supabase (새 단어): ${wordId}`);
     } else if (!local) {
+      // 로컬에 없고 Supabase에만 있는 경우: Supabase 데이터를 최신으로 간주
       merged[wordId] = supa;
+      supaToLocalCount++;
+      console.log(`[병합] Supabase -> 로컬 (새 단어): ${wordId}`);
     } else {
-      // 타임스탬프 비교
+      // 둘 다 있는 경우: last_reviewed_at 비교
       const supaTime = new Date(supa.last_reviewed_at || 0).getTime();
       const localTime = new Date(local.last_reviewed_at || 0).getTime();
-      merged[wordId] = supaTime >= localTime ? supa : local;
+
+      if (supaTime >= localTime) {
+        merged[wordId] = supa;
+        if (supaTime > localTime) {
+          supaToLocalCount++;
+          console.log(`[병합] Supabase -> 로컬 (최신): ${wordId}`);
+        } else {
+          console.log(`[병합] 동일 (Supabase 선택): ${wordId}`);
+        }
+      } else {
+        merged[wordId] = local;
+        localToSupaCount++;
+        console.log(`[병합] 로컬 -> Supabase (최신): ${wordId}`);
+      }
     }
   }
+  console.log('병합 완료. 로컬 -> Supabase 업데이트 예정:', localToSupaCount, '건');
+  console.log('Supabase -> 로컬 업데이트 예정:', supaToLocalCount, '건');
+
 
   // 4. Supabase/IndexedDB 모두에 병합 결과 반영
   // (a) Supabase upsert (최신 데이터만)
   const upserts = Object.values(merged).filter(row => row && row.user_id === userId);
   if (upserts.length > 0) {
-    await supabase.from('user_word_progress').upsert(upserts, { onConflict: 'user_id, word_id' });
+    const { error: upsertError } = await supabase.from('user_word_progress').upsert(upserts, { onConflict: 'user_id, word_id' });
+    if (upsertError) {
+      console.error('Supabase upsert 실패:', upsertError);
+    } else {
+      console.log('Supabase upsert 성공:', upserts.length, '건');
+    }
+  } else {
+    console.log('Supabase에 upsert할 데이터 없음.');
   }
+
   // (b) IndexedDB 저장
-  await set('user_word_progress', merged);
+  await set(PROGRESS_KEY, merged);
+  console.log('IndexedDB 저장 완료.');
+
   await setLastSyncDate(new Date().toISOString()); // 마지막 동기화 날짜 저장
+  console.log('--- 동기화 종료 ---');
 }
  

@@ -29,7 +29,6 @@ const MainLayout = () => {
             if (user && user.id) {
                 await syncProgressWithSupabase(user.id);
             }
-            await clearWordsFromIndexedDB();
             const fetchedWords = await fetchAndCacheWords();
             if (!fetchedWords) {
                 console.error('단어 데이터를 가져오지 못했습니다');

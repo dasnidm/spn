@@ -170,16 +170,24 @@ export async function updateProgress(wordId, progressObj) {
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (user && user.id) {
+      const upsertData = {
+        user_id: user.id,
+        word_id: wordId,
+        ...progressObj // progressObj의 모든 필드를 여기에 포함
+      };
+
+      // 상세 로깅 추가
+      console.log(`[updateProgress] Supabase에 upsert할 데이터:`, upsertData);
+      console.log(`[updateProgress] progressObj 원본:`, progressObj);
+
       const { error } = await supabase
         .from('user_word_progress')
-        .upsert({
-          user_id: user.id,
-          word_id: wordId,
-          ...progressObj // progressObj의 모든 필드를 여기에 포함
-        }, { onConflict: 'user_id, word_id' });
+        .upsert(upsertData, { onConflict: 'user_id, word_id' });
 
       if (error) {
         console.error('Supabase 진도 업데이트 실패:', error);
+      } else {
+        console.log(`[updateProgress] Supabase 업데이트 성공: ${wordId}`);
       }
     }
   } catch (error) {

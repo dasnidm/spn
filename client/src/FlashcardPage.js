@@ -75,29 +75,14 @@ const FlashcardPage = () => {
         // FSRS 상태 갱신
         const fsrsResult = updateFSRSProgress(userWordProgress, currentWord, level);
 
-        // 1. Supabase에 FSRS 상태 전체 업데이트 또는 삽입
-        const { error } = await supabase
-            .from('user_word_progress')
-            .upsert({
-                user_id: user.id,
-                word_id: currentWord.id,
-                ...fsrsResult
-            }, {
-                onConflict: 'user_id, word_id'
-            });
-
-        // 2. IndexedDB에도 동기화
+        // wordStorage.js의 updateProgress가 Supabase/IndexedDB 업데이트를 모두 처리
         await updateProgress(currentWord.id, fsrsResult);
 
-        if (error) {
-            console.error('Error updating word progress:', error);
-        } else {
-            // 3. MainLayout의 전체 words 상태 실시간 업데이트
-            const updatedWords = words.map(w =>
-                w.id === currentWord.id ? { ...w, ...fsrsResult } : w
-            );
-            setWords(updatedWords);
-        }
+        // 3. MainLayout의 전체 words 상태 실시간 업데이트
+        const updatedWords = words.map(w =>
+            w.id === currentWord.id ? { ...w, ...fsrsResult } : w
+        );
+        setWords(updatedWords);
 
         // 4. 다음 카드로 이동 또는 세션 종료
         if (currentIndex < sessionWords.length - 1) {

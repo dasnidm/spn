@@ -30,6 +30,7 @@ const MainLayout = () => {
                     await syncProgressWithSupabase(user.id);
                 }
                 // 3. 단어 데이터 로드 및 병합
+                await clearWordsFromIndexedDB(); // IndexedDB 캐시를 강제로 지움
                 const fetchedWords = await fetchAndCacheWords();
                 if (!fetchedWords) {
                     console.error('단어 데이터를 가져오지 못했습니다');

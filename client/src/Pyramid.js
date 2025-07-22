@@ -355,7 +355,7 @@ const Pyramid = ({ words, setWords }) => {
                                 }
                                 const layerColor = getMemoryColor(avgRecall);
                                 return (
-                                    <Group key={`layer-${layout.level}`} onClick={() => handleLayerClick(layout.level)}>
+                                    <Group key={`layer-${layout.level}`} onClick={() => { console.log(`Layer ${layout.level} clicked`); handleLayerClick(layout.level); }} onTap={() => { console.log(`Layer ${layout.level} tapped`); handleLayerClick(layout.level); }}>
                                         <Rect x={layout.x} y={layout.y} width={layout.width} height={layout.height} fill={layerColor} cornerRadius={4} shadowColor="black" shadowBlur={4} shadowOpacity={0.2} />
                                         <Text x={layout.x} y={layout.y} width={layout.width} height={layout.height} text={`Level ${layout.level} (${layout.startIdx + 1} - ${layout.endIdx})`} fill="white" fontSize={14} align="center" verticalAlign="middle" />
                                     </Group>

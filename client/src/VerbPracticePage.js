@@ -153,12 +153,14 @@ const VerbPracticePage = () => {
         const isCorrect = answer.trim().toLowerCase() === currentQuestion.correctAnswer.toLowerCase();
         setFeedback({ isCorrect, correctAnswer: currentQuestion.correctAnswer });
 
-        // FSRS Update
+        // FSRS Update (await 없이 비동기 처리)
         if (user) {
             const level = isCorrect ? 'good' : 'again';
             const wordForProgress = words.find(w => w.id === currentQuestion.verb.word_id) || {};
             const fsrsResult = updateFSRSProgress(wordForProgress, { id: currentQuestion.verb.word_id }, level);
-            await updateProgress(currentQuestion.verb.word_id, fsrsResult);
+            
+            updateProgress(currentQuestion.verb.word_id, fsrsResult); // await 제거
+            
             setWords(allWords => allWords.map(w => w.id === currentQuestion.verb.word_id ? { ...w, ...fsrsResult } : w));
         }
     };

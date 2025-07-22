@@ -72,13 +72,14 @@ const QuizPage = () => {
     useEffect(() => {
         if (sessionStarted && currentIndex < sessionWords.length) {
             const answerWord = sessionWords[currentIndex];
-            setCurrentQuiz(getQuiz(words, answerWord));
+            // words prop 대신 sessionWords를 기반으로 오답 선택지를 만듭니다.
+            setCurrentQuiz(getQuiz(sessionWords, answerWord));
             setSelectedOption(null);
             setIsCorrect(null);
         } else if (sessionStarted && currentIndex >= sessionWords.length && sessionWords.length > 0) {
             setSessionFinished(true);
         }
-    }, [sessionStarted, currentIndex, sessionWords, words]);
+    }, [sessionStarted, currentIndex, sessionWords]);
 
     // 선택지 클릭 핸들러
     const handleSelectOption = async (option) => {
@@ -94,12 +95,14 @@ const QuizPage = () => {
             setWrongCount(w => w + 1);
         }
 
-        // FSRS 업데이트
+        // FSRS 업데이트 (await 없이 비동기 처리)
         if (user) {
             const level = correct ? 'good' : 'again';
             const userWordProgress = words.find(w => w.id === currentQuiz.answer.id) || {};
             const fsrsResult = updateFSRSProgress(userWordProgress, currentQuiz.answer, level);
-            await updateProgress(currentQuiz.answer.id, fsrsResult);
+            
+            updateProgress(currentQuiz.answer.id, fsrsResult); // await 제거
+            
             setWords(allWords => allWords.map(w => w.id === currentQuiz.answer.id ? { ...w, ...fsrsResult } : w));
         }
     };

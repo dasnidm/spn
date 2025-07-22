@@ -30,14 +30,14 @@ const FlashcardPage = () => {
 
     // 세션 단어 선정 useEffect
     useEffect(() => {
-        if (sessionStarted && words && words.length > 0 && sessionSettings) {
+        if (sessionStarted && sessionSettings) {
             const filtered = filterWords(words, sessionSettings);
             setSessionWords(filtered);
             setCurrentIndex(0);
             setIsFlipped(false);
             setSessionFinished(false);
         }
-    }, [sessionStarted, words, sessionSettings]);
+    }, [sessionStarted, sessionSettings]);
 
     // 사용자 정보 가져오기
     useEffect(() => {
@@ -87,7 +87,7 @@ const FlashcardPage = () => {
         // 4. 다음 카드로 이동 또는 세션 종료
         if (currentIndex < sessionWords.length - 1) {
             setIsFlipped(false);
-            setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(i => i + 1); // 함수형 업데이트로 변경
         } else {
             setSessionFinished(true);
         }

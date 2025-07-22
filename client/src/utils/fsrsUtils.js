@@ -1,94 +1,121 @@
-import { FSRS } from 'ts-fsrs';
+import { fsrs, createEmptyCard, generatorParameters, Rating, State } from 'ts-fsrs';
 
-const fsrs = new FSRS();
+// README에 따라 FSRS 인스턴스를 생성합니다.
+const f = fsrs(generatorParameters());
 
 /**
- * @typedef {Object} FSRSCard
- * @property {string|number} id
- * @property {number} stability
- * @property {number} difficulty
- * @property {Date} due
- * @property {number} state
- * @property {number} lapses
- * @property {Date|undefined} last_review
+ * DB의 word/progress 정보를 FSRS 라이브러리가 사용하는 Card 객체로 변환합니다.
+ * DB에서 온 데이터가 null일 수 있는 모든 예외 케이스를 처리하도록 수정되었습니다.
+ * @param {object} progressOrWord - user_word_progress 정보가 포함된 word 객체
+ * @param {object} [word] - (옵션) word 객체.
+ * @returns {import('ts-fsrs').Card} FSRS 카드 객체
  */
+export const toFSRSCard = (progressOrWord, word) => {
+  const source = progressOrWord || {};
+  const card = createEmptyCard(new Date());
+
+  if (!source.last_reviewed_at) {
+    return card;
+  }
+
+  card.due = new Date(source.next_review_at);
+  card.stability = source.stability ?? 0;
+  card.difficulty = source.difficulty ?? 0;
+  card.state = source.state ?? State.New;
+  card.lapses = source.lapses ?? 0;
+  card.last_review = new Date(source.last_reviewed_at);
+  
+  return card;
+};
+
 
 /**
- * Word, UserWordProgress → FSRSCard 변환
- * @param {Object} word
- * @param {Object} progress
- * @returns {FSRSCard}
- */
-export function toFSRSCard(word, progress) {
-  return {
-    id: String(word.id),
-    stability: progress?.stability ?? 2.5,
-    difficulty: progress?.difficulty ?? 2.5,
-    due: progress?.next_review_at ? new Date(progress.next_review_at) : new Date(),
-    state: progress?.state ?? 0,
-    lapses: progress?.lapses ?? 0,
-    last_review: progress?.last_reviewed_at ? new Date(progress.last_reviewed_at) : undefined,
-  };
-}
-
-/**
- * FSRSCard → 예상 기억률(0~1)
- * @param {FSRSCard} card
- * @returns {number}
+ * FSRS 카드의 현재 예상 기억률(retrievability)을 계산합니다.
+ * @param {import('ts-fsrs').Card} card - FSRS 카드 객체
+ * @returns {number} 예상 기억률 (0.0 ~ 1.0 사이의 확률 값)
  */
 export function getRecallProbability(card) {
-  if (!card.stability || !card.last_review) return 0.0;
+  if (!card.last_review) {
+    return 0;
+  }
+  
   const now = new Date();
-  const elapsed_days = Math.max(0, (now - card.last_review) / (1000 * 60 * 60 * 24));
-  return Math.exp(-elapsed_days / card.stability);
+  const recall = f.get_retrievability(card, now);
+  
+  const rawProbability = recall ? parseFloat(recall) : 0;
+
+  // [핵심 수정] 라이브러리가 0-100 범위의 백분율을 반환하는 경우에 대비하여
+  // 0-1 범위의 확률 값으로 정규화합니다.
+  if (rawProbability > 1) {
+    return rawProbability / 100;
+  }
+  
+  return rawProbability;
 }
 
-// recall(0~1) → HSL 색상 그라데이션
+
+/**
+ * 예상 기억률에 따라 시각적 피드백을 위한 HSL 색상을 반환합니다.
+ * @param {number} recall - 예상 기억률 (0.0 ~ 1.0)
+ * @returns {string} HSL 색상 문자열
+ */
 export function getMemoryColor(recall) {
-  // 10% 미만은 어두운 회색으로 처리
-  if (recall < 0.1) return '#444'; 
+  if (recall < 0.1) return '#444';
   
-  const hue = 130; // 생생한 초록색의 색상(hue)
-  
-  // 채도(Saturation): 10%일 때 20, 100%일 때 80 (회색빛 -> 선명한 색)
+  const hue = 130; // 초록색 계열
   const saturation = 20 + (recall - 0.1) * (80 - 20) / 0.9;
-  
-  // 명도(Lightness): 10%일 때 35, 100%일 때 60 (어두운 색 -> 밝은 색)
   const lightness = 35 + (recall - 0.1) * (60 - 35) / 0.9;
 
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
-// grade: 'again' | 'hard' | 'good' 등 → FSRS grade(1~4)
-function mapLevelToFSRSGrade(level) {
-  // FSRS: 1=Again, 2=Hard, 3=Good, 4=Easy
-  if (level === 'again') return 1;
-  if (level === 'hard') return 2;
-  if (level === 'good') return 3;
-  if (level === 'easy') return 4;
-  return 1; // 기본값: Again
+
+/**
+ * 사용자의 학습 평가('again', 'hard', 'good')를 FSRS의 Rating 값으로 변환합니다.
+ * @param {string} level - 사용자의 평가 ('again', 'hard', 'good')
+ * @returns {Rating} FSRS Rating 값
+ */
+function mapLevelToFSRSRating(level) {
+  const ratingMap = {
+    again: Rating.Again,
+    hard: Rating.Hard,
+    good: Rating.Good,
+  };
+  return ratingMap[level] || Rating.Again;
 }
 
-// userWordProgress, word, level → FSRS 상태 갱신 결과 반환
-export function updateFSRSProgress(userWordProgress, word, level) {
+
+/**
+ * 학습 활동을 기반으로 FSRS 상태를 업데이트하고, DB에 저장할 완전한 객체를 반환합니다.
+ * @param {object} userWordProgress - 현재 단어의 학습 진행 상태
+ * @param {object} word - 현재 단어 정보
+ * @param {string} level - 사용자의 평가 ('again', 'hard', 'good')
+ * @returns {object} user_word_progress 테이블 스키마와 일치하는 객체
+ */
+export const updateFSRSProgress = (userWordProgress, word, level) => {
   const card = toFSRSCard(userWordProgress, word);
-  const grade = mapLevelToFSRSGrade(level);
-  const now = Date.now();
-  const result = fsrs.repeat(card, grade, now);
-  
-  // result는 { [newState]: { card, log } } 형태의 객체입니다.
-  // e.g., { "Review": { card: ..., log: ... } }
-  // 따라서 Object.values()를 사용해 내부의 card 객체를 추출해야 합니다.
-  const newCard = Object.values(result)[0].card;
+  const now = new Date();
+  const rating = mapLevelToFSRSRating(level);
+
+  const scheduling_cards = f.repeat(card, now);
+  const newCard = scheduling_cards[rating].card;
+
+  let status;
+  if (newCard.state === State.Review) {
+    status = 'review_needed';
+  } else if (newCard.state === State.Learn || newCard.state === State.Relearn) {
+    status = 'in_progress';
+  } else {
+    status = 'completed';
+  }
 
   return {
+    status: status,
+    last_reviewed_at: now.toISOString(),
+    next_review_at: newCard.due.toISOString(),
     stability: newCard.stability,
     difficulty: newCard.difficulty,
-    due: newCard.due, // ms timestamp
     state: newCard.state,
     lapses: newCard.lapses,
-    last_reviewed_at: new Date(now).toISOString(),
-    next_review_at: new Date(newCard.due).toISOString(),
-    status: grade >= 3 ? 'completed' : 'review_needed',
   };
-} 
+};

@@ -1,151 +1,218 @@
-import React, { useEffect, useState } from 'react';
-import { fetchAndCacheWords } from './utils/wordStorage';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import './App.css';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useOutletContext, useNavigate } from 'react-router-dom';
+import supabase from './supabaseClient';
+import FlashcardSetup from './FlashcardSetup'; // Setup Component 재사용
+import { updateFSRSProgress } from './utils/fsrsUtils';
+import { updateProgress } from './utils/wordStorage';
+import './QuizPage.css'; // 새로운 CSS 파일
+import { filterWords } from './utils/wordFilter';
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function filterWords(words, range) {
-  if (range === 'not_started') return words.filter(w => !w.status || w.status === 'not_started');
-  if (range === 'review_needed') return words.filter(w => w.status === 'review_needed');
-  if (range === 'b3') return words.filter(w => w.category_code === 'B-3');
-  if (range === 'random20') {
-    const shuffled = [...words].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 20);
-  }
-  return words;
-}
-
-function getQuiz(words) {
-  const answerIdx = getRandomInt(words.length);
-  const answer = words[answerIdx];
-  const pool = words.filter((w, i) => i !== answerIdx);
-  const options = [answer];
-  while (options.length < 4 && pool.length > 0) {
-    const idx = getRandomInt(pool.length);
-    options.push(pool[idx]);
-    pool.splice(idx, 1);
-  }
-  for (let i = options.length - 1; i > 0; i--) {
-    const j = getRandomInt(i + 1);
-    [options[i], options[j]] = [options[j], options[i]];
-  }
-  return { answer, options };
+// 퀴즈 생성 로직 (기존 로직 활용)
+function getQuiz(words, answerWord) {
+    const pool = words.filter(w => w.id !== answerWord.id);
+    const options = [answerWord];
+    while (options.length < 4 && pool.length > 0) {
+        const idx = Math.floor(Math.random() * pool.length);
+        options.push(pool[idx]);
+        pool.splice(idx, 1);
+    }
+    // 셔플
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+    }
+    return { answer: answerWord, options };
 }
 
 const QuizPage = () => {
-  const [words, setWords] = useState([]);
-  const [quiz, setQuiz] = useState(null);
-  const [selected, setSelected] = useState(null);
-  const [feedback, setFeedback] = useState('');
-  const [loading, setLoading] = useState(true);
-  const [correct, setCorrect] = useState(0);
-  const [wrong, setWrong] = useState(0);
-  const [current, setCurrent] = useState(1);
-  const [finished, setFinished] = useState(false);
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const range = searchParams.get('range') || 'all';
+    const { words, setWords } = useOutletContext();
+    const navigate = useNavigate();
+    const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    fetchAndCacheWords().then(ws => {
-      const filtered = filterWords(ws, range);
-      setWords(filtered);
-      setLoading(false);
-      setCorrect(0);
-      setWrong(0);
-      setCurrent(1);
-      setFinished(false);
-    });
-  }, [range]);
+    // 세션 관리
+    const [sessionStarted, setSessionStarted] = useState(false);
+    const [sessionSettings, setSessionSettings] = useState(null);
+    const [sessionWords, setSessionWords] = useState([]);
+    const [sessionFinished, setSessionFinished] = useState(false);
 
-  useEffect(() => {
-    if (words.length > 0 && current <= words.length) {
-      setQuiz(getQuiz(words));
-      setSelected(null);
-      setFeedback('');
+    // 퀴즈 상태
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentQuiz, setCurrentQuiz] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [isCorrect, setIsCorrect] = useState(null);
+    
+    // 통계
+    const [correctCount, setCorrectCount] = useState(0);
+    const [wrongCount, setWrongCount] = useState(0);
+
+    // 사용자 정보 가져오기
+    useEffect(() => {
+        const getUser = async () => {
+            const { data: { user } } = await supabase.auth.getUser();
+            setUser(user);
+        };
+        getUser();
+    }, []);
+
+    
+
+    // 세션 시작 핸들러
+    const handleStartSession = (settings) => {
+        setSessionSettings(settings);
+        const filtered = filterWords(words, settings);
+        setSessionWords(filtered);
+        setSessionStarted(true);
+        setCurrentIndex(0);
+        setCorrectCount(0);
+        setWrongCount(0);
+        setSessionFinished(false);
+    };
+
+    // 퀴즈 생성 로직
+    useEffect(() => {
+        if (sessionStarted && currentIndex < sessionWords.length) {
+            const answerWord = sessionWords[currentIndex];
+            setCurrentQuiz(getQuiz(words, answerWord));
+            setSelectedOption(null);
+            setIsCorrect(null);
+        } else if (sessionStarted && currentIndex >= sessionWords.length && sessionWords.length > 0) {
+            setSessionFinished(true);
+        }
+    }, [sessionStarted, currentIndex, sessionWords, words]);
+
+    // 선택지 클릭 핸들러
+    const handleSelectOption = async (option) => {
+        if (selectedOption) return; // 이미 선택했으면 무시
+
+        const correct = option.id === currentQuiz.answer.id;
+        setSelectedOption(option);
+        setIsCorrect(correct);
+
+        if (correct) {
+            setCorrectCount(c => c + 1);
+        } else {
+            setWrongCount(w => w + 1);
+        }
+
+        // FSRS 업데이트
+        if (user) {
+            const level = correct ? 'good' : 'again';
+            const userWordProgress = words.find(w => w.id === currentQuiz.answer.id) || {};
+            const fsrsResult = updateFSRSProgress(userWordProgress, currentQuiz.answer, level);
+            await updateProgress(currentQuiz.answer.id, fsrsResult);
+            setWords(allWords => allWords.map(w => w.id === currentQuiz.answer.id ? { ...w, ...fsrsResult } : w));
+        }
+    };
+
+    // 다음 문제로 이동
+    const handleNext = () => {
+        setCurrentIndex(i => i + 1);
+    };
+
+    // 초기 렌더링: 설정 화면
+    if (!sessionStarted) {
+        return <FlashcardSetup onStartSession={handleStartSession} />;
     }
-  }, [words, current]);
 
-  const handleSelect = (opt) => {
-    if (selected) return;
-    setSelected(opt);
-    if (opt.spanish === quiz.answer.spanish) {
-      setFeedback('정답입니다! 🎉');
-      setCorrect(c => c + 1);
-    } else {
-      setFeedback(`오답입니다. 정답: ${quiz.answer.spanish}`);
-      setWrong(w => w + 1);
+    // 로딩 또는 단어 없음
+    if (sessionWords.length === 0) {
+        return (
+            <div className="quiz-container">
+                <div style={{ color: '#aaa', fontSize: 18, textAlign: 'center', marginTop: 60 }}>
+                    해당 조건에 맞는 단어가 없습니다.<br/>필터를 변경하여 다시 시도해 주세요.
+                </div>
+                <button className="main-btn" onClick={() => setSessionStarted(false)}>
+                    학습 설정으로 돌아가기
+                </button>
+            </div>
+        );
     }
-  };
-
-  const handleNext = () => {
-    if (current >= words.length) {
-      setFinished(true);
-    } else {
-      setQuiz(getQuiz(words));
-      setSelected(null);
-      setFeedback('');
-      setCurrent(c => c + 1);
+    
+    // 세션 종료 화면
+    if (sessionFinished) {
+        return (
+            <div className="quiz-session-finish">
+                <h1>🎉 퀴즈 완료!</h1>
+                <p>오늘도 한 걸음 성장했어요.</p>
+                <div className="quiz-stats">
+                    <div>정답: <span className="correct">{correctCount}</span></div>
+                    <div>오답: <span className="wrong">{wrongCount}</span></div>
+                    <div>정답률: <span>{Math.round((correctCount / sessionWords.length) * 100)}%</span></div>
+                </div>
+                <div className="finish-buttons">
+                    <button onClick={() => setSessionStarted(false)}>다시하기</button>
+                    <button onClick={() => navigate('/learn')}>학습 메뉴로</button>
+                </div>
+            </div>
+        );
     }
-  };
 
-  if (loading) return <div className="loading-screen">단어 데이터를 불러오는 중...</div>;
-  if (!words.length) return (
-    <div className="empty-screen">
-      <div className="empty-title">학습할 단어가 없습니다! 🎉</div>
-      <div className="empty-sub">정답: {correct} / 오답: {wrong}</div>
-      <button className="main-btn" onClick={() => navigate('/learn')}>
-        학습 메뉴로 이동
-      </button>
-    </div>
-  );
-  if (finished) return (
-    <div className="finish-screen">
-      <div className="finish-title">🎉 퀴즈가 완료되었습니다!</div>
-      <div className="finish-sub">정답: {correct} / 오답: {wrong}</div>
-      <div className="finish-btns">
-        <button className="main-btn" onClick={() => navigate('/dashboard')}>대시보드로 이동</button>
-        <button className="main-btn" onClick={() => navigate('/learn')}>학습 메뉴로 이동</button>
-      </div>
-    </div>
-  );
-  if (!quiz) return null;
+    if (!currentQuiz) {
+        return <div className="quiz-container">퀴즈를 불러오는 중...</div>;
+    }
 
-  return (
-    <div className="flashcard-root">
-      <button className="back-btn" onClick={() => navigate(-1)}>←</button>
-      <h2 className="page-title">퀴즈 모드 (4지선다)</h2>
-      <div className="progress-bar">
-        <div className="progress-label">진도: {current} / {words.length} | 정답: {correct} / 오답: {wrong}</div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{ width: `${(current / words.length) * 100}%` }} />
+    const progressPercent = (currentIndex / sessionWords.length) * 100;
+
+    return (
+        <div className="quiz-container">
+            <div className="quiz-header">
+                <button className="exit-btn" onClick={() => navigate('/learn')}>✕</button>
+                <div className="progress-container">
+                    <div className="progress-bar">
+                        <div className="progress-fill" style={{ width: `${progressPercent}%` }}></div>
+                    </div>
+                    <span className="progress-text">{currentIndex + 1} / {sessionWords.length}</span>
+                </div>
+                <div className="score-display">
+                    <span className="correct">✓ {correctCount}</span>
+                    <span className="wrong">✕ {wrongCount}</span>
+                </div>
+            </div>
+
+            <div className="quiz-content">
+                <div className="question-area">
+                    <h2>{currentQuiz.answer.spanish}</h2>
+                    <p>{currentQuiz.answer.pos}</p>
+                </div>
+
+                <div className="options-grid">
+                    {currentQuiz.options.map((option, index) => {
+                        let buttonClass = 'option-btn';
+                        if (selectedOption) {
+                            if (option.id === currentQuiz.answer.id) {
+                                buttonClass += ' correct';
+                            } else if (option.id === selectedOption.id) {
+                                buttonClass += ' incorrect';
+                            } else {
+                                buttonClass += ' disabled';
+                            }
+                        }
+                        return (
+                            <button
+                                key={index}
+                                className={buttonClass}
+                                onClick={() => handleSelectOption(option)}
+                                disabled={!!selectedOption}
+                            >
+                                {option.korean}
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
+
+            {selectedOption && (
+                <div className={`quiz-footer ${isCorrect ? 'correct-bg' : 'incorrect-bg'}`}>
+                    <div className="feedback-text">
+                        {isCorrect ? '정답입니다!' : `오답입니다. 정답: ${currentQuiz.answer.korean}`}
+                    </div>
+                    <button className="continue-btn" onClick={handleNext}>
+                        계속하기
+                    </button>
+                </div>
+            )}
         </div>
-      </div>
-      <div className="card-area">
-        <div className="flashcard" style={{ cursor: 'default', minHeight: 80 }}>
-          <div className="word-ko" style={{ fontSize: '1.3rem', marginBottom: 8 }}>{quiz.answer.korean}</div>
-        </div>
-      </div>
-      <div className="btn-group">
-        {quiz.options.map((opt, i) => (
-          <button
-            key={i}
-            className={`main-btn ${selected ? (opt.spanish === quiz.answer.spanish ? 'know' : (opt === selected ? 'dontknow' : '')) : ''}`}
-            style={{ margin: '0.2rem 0', fontSize: 20, opacity: selected && opt !== selected && opt.spanish !== quiz.answer.spanish ? 0.7 : 1 }}
-            onClick={() => handleSelect(opt)}
-            disabled={!!selected}
-          >
-            {opt.spanish}
-          </button>
-        ))}
-      </div>
-      {feedback && <div style={{ margin: '1.2rem 0', fontWeight: 'bold', color: feedback.includes('정답') ? '#4fc3f7' : '#f44336', fontSize: '1.1rem' }}>{feedback}</div>}
-      {selected && <button className="sub-btn" onClick={handleNext} style={{ marginTop: 12 }}>다음 문제</button>}
-    </div>
-  );
+    );
 };
 
-export default QuizPage; 
+export default QuizPage;

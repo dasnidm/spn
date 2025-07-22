@@ -1,0 +1,241 @@
+.flashcard-setup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.setup-content {
+    width: 100%;
+    max-width: 700px;
+    padding: 80px 20px 120px 20px; /* Header/Footer space */
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.setup-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.setup-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.setup-header p {
+    font-size: 1.1rem;
+    color: #8d8d92;
+}
+
+.setup-section {
+    margin-bottom: 35px;
+}
+
+.setup-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-left: 5px;
+}
+
+/* Segmented Control (Apple-style) */
+.segmented-control {
+    display: flex;
+    width: 100%;
+    background-color: #3a3a3c;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.segmented-control button {
+    flex: 1;
+    padding: 12px 10px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.segmented-control button.active {
+    background-color: #5d5dff;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(93, 93, 255, 0.3);
+}
+
+/* Level Grid */
+.level-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+}
+
+.level-grid .level-btn {
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid #3a3a3c;
+    background-color: transparent;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.level-grid .level-btn:hover {
+    border-color: #5d5dff;
+}
+
+.level-grid .level-btn.active {
+    background-color: #5d5dff;
+    border-color: #5d5dff;
+    color: #fff;
+}
+
+/* Count Selector */
+.count-selector {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.count-selector button {
+    flex: 1;
+    padding: 16px 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid #3a3a3c;
+    background-color: transparent;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.count-selector button:hover {
+    border-color: #5d5dff;
+}
+
+.count-selector button.active {
+    background-color: #5d5dff;
+    border-color: #5d5dff;
+    color: #fff;
+}
+
+/* Footer & Start Button */
+.start-session-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #1c1c1e 60%, transparent);
+    padding: 20px 20px 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3001;
+}
+
+.summary-text {
+    color: #8d8d92;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.start-learning-btn {
+    width: 100%;
+    max-width: 660px;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    background-color: #5d5dff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.start-learning-btn:hover {
+    background-color: #7070ff;
+}
+
+.start-learning-btn:active {
+    transform: scale(0.98);
+}
+
+.start-learning-btn:disabled {
+    background-color: #3a3a3c;
+    color: #8d8d92;
+    cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .setup-content {
+        padding: 60px 15px 120px 15px;
+    }
+    .setup-header h1 {
+        font-size: 2rem;
+    }
+    .setup-header p {
+        font-size: 1rem;
+    }
+    .setup-section h2 {
+        font-size: 1.1rem;
+    }
+    .segmented-control button {
+        font-size: 0.9rem;
+    }
+    .level-grid {
+        grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+        gap: 8px;
+    }
+    .count-selector {
+        gap: 8px;
+    }
+    .count-selector button {
+        font-size: 0.9rem;
+        padding: 12px 8px;
+    }
+    .start-learning-btn {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+}

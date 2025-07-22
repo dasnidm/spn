@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import supabase from './supabaseClient';
-import { fetchAndCacheWords, mergeWordsWithProgress, clearWordsFromIndexedDB } from './utils/wordStorage';
+import { fetchAndCacheWords, mergeWordsWithProgress, clearWordsFromIndexedDB, syncProgressWithSupabase } from './utils/wordStorage';
 import './App.css';
 
 const getStats = (words) => {
@@ -20,27 +20,30 @@ const MainLayout = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const loadWords = async () => {
+        const loadAndSync = async () => {
             try {
                 setLoading(true);
-                console.log('단어 데이터 가져오는 중...');
+                // 1. supabase에서 user id 가져오기
+                const { data: { user } } = await supabase.auth.getUser();
+                if (user && user.id) {
+                    // 2. 동기화 실행
+                    await syncProgressWithSupabase(user.id);
+                }
+                // 3. 단어 데이터 로드 및 병합
                 const fetchedWords = await fetchAndCacheWords();
-                console.log('가져온 단어 데이터:', fetchedWords);
                 if (!fetchedWords) {
                     console.error('단어 데이터를 가져오지 못했습니다');
                     return;
                 }
                 const mergedWords = await mergeWordsWithProgress(fetchedWords);
-                console.log('진도 데이터와 병합된 단어:', mergedWords);
                 setWords(mergedWords);
             } catch (error) {
-                console.error('단어 데이터 로드 중 오류:', error);
+                console.error('단어 데이터 로드/동기화 중 오류:', error);
             } finally {
                 setLoading(false);
             }
         };
-
-        loadWords();
+        loadAndSync();
     }, []);
 
     const handleRefresh = async () => {
@@ -113,15 +116,6 @@ const MainLayout = () => {
 
     return (
         <div className="main-layout">
-            <div className="homepage-overlay">
-                <div className="dashboard-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'fixed', width: '100%', top: 0, left: 0, padding: '8px 24px', boxSizing: 'border-box', zIndex: 1200 }}>
-                    <div className="dashboard-btns" style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
-                        <button className="sub-btn" onClick={signOut}>Sign Out</button>
-                        <button className="main-btn" onClick={() => navigate('/learn')}>학습 메뉴로 이동</button>
-                        <button className="main-btn" onClick={handleRefresh}>데이터 새로고침</button>
-                    </div>
-                </div>
-            </div>
             <Outlet context={{ words, setWords, loading }} />
         </div>
     );

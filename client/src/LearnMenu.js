@@ -13,6 +13,15 @@ const LearnMenu = () => {
             </div>
             <div className="learn-mode-grid">
                 <div 
+                    className="learn-mode-card return-to-pyramid"
+                    onClick={() => navigate('/')}
+                >
+                    <div className="card-icon">△</div>
+                    <h2>피라미드로 돌아가기</h2>
+                    <p>전체 단어 지도를 보며 진행 상황을 확인합니다.</p>
+                    <div className="card-status">이동하기</div>
+                </div>
+                <div 
                     className="learn-mode-card active" 
                     onClick={() => navigate('/learn/flashcard')}
                 >
@@ -22,18 +31,24 @@ const LearnMenu = () => {
                     <div className="card-status">학습 시작하기</div>
                 </div>
 
-                <div className="learn-mode-card disabled">
+                <div 
+                    className="learn-mode-card active"
+                    onClick={() => navigate('/learn/quiz')}
+                >
                     <div className="card-icon">✍️</div>
                     <h2>객관식 퀴즈</h2>
                     <p>네 가지 선택지 중 올바른 뜻을 고르며 단어 인지 능력을 테스트합니다.</p>
-                    <div className="card-status">준비 중</div>
+                    <div className="card-status">도전하기</div>
                 </div>
                 
-                <div className="learn-mode-card disabled">
+                <div 
+                    className="learn-mode-card active"
+                    onClick={() => navigate('/learn/verb-practice')}
+                >
                     <div className="card-icon">🗣️</div>
                     <h2>동사 변화 연습</h2>
                     <p>스페인어의 핵심인 동사 변화를 집중적으로 훈련합니다.</p>
-                    <div className="card-status">준비 중</div>
+                    <div className="card-status">연습하기</div>
                 </div>
             </div>
         </div>

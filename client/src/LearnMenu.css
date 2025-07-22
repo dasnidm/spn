@@ -1,8 +1,10 @@
 .learn-menu-container {
     width: 100%;
     max-width: 960px;
+    min-height: 100vh; /* 화면 전체 높이를 최소 높이로 설정 */
     margin: 0 auto;
-    padding: 80px 24px 40px; /* 상단 헤더와의 간격 확보 */
+    padding: 80px 24px 40px;
+    box-sizing: border-box; /* 패딩이 크기에 포함되도록 설정 */
     color: #ffffff;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -102,4 +104,28 @@
 .learn-mode-card.disabled .card-status {
     background-color: #444;
     color: #888;
+}
+
+.learn-mode-card.return-to-pyramid {
+    cursor: pointer;
+    background: #3a3a3c;
+}
+
+.learn-mode-card.return-to-pyramid:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #a0a0a0;
+}
+
+.learn-mode-card.return-to-pyramid .card-icon {
+    color: #a0a0a0;
+}
+
+.learn-mode-card.return-to-pyramid .card-status {
+    background-color: #666;
+    color: #fff;
+}
+
+.learn-mode-card.return-to-pyramid:hover .card-status {
+    background-color: #888;
 } 

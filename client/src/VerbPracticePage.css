@@ -1,0 +1,154 @@
+.verb-practice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.verb-quiz-content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.verb-question-area {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.verb-tense-info {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.verb-tense-info-ko {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.verb-infinitive {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.verb-answer-form {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.verb-input {
+    flex-grow: 1;
+    padding: 18px 22px;
+    font-size: 1.3rem;
+    background-color: #2c2c2e;
+    border: 2px solid #444;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.verb-input:focus {
+    border-color: #5d5dff;
+}
+
+.verb-input.correct {
+    border-color: #66bb6a;
+    background-color: rgba(102, 187, 106, 0.1);
+}
+
+.verb-input.incorrect {
+    border-color: #ef5350;
+    background-color: rgba(239, 83, 80, 0.1);
+}
+
+.verb-submit-btn {
+    padding: 18px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #5d5dff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.verb-submit-btn:disabled {
+    background-color: #3a3a3c;
+    cursor: not-allowed;
+}
+
+.progress-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+
+/* Re-using quiz-footer styles from QuizPage.css */
+/* Ensure QuizPage.css is imported or copy styles for .quiz-footer, .feedback-text, .continue-btn etc. */
+/* For simplicity, assuming styles are available globally or copied */
+.quiz-header, .progress-bar, .progress-fill, .exit-btn, .quiz-footer, .feedback-text, .continue-btn, .correct-bg, .incorrect-bg, .options-grid, .option-btn, .option-btn.correct, .option-btn.incorrect, .option-btn.disabled {
+    /* These styles are assumed to be defined in another CSS file like QuizPage.css and imported in the component */
+}
+
+.verb-options {
+    max-width: 600px;
+}
+
+/* Mode Toggle Switch */
+.mode-switch {
+    display: flex;
+    background-color: #2c2c2e;
+    border-radius: 8px;
+    padding: 4px;
+    margin-left: auto; /* 헤더 오른쪽에 배치 */
+}
+
+.mode-switch button {
+    padding: 6px 12px;
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mode-switch button.active {
+    background-color: #5d5dff;
+    color: white;
+}

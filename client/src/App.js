@@ -6,12 +6,13 @@ import HomePage from './HomePage';
 import LearnMenu from './LearnMenu';
 import FlashcardPage from './FlashcardPage';
 import QuizPage from './QuizPage';
+import VerbPracticePage from './VerbPracticePage'; // VerbPracticePage 임포트
 import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './MainLayout';
 
 function App() {
   const [session, setSession] = useState(null);
-
+  // ... (useEffect remains the same)
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
@@ -26,6 +27,7 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
+
   if (!session) {
     return <AuthPage />;
   }
@@ -38,6 +40,7 @@ function App() {
         <Route path="learn" element={<LearnMenu />} />
         <Route path="learn/flashcard" element={<FlashcardPage />} />
         <Route path="learn/quiz" element={<QuizPage />} />
+        <Route path="learn/verb-practice" element={<VerbPracticePage />} /> {/* 새로운 라우트 추가 */}
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>
@@ -45,3 +48,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,4 +1,5 @@
 import { get, set, del } from 'idb-keyval';
+import supabase from '../supabaseClient';
 
 const WORDS_KEY = 'words_data';
 const PROGRESS_KEY = 'user_word_progress';
@@ -66,18 +67,93 @@ export async function clearWordsFromIndexedDB() {
   await del(WORDS_KEY);
 }
 
+// --- Verb Conjugations Functions ---
+const VERBS_KEY = 'verb_conjugations_data';
+
+export async function getVerbsFromIndexedDB() {
+  try {
+    return await get(VERBS_KEY);
+  } catch (error) {
+    console.error('IndexedDB에서 동사 데이터 로드 실패:', error);
+    return null;
+  }
+}
+
+export async function saveVerbsToIndexedDB(verbs) {
+  try {
+    await set(VERBS_KEY, verbs);
+  } catch (error) {
+    console.error('IndexedDB에 동사 데이터 저장 실패:', error);
+  }
+}
+
+export async function fetchAndCacheVerbs() {
+  try {
+    const cachedVerbs = await getVerbsFromIndexedDB();
+    if (cachedVerbs && cachedVerbs.length > 0) {
+      return cachedVerbs;
+    }
+
+    const { data, error } = await supabase
+      .from('verb_conjugations')
+      .select(`
+        word_id,
+        is_irregular,
+        conjugations,
+        word:words ( spanish, frequency_rank, category_code )
+      `);
+
+    if (error) throw error;
+
+    const verbsData = data.map(item => ({
+      ...item,
+      verb: item.word.spanish,
+      frequency_rank: item.word.frequency_rank,
+      category_code: item.word.category_code,
+    }));
+
+    await saveVerbsToIndexedDB(verbsData);
+    return verbsData;
+  } catch (error) {
+    console.error('동사 데이터 로드/캐시 중 오류:', error);
+    return null;
+  }
+}
+
 // --- User Progress Functions ---
 
 export async function getProgress() {
   return (await get(PROGRESS_KEY)) || {};
 }
 
-export async function updateProgress(wordId, status) {
+/**
+ * @typedef {Object} UserWordProgress
+ * @property {string|number} word_id
+ * @property {string} status
+ * @property {string} last_reviewed_at
+ * @property {string} next_review_at
+ * @property {number} stability
+ * @property {number} difficulty
+ * @property {number} state
+ * @property {number} lapses
+ */
+
+/**
+ * wordId, progressObj(FSRS 상태 전체) 저장
+ * @param {string|number} wordId
+ * @param {UserWordProgress} progressObj
+ */
+export async function updateProgress(wordId, progressObj) {
   const progress = await getProgress();
-  progress[wordId] = { status, last_reviewed: new Date().toISOString() };
+  progress[wordId] = { ...progressObj };
   await set(PROGRESS_KEY, progress);
 }
 
+/**
+ * words와 progress를 병합할 때 FSRS 필드까지 모두 병합
+ * @param {Array<Object>} words
+ * @returns {Promise<Array<Object>>}
+ */
 export async function mergeWordsWithProgress(words) {
   try {
     console.log('병합 전 단어 데이터:', {
@@ -101,9 +177,10 @@ export async function mergeWordsWithProgress(words) {
         console.warn('유효하지 않은 단어 항목:', word);
         return word;
       }
+      const prog = progress[word.id] || { status: 'not_started' };
       return {
         ...word,
-        ...(progress[word.id] || { status: 'not_started' }),
+        ...prog, // FSRS 필드까지 모두 병합
       };
     });
 
@@ -117,5 +194,56 @@ export async function mergeWordsWithProgress(words) {
     console.error('단어 데이터 병합 중 오류:', error);
     return words || []; // 오류 발생 시 원본 데이터 반환
   }
+}
+
+/**
+ * Supabase와 IndexedDB 진도(progress) 동기화
+ * @param {string} userId
+ */
+export async function syncProgressWithSupabase(userId) {
+  // 1. Supabase에서 전체 진도 fetch
+  const { data: supaRows, error } = await supabase
+    .from('user_word_progress')
+    .select('*')
+    .eq('user_id', userId);
+
+  if (error) {
+    console.error('Supabase 진도 fetch 실패:', error);
+    return;
+  }
+  const supaProgress = {};
+  for (const row of supaRows) {
+    supaProgress[row.word_id] = row;
+  }
+
+  // 2. IndexedDB에서 전체 진도 fetch
+  const localProgress = await getProgress();
+
+  // 3. word_id별로 최신 데이터 선택
+  const merged = {};
+  const allWordIds = new Set([...Object.keys(supaProgress), ...Object.keys(localProgress)]);
+  for (const wordId of allWordIds) {
+    const supa = supaProgress[wordId];
+    const local = localProgress[wordId];
+    if (!supa) {
+      merged[wordId] = local;
+    } else if (!local) {
+      merged[wordId] = supa;
+    } else {
+      // 타임스탬프 비교
+      const supaTime = new Date(supa.last_reviewed_at || 0).getTime();
+      const localTime = new Date(local.last_reviewed_at || 0).getTime();
+      merged[wordId] = supaTime >= localTime ? supa : local;
+    }
+  }
+
+  // 4. Supabase/IndexedDB 모두에 병합 결과 반영
+  // (a) Supabase upsert (최신 데이터만)
+  const upserts = Object.values(merged).filter(row => row && row.user_id === userId);
+  if (upserts.length > 0) {
+    await supabase.from('user_word_progress').upsert(upserts, { onConflict: 'user_id, word_id' });
+  }
+  // (b) IndexedDB 저장
+  await set('user_word_progress', merged);
 }
  

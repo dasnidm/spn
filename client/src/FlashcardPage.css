@@ -49,26 +49,42 @@
     transition: width 0.3s ease-in-out;
 }
 
+.progress-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #aaa;
+    white-space: nowrap;
+}
+
 .flashcard-scene {
     width: 100%;
     max-width: 400px;
     height: 250px;
     perspective: 1000px;
     cursor: pointer;
+    transition: box-shadow 0.3s, filter 0.3s;
 }
-
+.flashcard-scene.is-flipped {
+    filter: brightness(1.04) drop-shadow(0 0 8px #4FC3F744);
+}
+.flashcard-scene.is-flipped .flashcard {
+    transform: rotateY(180deg) scale(1.04);
+    box-shadow: 0 8px 32px #4FC3F744, 0 2px 12px #0002;
+}
 .flashcard {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s, background 0.3s;
 }
-
-.flashcard-scene.is-flipped .flashcard {
-    transform: rotateY(180deg);
-}
-
 .card-face {
     position: absolute;
     width: 100%;
@@ -84,13 +100,19 @@
     padding: 20px;
     box-sizing: border-box;
 }
-
 .card-front {
-    /* 앞면 스타일 */
+    animation: fadeInCard 0.5s;
+    /* 앞면: 3D 렌더링 힌트 추가 */
+    transform: rotateY(0deg) translateZ(1px);
+}
+@keyframes fadeInCard {
+    from { opacity: 0; transform: rotateY(0deg) translateZ(1px) scale(0.98) translateY(16px); }
+    to { opacity: 1; transform: rotateY(0deg) translateZ(1px) scale(1) translateY(0); }
 }
 
 .card-back {
-    transform: rotateY(180deg);
+    /* 뒷면: 3D 렌더링 힌트 추가 */
+    transform: rotateY(180deg) translateZ(1px);
 }
 
 .card-face .part-of-speech {
@@ -108,6 +130,7 @@
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
+    color: #fff;
 }
 
 .difficulty-buttons {
@@ -140,4 +163,121 @@
 .loading-flashcard {
     color: white;
     font-size: 1.2rem;
+}
+
+.difficulty-buttons.duolingo-style {
+    gap: 20px;
+    padding: 0 8px;
+}
+.level-btn {
+    flex: 1 1 0;
+    min-width: 90px;
+    max-width: 180px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 20px 0;
+    border-radius: 16px;
+    border: none;
+    margin: 0 2px;
+    background: #232326;
+    color: #fff;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.18s, color 0.18s, transform 0.18s, box-shadow 0.18s;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.level-btn.selected {
+    z-index: 2;
+    animation: btnPop 0.22s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes btnPop {
+    0% { transform: scale(1); box-shadow: none; }
+    60% { transform: scale(1.13); box-shadow: 0 0 24px #fff4; }
+    100% { transform: scale(1.08); }
+}
+.level-btn.again.selected {
+    background: #ef5350;
+    color: #fff;
+    box-shadow: 0 0 16px #ef535088;
+}
+.level-btn.hard.selected {
+    background: #ffca28;
+    color: #222;
+    box-shadow: 0 0 16px #ffca2888;
+}
+.level-btn.good.selected {
+    background: #66bb6a;
+    color: #fff;
+    box-shadow: 0 0 16px #66bb6a88;
+}
+.card-status-bar {
+    margin-left: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.card-status-front, .card-status-back {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.recall-bar {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    width: 90%;
+    max-width: 220px;
+    height: 12px;
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px #0002;
+}
+@media (max-width: 600px) {
+    .difficulty-buttons.duolingo-style {
+        gap: 10px;
+        padding: 0 2vw;
+    }
+    .level-btn {
+        font-size: 1rem;
+        padding: 16px 0;
+        min-width: 0;
+        max-width: 100vw;
+    }
+    .card-status-bar, .card-status-front, .card-status-back {
+        font-size: 13px;
+    }
+    .recall-bar {
+        max-width: 100vw;
+        height: 10px;
+    }
+} 
+.flashcard-session-finish {
+    animation: fadeInFinish 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes fadeInFinish {
+    from { opacity: 0; transform: scale(0.98) translateY(32px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.finish-emoji {
+    animation: emojiJump 1.1s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes emojiJump {
+    0% { transform: scale(0.8) translateY(0); }
+    30% { transform: scale(1.2) translateY(-12px); }
+    60% { transform: scale(1.05) translateY(0); }
+    100% { transform: scale(1) translateY(0); }
+}
+.review-list-section > div, .finish-stats > div {
+    animation: fadeInList 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes fadeInList {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
 } 

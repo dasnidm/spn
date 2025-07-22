@@ -8,7 +8,6 @@ const LAST_SYNC_DATE_KEY = 'last_sync_date';
 export async function getWordsFromIndexedDB() {
   try {
     const words = await get(WORDS_KEY);
-    console.log('IndexedDB에서 데이터 로드 시도:', words ? '성공' : '데이터 없음');
     return words;
   } catch (error) {
     console.error('IndexedDB에서 데이터 로드 실패:', error);
@@ -19,7 +18,6 @@ export async function getWordsFromIndexedDB() {
 export async function saveWordsToIndexedDB(words) {
   try {
     await set(WORDS_KEY, words);
-    console.log('IndexedDB에 데이터 저장 성공');
   } catch (error) {
     console.error('IndexedDB에 데이터 저장 실패:', error);
   }
@@ -29,21 +27,10 @@ export async function fetchAndCacheWords() {
   try {
     let words = await getWordsFromIndexedDB();
     
-    if (words) {
-      console.log('캐시된 데이터 유효성:', {
-        isArray: Array.isArray(words),
-        length: words.length,
-        hasId: words[0]?.id !== undefined,
-        hasPos: words[0]?.pos !== undefined
-      });
-    }
-
     if (words && Array.isArray(words) && words.length > 0 && words[0]?.id !== undefined && words[0]?.pos !== undefined) {
-      console.log('캐시된 데이터 사용');
       return words;
     }
 
-    console.log('새로운 데이터 다운로드 시작');
     const res = await fetch('/words.json');
     const freshWords = await res.json();
     
@@ -143,12 +130,9 @@ export async function getProgress() {
 
 export async function updateProgress(wordId, progressObj) {
   const progress = await getProgress();
-  // [수정] 로컬 IndexedDB에 저장하는 데이터는 user_id가 필요 없습니다.
-  // wordId가 key이므로 word_id도 필요 없습니다.
   progress[wordId] = { ...progressObj };
   await set(PROGRESS_KEY, progress);
 
-  // Supabase에는 user_id와 word_id를 포함하여 전송합니다.
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (user && user.id) {
@@ -176,7 +160,6 @@ export async function mergeWordsWithProgress(words) {
     const progress = await getProgress();
 
     if (!words || !Array.isArray(words)) {
-      console.error('유효하지 않은 단어 데이터');
       return [];
     }
 
@@ -199,7 +182,7 @@ export async function mergeWordsWithProgress(words) {
 }
 
 /**
- * Supabase와 IndexedDB 진도(progress) 동기화 (최종 수정본)
+ * Supabase와 IndexedDB 진도(progress) 동기화 (진짜 최종 수정본)
  * @param {string} userId
  */
 export async function syncProgressWithSupabase(userId) {
@@ -215,12 +198,13 @@ export async function syncProgressWithSupabase(userId) {
     console.error('Supabase 진도 fetch 실패:', supaError);
     return;
   }
+  // [핵심 수정] Supabase에서 가져온 데이터의 키를 문자열로 변환하여 저장
   const supaProgress = {};
   for (const row of supaRows) {
-    supaProgress[row.word_id] = row;
+    supaProgress[row.word_id.toString()] = row;
   }
 
-  // 2. IndexedDB에서 전체 진도 fetch
+  // 2. IndexedDB에서 전체 진도 fetch (키는 이미 문자열)
   const localProgress = await getProgress();
 
   // 3. word_id별로 최신 데이터 선택하여 병합
@@ -228,9 +212,8 @@ export async function syncProgressWithSupabase(userId) {
   const allWordIds = new Set([...Object.keys(supaProgress), ...Object.keys(localProgress)]);
 
   for (const wordIdStr of allWordIds) {
-    const wordId = parseInt(wordIdStr, 10);
-    const supa = supaProgress[wordId];
-    const local = localProgress[wordId];
+    const supa = supaProgress[wordIdStr];
+    const local = localProgress[wordIdStr]; // [핵심 수정] 문자열 키로 로컬 데이터 조회
     let definitiveRecord;
 
     if (!supa) {
@@ -238,7 +221,7 @@ export async function syncProgressWithSupabase(userId) {
       definitiveRecord = {
         ...local,
         user_id: userId,
-        word_id: wordId,
+        word_id: parseInt(wordIdStr, 10),
       };
     } else if (!local) {
       // 서버에만 존재 -> 로컬에 저장할 최종 데이터로 구성
@@ -255,17 +238,16 @@ export async function syncProgressWithSupabase(userId) {
         definitiveRecord = {
           ...local,
           user_id: userId,
-          word_id: wordId,
+          word_id: parseInt(wordIdStr, 10),
         };
       }
     }
-    mergedProgress[wordId] = definitiveRecord;
+    mergedProgress[wordIdStr] = definitiveRecord;
   }
 
   // 4. 병합된 결과를 양쪽에 모두 반영
   const upserts = Object.values(mergedProgress);
   if (upserts.length > 0) {
-    // (a) Supabase에 upsert
     const { error: upsertError } = await supabase.from('user_word_progress').upsert(upserts, { onConflict: 'user_id, word_id' });
     if (upsertError) {
       console.error('동기화 중 Supabase upsert 실패:', upsertError);
@@ -274,8 +256,7 @@ export async function syncProgressWithSupabase(userId) {
     }
   }
 
-  // (b) IndexedDB에 저장 (서버와 동일한, 완전한 데이터 저장)
-  //    로컬 데이터도 user_id, word_id를 갖게 되어 일관성 유지
+  // [핵심 수정] IndexedDB에 저장할 때도 서버와 동일한, 완전한 데이터(문자열 키)로 저장
   await set(PROGRESS_KEY, mergedProgress);
   console.log('IndexedDB 동기화 완료.');
 

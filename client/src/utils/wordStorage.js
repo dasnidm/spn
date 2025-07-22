@@ -3,6 +3,7 @@ import supabase from '../supabaseClient';
 
 const WORDS_KEY = 'words_data';
 const PROGRESS_KEY = 'user_word_progress';
+const LAST_SYNC_DATE_KEY = 'last_sync_date';
 
 export async function getWordsFromIndexedDB() {
   try {
@@ -65,6 +66,23 @@ export async function fetchAndCacheWords() {
 
 export async function clearWordsFromIndexedDB() {
   await del(WORDS_KEY);
+}
+
+export async function setLastSyncDate(date) {
+  try {
+    await set(LAST_SYNC_DATE_KEY, date);
+  } catch (error) {
+    console.error('마지막 동기화 날짜 저장 실패:', error);
+  }
+}
+
+export async function getLastSyncDate() {
+  try {
+    return await get(LAST_SYNC_DATE_KEY);
+  } catch (error) {
+    console.error('마지막 동기화 날짜 로드 실패:', error);
+    return null;
+  }
 }
 
 // --- Verb Conjugations Functions ---
@@ -273,5 +291,6 @@ export async function syncProgressWithSupabase(userId) {
   }
   // (b) IndexedDB 저장
   await set('user_word_progress', merged);
+  await setLastSyncDate(new Date().toISOString()); // 마지막 동기화 날짜 저장
 }
  

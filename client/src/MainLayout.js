@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import supabase from './supabaseClient';
-import { fetchAndCacheWords, mergeWordsWithProgress, clearWordsFromIndexedDB, syncProgressWithSupabase } from './utils/wordStorage';
+import { fetchAndCacheWords, mergeWordsWithProgress, clearWordsFromIndexedDB, syncProgressWithSupabase, getLastSyncDate } from './utils/wordStorage';
 import './App.css';
 
 const getStats = (words) => {
@@ -17,35 +17,48 @@ const getStats = (words) => {
 const MainLayout = () => {
     const [words, setWords] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [syncStatus, setSyncStatus] = useState(null); // 'idle', 'syncing', 'success', 'error'
+    const [syncMessage, setSyncMessage] = useState('');
+    const [lastSyncDate, setLastSyncDate] = useState(null);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const loadAndSync = async () => {
-            try {
-                setLoading(true);
-                // 1. supabase에서 user id 가져오기
-                const { data: { user } } = await supabase.auth.getUser();
-                if (user && user.id) {
-                    // 2. 동기화 실행
-                    await syncProgressWithSupabase(user.id);
-                }
-                // 3. 단어 데이터 로드 및 병합
-                await clearWordsFromIndexedDB(); // IndexedDB 캐시를 강제로 지움
-                const fetchedWords = await fetchAndCacheWords();
-                if (!fetchedWords) {
-                    console.error('단어 데이터를 가져오지 못했습니다');
-                    return;
-                }
-                const mergedWords = await mergeWordsWithProgress(fetchedWords);
-                setWords(mergedWords);
-            } catch (error) {
-                console.error('단어 데이터 로드/동기화 중 오류:', error);
-            } finally {
-                setLoading(false);
+    const performSyncAndLoad = async () => {
+        try {
+            setLoading(true);
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user && user.id) {
+                await syncProgressWithSupabase(user.id);
             }
-        };
-        loadAndSync();
+            await clearWordsFromIndexedDB();
+            const fetchedWords = await fetchAndCacheWords();
+            if (!fetchedWords) {
+                console.error('단어 데이터를 가져오지 못했습니다');
+                return;
+            }
+            const mergedWords = await mergeWordsWithProgress(fetchedWords);
+            setWords(mergedWords);
+            setSyncStatus('success');
+            setSyncMessage('데이터 동기화 및 로드 완료!');
+            const date = await getLastSyncDate();
+            setLastSyncDate(date);
+        } catch (error) {
+            console.error('단어 데이터 로드/동기화 중 오류:', error);
+            setSyncStatus('error');
+            setSyncMessage('데이터 동기화 중 오류 발생: ' + error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        performSyncAndLoad();
     }, []);
+
+    const handleManualSync = async () => {
+        setSyncStatus('syncing');
+        setSyncMessage('데이터 동기화 중...');
+        await performSyncAndLoad();
+    };
 
     const handleRefresh = async () => {
         try {
@@ -117,9 +130,58 @@ const MainLayout = () => {
 
     return (
         <div className="main-layout">
+            <button
+                onClick={handleManualSync}
+                disabled={syncStatus === 'syncing'}
+                style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    padding: '10px 15px',
+                    background: syncStatus === 'success' ? '#30D158' : (syncStatus === 'error' ? '#FF453A' : '#4FC3F7'),
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    zIndex: 1000,
+                    opacity: syncStatus === 'syncing' ? 0.7 : 1,
+                }}
+            >
+                {syncStatus === 'syncing' ? '동기화 중...' : '수동 동기화'}
+            </button>
+            {syncMessage && (
+                <div style={{
+                    position: 'fixed',
+                    bottom: '70px',
+                    right: '20px',
+                    background: 'rgba(0,0,0,0.7)',
+                    color: 'white',
+                    padding: '8px 12px',
+                    borderRadius: '5px',
+                    zIndex: 1000,
+                    fontSize: '0.9rem',
+                }}>
+                    {syncMessage}
+                </div>
+            )}
+            {lastSyncDate && (
+                <div style={{
+                    position: 'fixed',
+                    bottom: '120px',
+                    right: '20px',
+                    background: 'rgba(0,0,0,0.7)',
+                    color: 'white',
+                    padding: '8px 12px',
+                    borderRadius: '5px',
+                    zIndex: 1000,
+                    fontSize: '0.9rem',
+                }}>
+                    최근 동기화: {new Date(lastSyncDate).toLocaleString()}
+                </div>
+            )}
             <Outlet context={{ words, setWords, loading }} />
         </div>
     );
 };
 
-export default MainLayout; 
+export default MainLayout;

@@ -1,88 +1,130 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai@0.1.3";
 
-// CORS 헤더 (모든 출처에서의 요청을 허용 - 개발용)
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-}
+console.log("Process Example Queue function booting up for single job processing...");
 
-// Gemini API 클라이언트 초기화
-// !! 중요 !!: Supabase 대시보드에서 'GEMINI_API_KEY' 환경 변수를 설정해야 합니다.
 const API_KEY = Deno.env.get("GEMINI_API_KEY");
+if (!API_KEY) console.error("CRITICAL: GEMINI_API_KEY is not set in environment variables.");
 const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-
-// 프롬프트 생성 함수
 function createPrompt(targetWord, pos, knownWords) {
   const knownWordsString = knownWords.length > 0 ? knownWords.join(', ') : '없음';
-  
-  return `
-    당신은 스페인어 초급-중급 학습자를 위한 개인화된 예문을 만드는 전문 튜터입니다.
-
-    # 목표 단어:
-    ${targetWord} (품사: ${pos})
-
-    # 학습자가 이미 알고 있는 단어 목록 (이 단어들을 최대한 활용해주세요):
-    ${knownWordsString}
-
-    # 요청 사항:
-    1. '목표 단어'를 반드시 사용하여, '알고 있는 단어 목록'에 있는 단어들을 최대한 활용해 자연스러운 스페인어 예문 1개를 만들어 주세요.
-    2. 문법은 너무 복잡하지 않게, 스페인어 학습자의 초급-중급 수준에 맞춰 주세요.
-    3. 답변은 반드시 아래와 같은 JSON 형식으로만 제공해야 합니다. 다른 설명은 절대 추가하지 마세요.
-
-    {
-      "spanish_example": "여기에 스페인어 예문을 작성하세요",
-      "korean_translation": "여기에 한국어 번역을 작성하세요"
-    }
-  `;
+  return `You are a professional tutor creating a personalized example sentence for a beginner-intermediate Spanish learner.
+# Target Word:
+${targetWord} (Part of Speech: ${pos})
+# Words the learner already knows (use these as much as possible):
+${knownWordsString}
+# Request:
+1. Create one natural Spanish example sentence using the 'Target Word' and prioritizing words from the 'known words list'.
+2. Keep the grammar at a beginner-intermediate level.
+3. Your response MUST be only in the following JSON format. Do not add any other explanations.
+{
+  "spanish_example": "Your Spanish sentence here",
+  "korean_translation": "Your Korean translation here"
+}`;
 }
 
-
 serve(async (req) => {
-  // OPTIONS 요청(preflight) 처리
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders })
+  const { job_id } = await req.json();
+  if (!job_id) {
+    return new Response(JSON.stringify({ error: "job_id is required." }), { status: 400 });
   }
 
+  console.log(`[Job ${job_id}] Starting processing...`);
+
+  const supabaseAdmin = createClient(
+    Deno.env.get('SUPABASE_URL') ?? '',
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+  );
+
   try {
-    // 요청 본문에서 데이터 추출
-    // targetWord: 예문을 만들 단어 (예: "casa")
-    // pos: 품사 (예: "noun")
-    // knownWords: 사용자가 아는 단어 목록 (예: ["yo", "tengo", "una"])
-    const { targetWord, pos, knownWords } = await req.json()
+    const { data: job, error: jobError } = await supabaseAdmin
+      .from('example_generation_jobs')
+      .select('id, user_id, word:words(id, spanish, pos:part_of_speech)')
+      .eq('id', job_id)
+      .single();
 
-    if (!targetWord || !pos) {
-      return new Response(JSON.stringify({ error: 'targetWord와 pos는 필수입니다.' }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 400,
-      })
+    if (jobError || !job) {
+      throw new Error(`Job ${job_id} not found. Error: ${jobError?.message}`);
     }
+    console.log(`[Job ${job_id}] Found job details for word: ${job.word.spanish}`);
 
-    // 프롬프트 생성
-    const prompt = createPrompt(targetWord, pos, knownWords || []);
+    await supabaseAdmin
+      .from('example_generation_jobs')
+      .update({ status: 'processing', processed_at: new Date().toISOString() })
+      .eq('id', job.id);
+    console.log(`[Job ${job_id}] Status updated to 'processing'.`);
+
+    // 'stability' 컬럼을 사용하지 않도록 수정
+    const { data: knownProgress, error: progressError } = await supabaseAdmin
+      .from('user_word_progress')
+      .select('word_id, status')
+      .eq('user_id', job.user_id);
+
+    if (progressError) throw new Error(`Failed to fetch user progress: ${progressError.message}`);
+
+    // 'stability' 조건을 제거하고 'status'만으로 필터링
+    const knownWordIds = knownProgress
+      .filter(p => p.status === 'completed')
+      .map(p => p.word_id);
+    console.log(`[Job ${job_id}] Found ${knownWordIds.length} known word IDs based on 'completed' status.`);
+
+    let knownWords = [];
+    if (knownWordIds.length > 0) {
+      const { data: wordsData, error: wordsError } = await supabaseAdmin
+        .from('words')
+        .select('spanish')
+        .in('id', knownWordIds);
+
+      if (wordsError) throw new Error(`Failed to fetch known words text: ${wordsError.message}`);
+      knownWords = wordsData.map(w => w.spanish);
+    }
+    console.log(`[Job ${job_id}] Assembled ${knownWords.length} known words.`);
+
+    const prompt = createPrompt(job.word.spanish, job.word.pos, knownWords);
+    console.log(`[Job ${job_id}] Sending prompt to Gemini...`);
     
-    // Gemini API 호출
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
+    console.log(`[Job ${job_id}] Received raw response from Gemini: ${text}`);
 
-    // API 응답 파싱
-    // "```json\n{...}\n```" 형태의 응답을 처리하기 위함
-    const jsonString = text.replace(/```json\n|```/g, '').trim();
-    const generatedData = JSON.parse(jsonString);
+    let generatedData;
+    try {
+      const jsonString = text.replace(/```json\n|```/g, '').trim();
+      generatedData = JSON.parse(jsonString);
+    } catch (parseError) {
+      throw new Error(`Failed to parse JSON response from Gemini. Raw text: ${text}. Error: ${parseError.message}`);
+    }
+    
+    await supabaseAdmin
+      .from('generated_examples')
+      .upsert({
+        word_id: job.word.id,
+        user_id: job.user_id,
+        spanish_example: generatedData.spanish_example,
+        korean_translation: generatedData.korean_translation,
+        generated_by: 'gemini-1.5-flash',
+        knowledge_snapshot: { known_words_count: knownWords.length }
+      }, { onConflict: 'word_id, user_id' });
+    console.log(`[Job ${job_id}] Successfully upserted example into DB.`);
 
-    return new Response(JSON.stringify(generatedData), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 200,
-    })
+    await supabaseAdmin
+      .from('example_generation_jobs')
+      .update({ status: 'completed' })
+      .eq('id', job.id);
 
-  } catch (error) {
-    console.error('Error:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 500,
-    })
+    console.log(`[Job ${job_id}] Status updated to 'completed'. Job finished.`);
+    return new Response(JSON.stringify({ message: "Job completed successfully." }), { status: 200 });
+
+  } catch (e) {
+    console.error(`[Job ${job_id}] CRITICAL ERROR: ${e.message}`);
+    await supabaseAdmin
+      .from('example_generation_jobs')
+      .update({ status: 'failed', error_message: e.message })
+      .eq('id', job_id);
+    return new Response(JSON.stringify({ error: e.message }), { status: 500 });
   }
-})
+});

@@ -121,3 +121,30 @@
   cursor: not-allowed;
   transform: none;
 }
+
+.status-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.status-message.syncing {
+  background-color: rgba(0, 122, 255, 0.2);
+  color: #4FC3F7;
+  border-color: #007AFF;
+}
+
+.status-message.success {
+  background-color: rgba(48, 209, 88, 0.2);
+  color: #30D158;
+  border-color: #30D158;
+}
+
+.status-message.error {
+  background-color: rgba(255, 69, 58, 0.2);
+  color: #FF453A;
+  border-color: #FF453A;
+}

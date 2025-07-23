@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import supabase from './supabaseClient';
 import { get, set } from 'idb-keyval';
+import { resetAndSyncWithServer } from './utils/wordStorage'; // 임포트 추가
 import './SettingsPage.css';
 
 const GOAL_KEY = 'daily_learning_goal';
@@ -23,6 +24,8 @@ const SettingsPage = () => {
   const [dailyGoal, setDailyGoal] = useState(10);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [subscriptionLoading, setSubscriptionLoading] = useState(true);
+  const [forceSyncStatus, setForceSyncStatus] = useState('idle');
+  const [forceSyncMessage, setForceSyncMessage] = useState('');
 
   useEffect(() => {
     get(GOAL_KEY).then(val => {
@@ -78,16 +81,13 @@ const SettingsPage = () => {
           body: { subscription },
       });
 
-      if (error) {
-          throw error;
-      }
+      if (error) throw error;
       
       setIsSubscribed(true);
       alert('알림이 성공적으로 구독되었습니다!');
     } catch (error) {
       alert('알림 구독에 실패했습니다. 콘솔을 확인해주세요.');
       console.error('알림 구독 오류:', error);
-      // 구독 실패 시, 사용자에게 다시 시도하도록 유도하거나 원인을 알려줄 수 있습니다.
       const existingSubscription = await navigator.serviceWorker.ready.then(reg => reg.pushManager.getSubscription());
       if (existingSubscription) {
         await existingSubscription.unsubscribe();
@@ -116,11 +116,27 @@ const SettingsPage = () => {
     }
   };
 
+  // 여기가 복원된 기능입니다.
   const handleForceSync = async () => {
     if (!window.confirm('정말로 로컬 데이터를 모두 지우고 서버 데이터로 덮어쓰시겠습니까? 이 작업은 되돌릴 수 없습니다.')) {
       return;
     }
-    alert('강제 동기화 기능은 현재 개발 중입니다.');
+    
+    setForceSyncStatus('syncing');
+    setForceSyncMessage('강제 동기화를 시작합니다...');
+    
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) throw new Error('사용자 인증 정보가 없습니다.');
+
+      const count = await resetAndSyncWithServer(user.id);
+      setForceSyncStatus('success');
+      setForceSyncMessage(`동기화 완료! ${count}개의 학습 기록을 새로고침했습니다. 대시보드로 돌아가면 적용됩니다.`);
+    } catch (error) {
+      setForceSyncStatus('error');
+      setForceSyncMessage(`오류 발생: ${error.message}`);
+      console.error('강제 동기화 실패:', error);
+    }
   };
 
   return (
@@ -181,10 +197,15 @@ const SettingsPage = () => {
             이 기능은 현재 기기의 <strong>로컬 데이터를 모두 삭제</strong>하고, 서버의 최신 데이터로 강제 덮어쓰기합니다.
           </p>
           <div className="sync-action">
-            <button onClick={handleForceSync} className="sync-button-danger">
-              로컬 데이터 초기화 및 서버와 동기화
+            <button onClick={handleForceSync} disabled={forceSyncStatus === 'syncing'} className="sync-button-danger">
+              {forceSyncStatus === 'syncing' ? '초기화 진행 중...' : '로컬 데이터 초기화 및 서버와 동기화'}
             </button>
           </div>
+          {forceSyncMessage && (
+            <div className={`status-message ${forceSyncStatus}`}>
+              <p>{forceSyncMessage}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

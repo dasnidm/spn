@@ -25,14 +25,14 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, 1fr); /* 모바일에서 2개씩 표시 */
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .stat-card {
   background-color: #1e1e1e;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #2c2c2c;
@@ -40,21 +40,21 @@
 }
 
 .stat-card .value {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #4FC3F7;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.25rem 0;
 }
 
 .stat-card .label {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #aaa;
   margin: 0;
 }
 
 .stats-section {
   background-color: #1e1e1e;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
   border: 1px solid #2c2c2c;
@@ -66,7 +66,30 @@
   color: #e0e0e0;
   border-bottom: 1px solid #333;
   padding-bottom: 0.8rem;
+  font-size: 1.25rem;
 }
+
+.heatmap-container, .barchart-container {
+  overflow-x: auto;
+  padding-bottom: 10px; /* 스크롤바 공간 */
+}
+
+/* 스크롤바 스타일링 (선택 사항) */
+.heatmap-container::-webkit-scrollbar, .barchart-container::-webkit-scrollbar {
+  height: 8px;
+}
+.heatmap-container::-webkit-scrollbar-track, .barchart-container::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+.heatmap-container::-webkit-scrollbar-thumb, .barchart-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+.heatmap-container::-webkit-scrollbar-thumb:hover, .barchart-container::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
 
 /* Calendar Heatmap Styles */
 .react-calendar-heatmap .color-empty {
@@ -78,7 +101,7 @@
 .react-calendar-heatmap .color-scale-4 { fill: #39d353; }
 
 .react-calendar-heatmap text {
-  font-size: 10px;
+  font-size: 9px;
   fill: #aaa;
 }
 
@@ -90,4 +113,28 @@
 
 .recharts-wrapper .recharts-text {
   fill: #aaa;
+  font-size: 12px;
+}
+
+/* 데스크톱 화면 대응 */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr); /* 데스크톱에서 4개씩 표시 */
+    gap: 1.5rem;
+  }
+  .stat-card {
+    padding: 1.5rem;
+  }
+  .stat-card .value {
+    font-size: 2.5rem;
+  }
+  .stat-card .label {
+    font-size: 1rem;
+  }
+  .stats-section {
+    padding: 2rem;
+  }
+  .stats-section h2 {
+    font-size: 1.5rem;
+  }
 }

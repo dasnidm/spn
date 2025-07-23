@@ -255,7 +255,7 @@ const Pyramid = ({ words, setWords }) => {
 
             {viewMode === 'layer' && <div style={{ position: 'fixed', top: 56, left: 0, width: '100%', display: 'flex', justifyContent: 'center', gap: '16px', padding: '12px 0', zIndex: 1200, background: '#1a1a1a', borderBottom: '1px solid #333' }}><button onClick={() => setSortMode('pos')} style={{ ...buttonStyle, background: sortMode === 'pos' ? '#4FC3F7' : '#2c2c2e', color: sortMode === 'pos' ? '#1a1a1a' : 'white' }}>품사별 그룹</button><button onClick={() => setSortMode('freq')} style={{ ...buttonStyle, background: sortMode === 'freq' ? '#4FC3F7' : '#2c2c2e', color: sortMode === 'freq' ? '#1a1a1a' : 'white' }}>빈도수 정렬</button></div>}
 
-            <div style={{ position: 'fixed', top: viewMode === 'layer' ? 112 : (isMobile ? 100 : 56), left: 0, right: 0, bottom: 0, overflowY: 'auto', overflowX: 'hidden' }}>
+            <div style={{ position: 'fixed', top: viewMode === 'layer' ? 112 : (isMobile ? 100 : 56), left: 0, right: 0, bottom: 60, overflowY: 'auto', overflowX: 'hidden' }}>
                 <div style={{ position: 'relative', width: '100%', minHeight: '100%' }}>
                     <Stage ref={stageRef} width={stageSize.width} height={allViewTotalHeight} style={{ display: viewMode === 'all' ? 'block' : 'none' }}>
                         <Layer>

@@ -83,28 +83,32 @@ const StatsPage = () => {
 
       <div className="stats-section">
         <h2>학습 활동 (지난 1년)</h2>
-        <CalendarHeatmap
-          startDate={new Date(new Date().setFullYear(new Date().getFullYear() - 1))}
-          endDate={new Date()}
-          values={heatmapData}
-          classForValue={getHeatmapClass}
-          tooltipDataAttrs={value => ({ 'data-tip': `${value.date ? new Date(value.date).toLocaleDateString() : ''}: ${value.count || 0}개 학습` })}
-        />
+        <div className="heatmap-container">
+          <CalendarHeatmap
+            startDate={new Date(new Date().setFullYear(new Date().getFullYear() - 1))}
+            endDate={new Date()}
+            values={heatmapData}
+            classForValue={getHeatmapClass}
+            tooltipDataAttrs={value => ({ 'data-tip': `${value.date ? new Date(value.date).toLocaleDateString() : ''}: ${value.count || 0}개 학습` })}
+          />
+        </div>
       </div>
 
       <div className="stats-section">
         <h2>품사별 학습 현황</h2>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={posChartData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis type="number" />
-            <YAxis type="category" dataKey="name" width={100} />
-            <Tooltip cursor={{fill: 'rgba(255, 255, 255, 0.1)'}} contentStyle={{backgroundColor: '#222', border: '1px solid #444'}}/>
-            <Legend />
-            <Bar dataKey="학습한단어" stackId="a" fill="#4FC3F7" />
-            <Bar dataKey="남은단어" stackId="a" fill="#333" />
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="barchart-container">
+          <ResponsiveContainer width={posChartData.length * 60 < 300 ? 300 : posChartData.length * 60} height={400}>
+            <BarChart data={posChartData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis type="number" />
+              <YAxis type="category" dataKey="name" width={100} />
+              <Tooltip cursor={{fill: 'rgba(255, 255, 255, 0.1)'}} contentStyle={{backgroundColor: '#222', border: '1px solid #444'}}/>
+              <Legend />
+              <Bar dataKey="학습한단어" stackId="a" fill="#4FC3F7" />
+              <Bar dataKey="남은단어" stackId="a" fill="#333" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );

@@ -5,12 +5,13 @@ const WORDS_KEY = 'words_data';
 const PROGRESS_KEY = 'user_word_progress';
 const LAST_SYNC_DATE_KEY = 'last_sync_date';
 
+// --- 단어 데이터 함수 ---
+
 export async function getWordsFromIndexedDB() {
   try {
-    const words = await get(WORDS_KEY);
-    return words;
+    return await get(WORDS_KEY);
   } catch (error) {
-    console.error('IndexedDB에서 데이터 로드 실패:', error);
+    console.error('IndexedDB에서 단어 데이터 로드 실패:', error);
     return null;
   }
 }
@@ -19,16 +20,15 @@ export async function saveWordsToIndexedDB(words) {
   try {
     await set(WORDS_KEY, words);
   } catch (error) {
-    console.error('IndexedDB에 데이터 저장 실패:', error);
+    console.error('IndexedDB에 단어 데이터 저장 실패:', error);
   }
 }
 
 export async function fetchAndCacheWords() {
   try {
-    let words = await getWordsFromIndexedDB();
-    
-    if (words && Array.isArray(words) && words.length > 0 && words[0]?.id !== undefined && words[0]?.pos !== undefined) {
-      return words;
+    const cachedWords = await getWordsFromIndexedDB();
+    if (cachedWords && Array.isArray(cachedWords) && cachedWords.length > 0) {
+      return cachedWords;
     }
 
     const res = await fetch('/words.json');
@@ -43,7 +43,7 @@ export async function fetchAndCacheWords() {
     await saveWordsToIndexedDB(wordsWithIdAndPos);
     return wordsWithIdAndPos;
   } catch (error) {
-    console.error('데이터 로드/캐시 과정 중 오류:', error);
+    console.error('단어 데이터 로드/캐시 중 오류:', error);
     return null;
   }
 }
@@ -51,6 +51,8 @@ export async function fetchAndCacheWords() {
 export async function clearWordsFromIndexedDB() {
   await del(WORDS_KEY);
 }
+
+// --- 동기화 날짜 함수 ---
 
 export async function setLastSyncDate(date) {
   try {
@@ -69,7 +71,8 @@ export async function getLastSyncDate() {
   }
 }
 
-// --- Verb Conjugations Functions ---
+// --- 동사 데이터 함수 ---
+
 const VERBS_KEY = 'verb_conjugations_data';
 
 export async function getVerbsFromIndexedDB() {
@@ -122,7 +125,7 @@ export async function fetchAndCacheVerbs() {
   }
 }
 
-// --- User Progress Functions ---
+// --- 사용자 학습 진행 데이터 함수 (최종) ---
 
 export async function getProgress() {
   return (await get(PROGRESS_KEY)) || {};
@@ -130,7 +133,13 @@ export async function getProgress() {
 
 export async function updateProgress(wordId, progressObj) {
   const progress = await getProgress();
-  progress[wordId] = { ...progressObj };
+  
+  const completeProgress = {
+    ...progressObj,
+    is_checked: progressObj.is_checked || false,
+  };
+
+  progress[wordId.toString()] = completeProgress;
   await set(PROGRESS_KEY, progress);
 
   try {
@@ -139,7 +148,7 @@ export async function updateProgress(wordId, progressObj) {
       const upsertData = {
         user_id: user.id,
         word_id: wordId,
-        ...progressObj
+        ...completeProgress
       };
 
       const { error } = await supabase
@@ -167,7 +176,7 @@ export async function mergeWordsWithProgress(words) {
       if (!word || !word.id) {
         return word;
       }
-      const prog = progress[word.id] || { status: 'not_started' };
+      const prog = progress[word.id.toString()] || {};
       return {
         ...word,
         ...prog,
@@ -181,14 +190,9 @@ export async function mergeWordsWithProgress(words) {
   }
 }
 
-/**
- * Supabase와 IndexedDB 진도(progress) 동기화 (진짜 최종 수정본)
- * @param {string} userId
- */
 export async function syncProgressWithSupabase(userId) {
   console.log('--- 동기화 시작 ---');
   
-  // 1. Supabase에서 전체 진도 fetch
   const { data: supaRows, error: supaError } = await supabase
     .from('user_word_progress')
     .select('*')
@@ -198,68 +202,42 @@ export async function syncProgressWithSupabase(userId) {
     console.error('Supabase 진도 fetch 실패:', supaError);
     return;
   }
-  // [핵심 수정] Supabase에서 가져온 데이터의 키를 문자열로 변환하여 저장
+  
   const supaProgress = {};
   for (const row of supaRows) {
     supaProgress[row.word_id.toString()] = row;
   }
 
-  // 2. IndexedDB에서 전체 진도 fetch (키는 이미 문자열)
   const localProgress = await getProgress();
-
-  // 3. word_id별로 최신 데이터 선택하여 병합
   const mergedProgress = {};
   const allWordIds = new Set([...Object.keys(supaProgress), ...Object.keys(localProgress)]);
 
   for (const wordIdStr of allWordIds) {
     const supa = supaProgress[wordIdStr];
-    const local = localProgress[wordIdStr]; // [핵심 수정] 문자열 키로 로컬 데이터 조회
+    const local = localProgress[wordIdStr] ? { is_checked: false, ...localProgress[wordIdStr] } : null;
     let definitiveRecord;
 
     if (!supa) {
-      // 로컬에만 존재 -> 서버로 푸시할 최종 데이터로 구성
-      definitiveRecord = {
-        ...local,
-        user_id: userId,
-        word_id: parseInt(wordIdStr, 10),
-      };
+      definitiveRecord = { ...local, user_id: userId, word_id: parseInt(wordIdStr, 10) };
     } else if (!local) {
-      // 서버에만 존재 -> 로컬에 저장할 최종 데이터로 구성
       definitiveRecord = supa;
     } else {
-      // 둘 다 존재 -> 타임스탬프 비교
       const supaTime = new Date(supa.last_reviewed_at || 0).getTime();
       const localTime = new Date(local.last_reviewed_at || 0).getTime();
-
-      if (supaTime >= localTime) {
-        definitiveRecord = supa;
-      } else {
-        // 로컬이 최신 -> 로컬 데이터를 기반으로 서버에 푸시할 최종 데이터 구성
-        definitiveRecord = {
-          ...local,
-          user_id: userId,
-          word_id: parseInt(wordIdStr, 10),
-        };
-      }
+      definitiveRecord = supaTime >= localTime ? supa : { ...local, user_id: userId, word_id: parseInt(wordIdStr, 10) };
     }
     mergedProgress[wordIdStr] = definitiveRecord;
   }
 
-  // 4. 병합된 결과를 양쪽에 모두 반영
   const upserts = Object.values(mergedProgress);
   if (upserts.length > 0) {
     const { error: upsertError } = await supabase.from('user_word_progress').upsert(upserts, { onConflict: 'user_id, word_id' });
     if (upsertError) {
       console.error('동기화 중 Supabase upsert 실패:', upsertError);
-    } else {
-      console.log('Supabase 동기화 성공:', upserts.length, '건');
     }
   }
 
-  // [핵심 수정] IndexedDB에 저장할 때도 서버와 동일한, 완전한 데이터(문자열 키)로 저장
   await set(PROGRESS_KEY, mergedProgress);
-  console.log('IndexedDB 동기화 완료.');
-
   await setLastSyncDate(new Date().toISOString());
   console.log('--- 동기화 종료 ---');
 }

@@ -1,16 +1,23 @@
-import { useState, useEffect, useMemo } from 'react';
-import { groupWordsByPos } from '../utils/grouping'; // (나중에 생성할 파일)
+import { useMemo } from 'react';
+import { groupWordsByPos } from '../utils/grouping';
+import { getRecallProbability, toFSRSCard } from '../utils/fsrsUtils'; // FSRS 유틸리티 임포트
 
-// 이 훅은 피라미드 표시에 필요한 모든 데이터 계산 및 상태 관리를 담당합니다.
+/**
+ * 피라미드 표시에 필요한 모든 데이터 계산 및 상태 관리를 담당하는 훅
+ * @param {Array<object>} words - 전체 단어 목록 (학습 상태 포함)
+ * @param {string} viewMode - 'all' 또는 'layer'
+ * @param {number|null} selectedLayer - 선택된 레벨
+ * @param {string} sortMode - 'pos' 또는 'freq'
+ * @param {object} stageSize - Konva Stage의 크기 { width, height }
+ * @param {boolean} isMobile - 모바일 뷰 여부
+ * @returns {object} 피라미드 표시에 필요한 모든 계산된 데이터
+ */
 export const usePyramidData = (words, viewMode, selectedLayer, sortMode, stageSize, isMobile) => {
 
-    const [displayedWords, setDisplayedWords] = useState([]);
-
     // 선택된 레이어나 정렬 모드가 바뀔 때마다 표시할 단어 목록을 업데이트
-    useEffect(() => {
+    const displayedWords = useMemo(() => {
         if (selectedLayer === null || !words || words.length === 0) {
-            setDisplayedWords([]);
-            return;
+            return [];
         }
 
         const startIndex = (selectedLayer - 1) * 100;
@@ -27,18 +34,36 @@ export const usePyramidData = (words, viewMode, selectedLayer, sortMode, stageSi
             return a.frequency_rank - b.frequency_rank;
         });
 
-        setDisplayedWords(sortedWords);
+        return sortedWords;
     }, [selectedLayer, sortMode, words]);
 
-    // 전체 통계 계산
+    /**
+     * [핵심 수정] 앱의 새로운 철학에 따라 모든 통계를 재정의합니다.
+     */
     const totalStats = useMemo(() => {
-        if (!words || words.length === 0) return { total: 0, completed: 0, notStarted: 0, reviewNeeded: 0, percent: 0 };
+        if (!words || words.length === 0) {
+            return { total: 0, learnedCount: 0, percent: 0, notStarted: 0, reviewNeeded: 0 };
+        }
+        
         const total = words.length;
-        const completed = words.filter(w => w.status === 'completed').length;
-        const notStarted = words.filter(w => !w.status || w.status === 'not_started').length;
-        const reviewNeeded = words.filter(w => w.status === 'review_needed').length;
-        const percent = Math.round((completed / total) * 100);
-        return { total, completed, notStarted, reviewNeeded, percent };
+
+        // 1. "학습한 단어" (진도율 n) = FSRS 기록이 있거나, 체크된 단어
+        const learnedCount = words.filter(w => w.last_reviewed_at || w.is_checked).length;
+        const percent = total > 0 ? Math.round((learnedCount / total) * 100) : 0;
+
+        // 2. "미학습 단어" = 학습 기록도 없고, 체크도 안 된 단어
+        const notStarted = total - learnedCount;
+
+        // 3. "복습 필요 단어" = 체크 안 됐고, 기억률이 90% 미만인 단어
+        const reviewNeeded = words.filter(w => {
+            if (w.is_checked || !w.last_reviewed_at) {
+                return false; // 체크됐거나, 학습 기록이 없으면 복습 대상이 아님
+            }
+            const recall = getRecallProbability(toFSRSCard(w, w));
+            return recall < 0.9;
+        }).length;
+
+        return { total, learnedCount, percent, notStarted, reviewNeeded };
     }, [words]);
 
     // 전체 뷰 (피라미드) 레이아웃 계산
@@ -46,33 +71,27 @@ export const usePyramidData = (words, viewMode, selectedLayer, sortMode, stageSi
         if (!words || words.length === 0 || !stageSize.width) return [];
 
         const levelCount = Math.ceil(words.length / 100);
-        const levelStart = 1;
         const layerHeight = isMobile ? 44 : 40;
         const maxLayerWidth = Math.max(300, stageSize.width * (isMobile ? 0.9 : 0.8));
         const verticalSpacing = 12;
         const topMargin = isMobile ? 120 : 80;
         
         return Array.from({ length: levelCount }, (_, i) => {
-            const level = levelStart + i;
-            const startIdx = (level - 1) * 100;
-            const endIdx = Math.min(level * 100, words.length);
-            const layerWords = words.slice(startIdx, endIdx);
-            const stats = {
-                completed: layerWords.filter(w => w.status === 'completed').length,
-                review_needed: layerWords.filter(w => w.status === 'review_needed').length,
-                total: layerWords.length
-            };
+            const level = i + 1;
+            const startIdx = i * 100;
+            const endIdx = Math.min(startIdx + 100, words.length);
+            
             const widthRatio = 0.4 + (i * 0.4 / levelCount);
             const layerWidth = Math.max(maxLayerWidth * widthRatio, maxLayerWidth * 0.4);
             const x = (stageSize.width - layerWidth) / 2;
             const y = topMargin + (i * (layerHeight + verticalSpacing));
+            
             return {
                 level,
                 x: Math.max(0, x),
                 y: Math.max(topMargin, y),
                 width: Math.max(1, layerWidth),
                 height: Math.max(1, layerHeight),
-                stats,
                 startIdx,
                 endIdx
             };

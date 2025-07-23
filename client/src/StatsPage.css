@@ -1,0 +1,93 @@
+/* StatsPage.css */
+@import '~react-calendar-heatmap/dist/styles.css';
+
+.stats-page {
+  padding: 2rem;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.stats-header h1 {
+  color: #4FC3F7;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #2c2c2c;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.stat-card .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4FC3F7;
+  margin: 0 0 0.5rem 0;
+}
+
+.stat-card .label {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.stats-section {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #2c2c2c;
+}
+
+.stats-section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.8rem;
+}
+
+/* Calendar Heatmap Styles */
+.react-calendar-heatmap .color-empty {
+  fill: #2c2c2c;
+}
+.react-calendar-heatmap .color-scale-1 { fill: #0e4429; }
+.react-calendar-heatmap .color-scale-2 { fill: #006d32; }
+.react-calendar-heatmap .color-scale-3 { fill: #26a641; }
+.react-calendar-heatmap .color-scale-4 { fill: #39d353; }
+
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+/* Recharts Styles */
+.recharts-wrapper .recharts-cartesian-grid-horizontal line,
+.recharts-wrapper .recharts-cartesian-grid-vertical line {
+  stroke: #333;
+}
+
+.recharts-wrapper .recharts-text {
+  fill: #aaa;
+}

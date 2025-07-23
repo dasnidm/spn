@@ -241,7 +241,7 @@ const Pyramid = ({ words, setWords }) => {
     };
 
     return (
-        <div style={{ width: '100%', height: '100vh', background: '#1a1a1a', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ width: '100%', height: '100%', background: '#1a1a1a', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'center', padding: `8px ${isMobile ? '16px' : '24px'}`, boxSizing: 'border-box', zIndex: 1200, background: '#1a1a1a', borderBottom: '1px solid #333', height: isMobile ? 'auto' : 56, minHeight: 56 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: isMobile ? '8px' : 0 }}>
                     {viewMode === 'layer' && <button onClick={() => { setViewMode('all'); setSelectedLayer(null); }} style={{ ...buttonStyle, marginLeft: 0, color: '#4FC3F7', background: 'none', fontWeight: 'bold', fontSize: isMobile ? '16px' : '18px', padding: isMobile ? '8px 12px' : buttonStyle.padding }}>{'< Back'}</button>}
@@ -298,7 +298,7 @@ const Pyramid = ({ words, setWords }) => {
                         </div>
                     )}
 
-                    {viewMode === 'all' && <div style={{ position: 'fixed', bottom: 20, left: '50%', transform: 'translateX(-50%)', background: '#2c2c2e', padding: '20px 24px', borderRadius: '12px', color: 'white', minWidth: '300px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)', zIndex: 1000 }}>
+                    {viewMode === 'all' && <div style={{ position: 'fixed', bottom: 80, left: '50%', transform: 'translateX(-50%)', background: '#2c2c2e', padding: '20px 24px', borderRadius: '12px', color: 'white', minWidth: '300px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)', zIndex: 1000 }}>
                         <div style={{ marginBottom: '16px' }}>
                             <div style={{ fontSize: '16px', color: '#fff', marginBottom: '8px', fontWeight: 'bold' }}>전체 진도율</div>
                             <div style={{ height: '8px', background: '#444', borderRadius: '4px', overflow: 'hidden', marginBottom: '12px' }}>

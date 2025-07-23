@@ -1,11 +1,13 @@
+# supabase/config.toml
 
 [functions.process-example-queue]
-enabled = true
-verify_jwt = true
-import_map = "./functions/process-example-queue/deno.json"
-# Uncomment to specify a custom file path to the entrypoint.
-# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
-entrypoint = "./functions/process-example-queue/index.ts"
-# Specifies static files to be bundled with the function. Supports glob patterns.
-# For example, if you want to serve static HTML pages in your function:
-# static_files = [ "./functions/process-example-queue/*.html" ]
+  enabled = true
+  verify_jwt = true
+  import_map = "./functions/process-example-queue/deno.json"
+  entrypoint = "./functions/process-example-queue/index.ts"
+
+[functions.save-push-subscription]
+  # 이 함수는 클라이언트에서 직접 호출되므로 별도 스케줄 없음
+
+[functions.send-daily-reminder]
+  # 스케줄은 pg_cron을 통해 관리됩니다.

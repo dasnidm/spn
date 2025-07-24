@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import HomePage from './HomePage'; // HomePage 임포트
-// import LearnMenu from './LearnMenu'; // 나중에 만들 LearnMenu
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import Modal from 'react-modal'; // react-modal 임포트
+import Modal from 'react-modal';
 
 // 스크린 리더 사용자를 위해 앱의 루트 요소를 알려줍니다.
 Modal.setAppElement('#root');
@@ -20,16 +19,28 @@ root.render(
   </React.StrictMode>
 );
 
-// 서비스 워커 등록 비활성화 (개발 중 캐시 문제 방지)
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', () => {
-//     navigator.serviceWorker.register('/service-worker.js').then(registration => {
-//       console.log('Service Worker registered: ', registration);
-//     }).catch(registrationError => {
-//       console.log('Service Worker registration failed: ', registrationError);
-//     });
-//   });
-// }
+// 서비스 워커를 등록하여 PWA 및 오프라인 기능을 활성화합니다.
+// onUpdate 콜백은 새 버전이 감지되었을 때 실행됩니다.
+serviceWorkerRegistration.register({
+  onUpdate: registration => {
+    const waitingServiceWorker = registration.waiting;
+
+    if (waitingServiceWorker) {
+      // 사용자에게 새 버전이 있음을 알리고 새로고침을 유도합니다.
+      const userConfirmation = window.confirm(
+        "새로운 버전이 있습니다. 앱을 업데이트하시겠습니까?"
+      );
+      if (userConfirmation) {
+        waitingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
+        waitingServiceWorker.addEventListener('statechange', e => {
+          if (e.target.state === 'activated') {
+            window.location.reload();
+          }
+        });
+      }
+    }
+  }
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

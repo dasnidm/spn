@@ -292,19 +292,19 @@ const FlashcardPage = () => {
                         onClick={() => handleLevelSelect('again')}
                         style={{}}
                         disabled={false}
-                    >어려워요</button>
+                    >몰라요</button>
                     <button
                         className={`level-btn hard`}
                         onClick={() => handleLevelSelect('hard')}
                         style={{}}
                         disabled={false}
-                    >애매해요</button>
+                    >어려워요</button>
                     <button
                         className={`level-btn good`}
                         onClick={() => handleLevelSelect('good')}
                         style={{}}
                         disabled={false}
-                    >완벽해요</button>
+                    >쉬워요</button>
                 </div>
             )}
         </div>

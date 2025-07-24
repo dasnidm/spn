@@ -151,16 +151,17 @@ export async function updateProgress(wordId, progressObj) {
         ...completeProgress
       };
 
-      const { error } = await supabase
-        .from('user_word_progress')
-        .upsert(upsertData, { onConflict: 'user_id, word_id' });
+      // [MODIFIED] Call the edge function instead of direct upsert
+      const { error } = await supabase.functions.invoke('update-user-word-progress', {
+        body: upsertData,
+      });
 
       if (error) {
-        console.error('Supabase 진도 업데이트 실패:', error);
+        console.error('Supabase function `update-user-word-progress` call failed:', error);
       }
     }
   } catch (error) {
-    console.error('사용자 정보 가져오기 또는 Supabase 업데이트 중 오류:', error);
+    console.error('Error getting user or invoking function:', error);
   }
 }
 

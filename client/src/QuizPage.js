@@ -82,7 +82,7 @@ const QuizPage = () => {
     }, [sessionStarted, currentIndex, sessionWords]);
 
     // 선택지 클릭 핸들러
-    const handleSelectOption = async (option) => {
+    const handleSelectOption = (option) => {
         if (selectedOption) return; // 이미 선택했으면 무시
 
         const correct = option.id === currentQuiz.answer.id;
@@ -93,22 +93,25 @@ const QuizPage = () => {
             setCorrectCount(c => c + 1);
         } else {
             setWrongCount(w => w + 1);
-        }
-
-        // FSRS 업데이트 (await 없이 비동기 처리)
-        if (user) {
-            const level = correct ? 'good' : 'again';
-            const userWordProgress = words.find(w => w.id === currentQuiz.answer.id) || {};
-            const fsrsResult = updateFSRSProgress(userWordProgress, currentQuiz.answer, level);
-            
-            updateProgress(currentQuiz.answer.id, fsrsResult); // await 제거
-            
-            setWords(allWords => allWords.map(w => w.id === currentQuiz.answer.id ? { ...w, ...fsrsResult } : w));
+            // 오답인 경우, 즉시 FSRS 업데이트
+            if (user) {
+                const userWordProgress = words.find(w => w.id === currentQuiz.answer.id) || {};
+                const fsrsResult = updateFSRSProgress(userWordProgress, currentQuiz.answer, 'again');
+                updateProgress(currentQuiz.answer.id, fsrsResult);
+                setWords(allWords => allWords.map(w => w.id === currentQuiz.answer.id ? { ...w, ...fsrsResult } : w));
+            }
         }
     };
 
     // 다음 문제로 이동
-    const handleNext = () => {
+    const handleNext = (level = 'good') => { // 기본값을 'good'으로 설정
+        // 정답을 맞춘 경우, 여기서 FSRS 업데이트
+        if (isCorrect && user) {
+            const userWordProgress = words.find(w => w.id === currentQuiz.answer.id) || {};
+            const fsrsResult = updateFSRSProgress(userWordProgress, currentQuiz.answer, level);
+            updateProgress(currentQuiz.answer.id, fsrsResult);
+            setWords(allWords => allWords.map(w => w.id === currentQuiz.answer.id ? { ...w, ...fsrsResult } : w));
+        }
         setCurrentIndex(i => i + 1);
     };
 
@@ -209,9 +212,20 @@ const QuizPage = () => {
                     <div className="feedback-text">
                         {isCorrect ? '정답입니다!' : `오답입니다. 정답: ${currentQuiz.answer.korean}`}
                     </div>
-                    <button className="continue-btn" onClick={handleNext}>
-                        계속하기
-                    </button>
+                    {isCorrect ? (
+                        <div className="correct-feedback-buttons">
+                            <button className="continue-btn hard" onClick={() => handleNext('hard')}>
+                                어려웠어요
+                            </button>
+                            <button className="continue-btn" onClick={() => handleNext('good')}>
+                                계속하기
+                            </button>
+                        </div>
+                    ) : (
+                        <button className="continue-btn" onClick={() => handleNext()}>
+                            계속하기
+                        </button>
+                    )}
                 </div>
             )}
         </div>

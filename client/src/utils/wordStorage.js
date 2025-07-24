@@ -201,7 +201,7 @@ export async function resetAndSyncWithServer(userId) {
   // 2. 서버에서 단어 진행률 데이터 가져오기
   const { data: supaWordRows, error: supaWordError } = await supabase
     .from('user_word_progress')
-    .select('*')
+    .select('word_id, is_checked, last_reviewed_at, next_review_at, stability, difficulty, lapses, state')
     .eq('user_id', userId);
 
   if (supaWordError) {
@@ -254,7 +254,7 @@ export async function syncProgressWithSupabase(userId) {
   
   const { data: supaRows, error: supaError } = await supabase
     .from('user_word_progress')
-    .select('*')
+    .select('word_id, is_checked, last_reviewed_at, next_review_at, stability, difficulty, lapses, state')
     .eq('user_id', userId);
 
   if (supaError) {

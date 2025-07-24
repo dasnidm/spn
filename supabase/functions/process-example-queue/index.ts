@@ -17,10 +17,11 @@ ${targetWord} (Part of Speech: ${pos})
 # Words the learner already knows (use these as much as possible):
 ${knownWordsString}
 # Request:
-1. Create one natural Spanish example sentence using the 'Target Word' and prioritizing words from the 'known words list'.
-2. Keep the grammar at a beginner-intermediate level.
-3. The sentence should be concise, ideally between 5 and 15 words long.
-4. Your response MUST be only in the following JSON format. Do not add any other explanations.
+1. Create one natural Spanish example sentence using the 'Target Word'.
+2. **CRITICAL**: The sentence MUST be short, between 5 and 10 words total. This is for a "sentence scramble" game, so longer sentences are unusable.
+3. Prioritize using words from the 'known words list' if possible, but the length limit is more important.
+4. Keep the grammar at a beginner-intermediate level.
+5. Your response MUST be only in the following JSON format. Do not add any other explanations.
 {
   "spanish_example": "Your Spanish sentence here",
   "korean_translation": "Your Korean translation here"

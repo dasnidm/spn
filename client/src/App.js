@@ -7,6 +7,7 @@ import LearnMenu from './LearnMenu';
 import FlashcardPage from './FlashcardPage';
 import QuizPage from './QuizPage';
 import VerbPracticePage from './VerbPracticePage';
+import SentenceScramblePage from './SentenceScramblePage';
 import SettingsPage from './SettingsPage';
 import StatsPage from './StatsPage'; // StatsPage 임포트
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -43,6 +44,7 @@ function App() {
         <Route path="learn/flashcard" element={<FlashcardPage />} />
         <Route path="learn/quiz" element={<QuizPage />} />
         <Route path="learn/verb-practice" element={<VerbPracticePage />} />
+        <Route path="learn/sentence-scramble" element={<SentenceScramblePage />} />
         <Route path="settings" element={<SettingsPage />} />
         <Route path="stats" element={<StatsPage />} /> {/* 새로운 라우트 추가 */}
         <Route path="*" element={<Navigate to="/dashboard" replace />} />

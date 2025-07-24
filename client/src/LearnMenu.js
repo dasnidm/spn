@@ -50,6 +50,16 @@ const LearnMenu = () => {
                     <p>스페인어의 핵심인 동사 변화를 집중적으로 훈련합니다.</p>
                     <div className="card-status">연습하기</div>
                 </div>
+
+                <div 
+                    className="learn-mode-card active"
+                    onClick={() => navigate('/learn/sentence-scramble')}
+                >
+                    <div className="card-icon">📝</div>
+                    <h2>문장 배열하기 (AI)</h2>
+                    <p>AI가 생성한 예문을 통해 문장 구조를 학습합니다.</p>
+                    <div className="card-status">도전하기</div>
+                </div>
             </div>
         </div>
     );

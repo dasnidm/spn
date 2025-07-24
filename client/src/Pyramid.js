@@ -58,7 +58,7 @@ const Pyramid = ({ words, setWords }) => {
 
     const renderWordBlock = (word) => {
         const isChecked = word.is_checked || false;
-        const recall = isChecked ? 1 : getRecallProbability(toFSRSCard(word, word));
+        const recall = isChecked ? 1 : getRecallProbability(toFSRSCard(word, new Date()));
         const color = getMemoryColor(recall);
         const percent = Math.round(recall * 100);
 
@@ -97,7 +97,7 @@ const Pyramid = ({ words, setWords }) => {
                                 let avgRecall = 0;
                                 if (layerWords.length > 0) {
                                     avgRecall = layerWords.reduce((sum, w) => {
-                                        const recall = w.is_checked ? 1 : getRecallProbability(toFSRSCard(w, w));
+                                        const recall = w.is_checked ? 1 : getRecallProbability(toFSRSCard(w, new Date()));
                                         return sum + recall;
                                     }, 0) / layerWords.length;
                                 }

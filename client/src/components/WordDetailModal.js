@@ -130,12 +130,15 @@ const WordDetailModal = ({ word, setWords, onClose }) => {
     const displayPercent = Math.round(recall * 100);
 
     const renderExampleSection = () => {
+        // Case 1: 로딩 중
         if (jobStatus === 'pending' || jobStatus === 'processing') {
             return <div style={{ color: '#aaa', minHeight: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>AI가 예문을 만들고 있어요...</div>;
         }
+
+        // Case 2: 예문이 성공적으로 생성됨
         if (generatedExample) {
             return (
-                <div style={{ position: 'relative', paddingRight: '30px' }}>
+                <div style={{ position: 'relative', paddingRight: '30px', textAlign: 'left' }}>
                     <p style={{ fontSize: 16, color: '#fff', margin: '0 0 4px 0' }}>{generatedExample.spanish_example}</p>
                     <p style={{ fontSize: 14, color: '#aaa', margin: 0 }}>{generatedExample.korean_translation}</p>
                     <button onClick={handleCreateJob} title="더 나은 예문으로 업데이트" style={{ position: 'absolute', top: '50%', right: 0, transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'white', fontSize: '20px', cursor: 'pointer', padding: '5px' }}>
@@ -144,13 +147,22 @@ const WordDetailModal = ({ word, setWords, onClose }) => {
                 </div>
             );
         }
-        if (jobStatus === 'failed') {
-            return <div style={{ color: '#FF453A' }}>{generationError}</div>;
-        }
+
+        // Case 3: 예문이 없거나, 생성에 실패했거나, 그 외 모든 경우
         return (
-            <button style={{ ...buttonStyle, background: '#64D2FF', color: '#1a1a1a', marginLeft: 0, fontSize: 14, padding: '8px 16px' }} onClick={handleCreateJob}>
-                AI 예문 보기
-            </button>
+            <div style={{ textAlign: 'center' }}>
+                {generationError && (
+                    <p style={{ color: '#FF453A', fontSize: 13, marginBottom: 8 }}>
+                        오류: {generationError.length > 50 ? generationError.substring(0, 50) + '...' : generationError}
+                    </p>
+                )}
+                <button 
+                    style={{ ...buttonStyle, background: '#64D2FF', color: '#1a1a1a', marginLeft: 0, fontSize: 14, padding: '8px 16px' }} 
+                    onClick={handleCreateJob}
+                >
+                    {generationError ? '다시 생성하기' : 'AI 예문 생성하기'}
+                </button>
+            </div>
         );
     };
 

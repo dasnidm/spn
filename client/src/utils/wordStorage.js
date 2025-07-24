@@ -134,9 +134,12 @@ export async function getProgress() {
 export async function updateProgress(wordId, progressObj) {
   const progress = await getProgress();
   
+  // [CRITICAL FIX] Merge with existing progress to prevent data loss
+  const existingProgress = progress[wordId.toString()] || {};
   const completeProgress = {
+    ...existingProgress,
     ...progressObj,
-    is_checked: progressObj.is_checked || false,
+    is_checked: progressObj.is_checked || existingProgress.is_checked || false,
   };
 
   progress[wordId.toString()] = completeProgress;

@@ -97,3 +97,11 @@ self.addEventListener('push', event => {
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });
+
+/* eslint-disable-next-line no-restricted-globals */
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    /* eslint-disable-next-line no-restricted-globals */
+    self.skipWaiting();
+  }
+});

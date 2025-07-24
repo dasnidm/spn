@@ -19,7 +19,8 @@ ${knownWordsString}
 # Request:
 1. Create one natural Spanish example sentence using the 'Target Word' and prioritizing words from the 'known words list'.
 2. Keep the grammar at a beginner-intermediate level.
-3. Your response MUST be only in the following JSON format. Do not add any other explanations.
+3. The sentence should be concise, ideally between 5 and 15 words long.
+4. Your response MUST be only in the following JSON format. Do not add any other explanations.
 {
   "spanish_example": "Your Spanish sentence here",
   "korean_translation": "Your Korean translation here"

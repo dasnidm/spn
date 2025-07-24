@@ -59,7 +59,7 @@ export const usePyramidData = (words, viewMode, selectedLayer, sortMode, stageSi
             if (w.is_checked || !w.last_reviewed_at) {
                 return false; // 체크됐거나, 학습 기록이 없으면 복습 대상이 아님
             }
-            const recall = getRecallProbability(toFSRSCard(w, w));
+            const recall = getRecallProbability(toFSRSCard(w, new Date()));
             return recall < 0.9;
         }).length;
 

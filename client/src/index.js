@@ -19,28 +19,10 @@ root.render(
   </React.StrictMode>
 );
 
-// 서비스 워커를 등록하여 PWA 및 오프라인 기능을 활성화합니다.
-// onUpdate 콜백은 새 버전이 감지되었을 때 실행됩니다.
-serviceWorkerRegistration.register({
-  onUpdate: registration => {
-    const waitingServiceWorker = registration.waiting;
-
-    if (waitingServiceWorker) {
-      // 사용자에게 새 버전이 있음을 알리고 새로고침을 유도합니다.
-      const userConfirmation = window.confirm(
-        "새로운 버전이 있습니다. 앱을 업데이트하시겠습니까?"
-      );
-      if (userConfirmation) {
-        waitingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
-        waitingServiceWorker.addEventListener('statechange', e => {
-          if (e.target.state === 'activated') {
-            window.location.reload();
-          }
-        });
-      }
-    }
-  }
-});
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
